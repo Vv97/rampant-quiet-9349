@@ -6,6 +6,7 @@ export const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="*" element={<h1>page not found</h1>} />
     </Routes>
   );
 };
