@@ -1,0 +1,56 @@
+.nav_main {
+  /* border: 5px solid red; */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 100px;
+  /* background-color: bisque; */
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  width: 100px;
+  height: 50px;
+}
+
+.navigate_section {
+  /* border: 5px solid orange; */
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: 100px;
+}
+.add_product_btn_div {
+  font-size: 16px;
+  border: 1px solid black;
+  margin: 25px 10px;
+  padding: 20px 10px;
+  margin-left: 30%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+}
+
+.nav_drop_down_section {
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius:10px ;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 100px;
+}
+.nav_dropdown_btn {
+  border: 5px solid blue;
+  padding: 10px 10px;
+}
+
