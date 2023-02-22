@@ -1,0 +1,53 @@
+.smCategory{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid red;
+    background-color: #fff;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   padding: 10px 10px;
+    z-index: 1;   
+}
+
+.smCategoryBackbtn{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+
+
+.smCategoryBackbtn > button{
+   border: none;
+   background-color: transparent;    
+   font-size: 1.7rem;
+}
+
+
+.fashionList{
+    border : 1px solid tan;
+     width: 22%;
+ }
+
+.fashionListChild{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #fff;
+    font-size: 0.9rem;
+    padding-inline-start: 5px;
+    border: 1px solid red;  
+    
+}
+
+.fashionListChild > a {
+    color: #363636;
+    width: 20%;
+}
+
+
+
+

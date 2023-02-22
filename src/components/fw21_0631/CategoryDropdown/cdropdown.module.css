@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+.categorydropdown{
+    position: absolute;
+    top: 40px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 800px;
+    left: 0;
+    padding: 10px 15px;
+    font-size: .8rem;
+}
+
+.cdContainer{
+    padding:  20px 0px;
+    border-bottom:1px solid #c8c8c8;
+    display: grid;
+    gap: 15px 10px;
+    grid-template-columns: repeat(3,1fr);
+    /* border: 1px solid red; */
+   
+}
+
+.cdContainer > ul {
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+
+
+
+.cdContainer > ul > li > a:not(.cdContainerTitle) {
+    color: #707070;
+    padding-inline: 10px;
+
+}
+
+
+.cdContainer > ul >  li > a:hover , .cdContainerTitle:hover{
+    text-decoration: underline;
+    color: #3394f8;
+    
+}
+
+.cdContainerTitle{
+    font-size: 1rem;
+    font-weight: 500;
+    padding-inline: 0px;
+}
+
+.cdContainerTitle {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding-inline: 6px;
+}
+
+.cdContainer > .cdContainerTitle  {
+    color: #000;
+}
+
+.cdContainerHeadDownIcon{
+  color: #000;
+}
+
+.categorydropdown > div:nth-child(2){
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 85%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color:#3394f8;
+    padding: 2px;
+}
+
+@media all and (max-width:1027px) {
+
+    .categorydropdown{
+        width: 750px;
+    }
+}
+
+@media all and (max-width:907px) {
+
+    .categorydropdown{
+        width: 650px;
+    }
+}
+
+
+
