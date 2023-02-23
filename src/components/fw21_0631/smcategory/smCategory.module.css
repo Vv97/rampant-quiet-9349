@@ -8,9 +8,14 @@
    right: 0;
    left: 0;
    bottom: 0;
-   padding: 10px 10px;
+   padding: 10px 20px;
     z-index: 1;   
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
+
 
 .smCategoryBackbtn{
     display: flex;
@@ -24,28 +29,60 @@
    border: none;
    background-color: transparent;    
    font-size: 1.7rem;
+   width: 8%;
 }
 
 
-.fashionList{
-    border : 1px solid tan;
-     width: 22%;
+.fashionList {
+     width: 25%;
+     font-size: 1.1rem;
+
  }
 
-.fashionListChild{
+ .ElectronicList{
+    width: 45%;
+    font-size: 1.1rem;
+ }
+
+ .fashionList > p , .ElectronicList > p {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+ }
+
+
+ .SmCategoryLists{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 1.1rem;
+ }
+
+ .fashionList > p > svg , .ElectronicList > p > svg , .SmCategoryLists > svg{
+   font-size: 1rem;
+ }
+
+.fashionListChild , .electronicListChild{
     display: flex;
     flex-direction: column;
     gap: 5px;
     background-color: #fff;
     font-size: 0.9rem;
     padding-inline-start: 5px;
-    border: 1px solid red;  
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
     
 }
 
 .fashionListChild > a {
     color: #363636;
-    width: 20%;
+    width: 80%;
+}
+
+
+.electronicListChild > a{
+    width: 100%;
+    color: #363636;
+    font-size: 0.9rem;
 }
 
 

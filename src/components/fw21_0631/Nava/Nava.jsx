@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineUser } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { SmallSDropdown } from "../smallSDropdown/SmallSDropdown";
+import { setLocalDate } from "../../../utils/accesslocalstore";
 export const Nava = () => {
   const [hamburger, sethampurger] = useState(false);
 
