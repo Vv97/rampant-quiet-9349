@@ -1,56 +1,73 @@
+/* NAVBAR (admin) STYLING */
 .nav_main {
   /* border: 5px solid red; */
+  /* border-bottom: 2px solid black; */
   display: flex;
   flex-direction: row;
+  text-align: center;
   gap: 10px;
-  height: 100px;
-  /* background-color: bisque; */
+  height: 70px;
+  background-color: rgb(246, 245, 245);
 }
 
 .nav_logo {
+  /* border: 1px solid red; */
   display: flex;
+  text-align: center;
   align-items: center;
-  margin-left: 50px;
+  margin: auto 50px;
   width: 100px;
   height: 50px;
 }
+.nav_logo:hover {
+  cursor: pointer;
+}
 
 .navigate_section {
-  /* border: 5px solid orange; */
   display: flex;
   align-items: center;
   gap: 50px;
-  margin-left: auto;
-  margin-right: 100px;
+  margin: none 100px none auto;
 }
+.navigate_section_products:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.navigate_section_home:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .add_product_btn_div {
   font-size: 16px;
   border: 1px solid black;
-  margin: 25px 10px;
+  background-color: blue;
+  color: white;
+  height: 30px;
   padding: 20px 10px;
-  margin-left: 30%;
-  margin-right: 10px;
+  margin: auto 10px auto 30%;
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: blue;
-  color: white;
 }
 
-.nav_drop_down_section {
+.nav_drop_down_section {  
   font-size: 16px;
-  border: 1px solid black;
-  border-radius:10px ;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 20px 10px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 130px;
   display: flex;
   flex-direction: row;
-  margin-left: auto;
-  margin-right: 100px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 100px 20px auto;
 }
-.nav_dropdown_btn {
-  border: 5px solid blue;
-  padding: 10px 10px;
+.dropbtn_text{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
 }
-
