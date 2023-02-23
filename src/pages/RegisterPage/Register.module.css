@@ -1,7 +1,7 @@
 #mainregister{
     margin: auto;
     max-width: 1248px;
-    border: 1px solid red;
+     border: 1px solid red; 
     /* height: 700px; */
 
 }
@@ -22,9 +22,49 @@
 
 }
 
+#leftdiv{
+    position: fixed;
+    right: 170px;
+    /* border: 1px solid rgb(33, 27, 27); */
+    width: 4%;
+    height: 200px;
+    margin: auto;
+}
+
+/* #leftdiv  > div > img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+} */
+
+#leftdiv :nth-child(1) {
+    padding: 2px;
+    width: 100%;
+    height: 20%;
+    margin: auto;
+    background-color: #3665f3;
+}
+
+#leftdiv :nth-child(2) {
+    padding: 2px;
+    margin: auto;
+   width: 100%;
+    height: 40%;
+    /* border-bottom: 1px solid rgb(150, 148, 148); */
+    
+}
+
+#leftdiv :nth-child(3) {
+    padding: 2px;
+    width: 100%;
+    height: 40%;
+    margin: auto;
+}
+
+
 #abjdesc{
     margin-top: 30px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 45%;
     height: 130px;
     margin: auto;
@@ -39,7 +79,7 @@
 
 #formdiv {
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 40%;
 
 }
@@ -47,20 +87,20 @@
 #formdiv > div {
     width: 80%;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
 #personalform {
     margin: auto;
-    border: 1px solid rgb(98, 0, 255);
+    /* border: 1px solid rgb(98, 0, 255); */
     width: 40%;
     height: 450px;
     margin-top: 30px;
 }
 
 .emaildiv {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 90%;
     height: 80px;
     margin: auto;
@@ -80,7 +120,7 @@
 }
 
 #name {
-    border: 1px solid rgb(32, 30, 30);
+    /* border: 1px solid rgb(32, 30, 30); */
     display: flex;
     width: 90%;
     height: 80px;
@@ -101,7 +141,7 @@
     margin: 10px;
 }
 #btn_div{
-    border: 1px solid rgb(32, 30, 30);
+    /* border: 1px solid rgb(32, 30, 30); */
     width: 90%;
     height: 80px;
     margin: auto;
@@ -118,5 +158,5 @@
 #terms > p {
     width: 90%;
     margin: auto;
-    font-size: 14px;
+    font-size: 13px;
 }

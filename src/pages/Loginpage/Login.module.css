@@ -1,0 +1,93 @@
+#loginbody{
+    max-width: 1248px;
+    margin: auto;
+}
+
+#learn{
+    border: 1px solid red;
+    text-align: right;
+    padding-right: 10px;
+}
+#learn > a {
+    color: blue;
+}
+
+#logo{
+    width: 15%;
+    height: 40px;
+    border: 1px solid rgb(169, 72, 72);
+}
+
+#logo > img {
+    width: 100%;
+
+}
+
+#formDiv {
+    border: 1px solid rgb(64, 0, 255);
+    margin: auto;
+    width: 60%;
+    height: 800px;
+}
+
+
+
+#desc{
+    border: 1px solid red;
+    margin: auto;
+    width: 50%;
+    height: 140px;
+    margin-top: 30px;
+    
+}
+
+#desc > img {
+    width: 25px;
+    margin-top: 10px;
+    
+}
+
+#hello{
+    width: 30%;
+    margin: auto;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+/* #hello > h1 {
+   align-items: center;
+   justify-content: center;
+} */
+
+#sign {
+    border: 1px solid rgb(153, 138, 138);
+    width: 36%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+#formdata {
+    margin: auto;
+    width: 50%;
+    border: 1px solid red;
+    height: 400px;
+    margin-top: 40px;
+
+}
+
+#formdata > form > div {
+    border: 1px solid rgb(0, 255, 47);
+    width: 90%;
+    height: 60px;
+    margin: auto;
+}
+
+.inputDiv > input, button{
+    margin: auto;
+    width: 95%;
+    height: 90%;
+}
