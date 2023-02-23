@@ -1,21 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "./Register.module.css"
 import logo from "./ebay.jpeg"
 import { Link } from 'react-router-dom'
+import { Registerdata } from '../../utils/accesslocalstore'
 
 export const Register = () => {
+    const [data, setdata] = useState({
+        Firstname: "",
+        Lastname: "",
+        Email: "",
+        Password: "",
+        Type: "" 
+
+    })
+
+    console.log(data)
+
+const handlechange = (e) => {
+    setdata({...data, [e.target.name]: e.target.value})
+}
+
+const handleSubmit = (e) => {
+    e.preventDefault()
+    Registerdata(data)
+    console.log(data, "OK")
+}
+
+
   return (
+
     <div id={styles.mainregister} >
         <div id={styles.abjlogo}>
-            <img src={logo} alt="logo" />
+            <img src={"https://i.imgur.com/FQCppUc.png"} alt="logo" />
         </div>
-
-
 
         <div id={styles.singintext}>
             <p>Already a member? <Link rel="stylesheet" href="/" >Sign in </ Link></p>
         </div>
-        <div></div>
+    <br />
+    <br />
+    <br />
+
+        <div id={styles.leftdiv} >
+        <h3>Help</h3>   
+           <img src="https://secureir.ebaystatic.com/pictures/aw/OCS_SelfService/Inflowhelp_Question_Blue_Icon.svg" alt="ques" />
+           
+            <img src="https://secureir.ebaystatic.com/pictures/aw/OCS_SelfService/Inflowhelp_Feedback_Blue_Icon.svg" alt="note" />
+      
+       </div>
+
+
+
 
 
         <div id={styles.abjdesc}>
@@ -28,33 +63,33 @@ export const Register = () => {
 
    <div id={styles.formdiv}>
 
-    <div>
-    <h1>
+    <div style={ {justifyContent:"center", alignItems: "center"}}>
+    <h1 >
     Create an account
     </h1>
     </div>
-    <div>    
-    <input type="radio" name="business" value={"Personal"} />
+    <div style={{display: "flex", justifyContent: "space-around", alignItems: "center"  }} onChange={ (e) => handlechange(e)  }>    
+    <input type="radio" name="Type" value={"Personal"} />
     <label>Personal account</label>
-    <input type="radio" name="business" value={"Business"} />
+    <input type="radio" name="Type" value={"Business"} />
     <label >Business account</label>
     </div>
     </div>
 
     <div id={styles.personalform}>
 
-    <form >
+    <form onSubmit={handleSubmit} >
         <div id={styles.name} >
 
-        <input type="text" placeholder='First Name' /> <input type="text" placeholder='Last Name' />
+        <input type="text" placeholder='First Name' name='Firstname' onChange={(e) => handlechange(e)} /> <input type="text" placeholder='Last Name' name='Lastname' onChange={(e) => handlechange(e)} />
         </div>
 
         <div className={styles.emaildiv} >
-        <input type="text" placeholder='Email'/>
+        <input type="text" placeholder='Email' name="Email"  onChange={(e) => handlechange(e)} />
         </div>
 
         <div className={styles.emaildiv}>
-        <input type="password" placeholder='Password' />
+        <input type="password" placeholder='Password' name='Password' onChange={handlechange} />
         </div>
         <div className={styles.emaildiv}>
 

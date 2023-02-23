@@ -1,3 +1,5 @@
+import axios from "axios"
+
 export const getLocalData = (key) => {
     try {
         let temp = JSON.parse(localStorage.getItem(key))
@@ -10,4 +12,10 @@ export const getLocalData = (key) => {
 
 export const setLocalDate = (key, data) => {
     return localStorage.setItem(key, JSON.stringify(data))
+}
+
+
+export const Registerdata = (data) => {
+    axios.post(`http://localhost:8080/register`, data)
+
 }
