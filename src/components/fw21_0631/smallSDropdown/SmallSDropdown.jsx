@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./SmallDropdown.module.css";
 import { RxCross2 } from "react-icons/rx";
 import { SmCategory } from "../smcategory/smCategory";
+import { setLocalDate } from "../../../utils/accesslocalstore";
+
 export const SmallSDropdown = ({ handleHamburger }) => {
   const [Categories, setCategories] = useState(false);
 

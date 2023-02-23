@@ -23,24 +23,26 @@
     padding: 8px 0px;
 }
 
+
 .nav1 , .nav2{
     max-width: 1248px;
     margin: auto;
     /* padding-top: 2px; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 .nav2{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     padding: 12px 0;
 }
 
 .navList1 , .navList2 {
     display: inline-flex;
-    border: 1px solid slateblue;
+    /* border: 1px solid slateblue; */
     align-items: center;
     gap: 25px;
     /* color: #c3c5c7; */
@@ -53,6 +55,7 @@
      justify-content: center;
      align-items: center;
      position: relative;
+     z-index: 1;
 }
 
 
@@ -69,6 +72,10 @@
     transition: 2s;
 }
 
+
+.nav2 {
+    border-bottom: 1px solid  #e5e5e5;
+}
 
 
 .navIcons{
@@ -241,6 +248,7 @@
  align-items: center;
  gap: 5px;
  position: relative;
+ z-index: 2;
 }
 
 
@@ -299,9 +307,22 @@ font-size: 1.1rem;
 
 
 
-.Namea{
+.Namea , .smallSearchCon{
     display: none;
 }
+
+.signin_loginLink{
+    font-size: .9rem;
+    text-decoration: underline;
+    color: #0000FF;
+    margin-left: 5px;
+}
+
+.signin_loginLink + span{
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+
 
 
 /* ------ media querie ------- */
@@ -342,7 +363,7 @@ font-size: 1.1rem;
     }
   
     .nav2DropdownSearch{
-      width: 70%;
+      width: 71%;
     }
 
 
@@ -366,9 +387,9 @@ font-size: 1.1rem;
 
     .navMediumScreenIcon{
         display: block;
-        width: 8%;
+        width: 7%;
         height: 41px;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         border: none;
         background-color:#3665f3;
         color: #fff;
@@ -379,18 +400,31 @@ font-size: 1.1rem;
   }
 
 
+  .navList1 > li >h5{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    gap: 5px;
+  }
+
+
   @media all and (max-width:600px){
-    .navScreenNone{
-        display: none;
-    }
 
     .navList1 , .navList2 {
         gap: 15px;
     }
   }
 
+
+  @media all and (max-width:733px){
+    .navScreenNone{
+        display: none;
+    }
+  }
+
   @media all and (max-width:530px){
-   .navHamburger{
+   .navHamburger , .smallSearchCon{
     display: block;
    }
 
@@ -404,3 +438,6 @@ font-size: 1.1rem;
    }
 
   }
+
+
+ 

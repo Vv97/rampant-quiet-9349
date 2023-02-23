@@ -9,8 +9,9 @@ import { Nava } from "../Nava/Nava";
 import { SmSearch } from "../scInputSearch/SmSearch";
 
 export const Navbar = () => {
-  const [name, setname] = useState("");
+  const [name, setname] = useState("hii");
   const [cart, setcart] = useState([]);
+  const [auth, setauth] = useState(false);
   const [Category, setcategory] = useState(false);
 
   const handleCategory = () => {
@@ -23,7 +24,26 @@ export const Navbar = () => {
         <div className={styles.nav1wrapper}>
           <div className={styles.nav1}>
             <ul className={styles.navList1}>
-              <li>Hi {name && name}</li>
+              <li>
+                Hi!
+                {name.length > 0 ? (
+                  name && (
+                    <h5>
+                      {name} <BsChevronDown />
+                    </h5>
+                  )
+                ) : (
+                  <>
+                    <Link className={styles.signin_loginLink} to="/login">
+                      Sign in
+                    </Link>
+                    <span>or</span>
+                    <Link className={styles.signin_loginLink} to={"/register"}>
+                      register
+                    </Link>
+                  </>
+                )}
+              </li>
               <li>
                 <a
                   className={`${styles.navListWithLinks}  ${styles.navScreenNone} `}
@@ -118,7 +138,7 @@ export const Navbar = () => {
           <Nava />
         </div>
 
-        <div>
+        <div className={styles.smallSearchCon}>
           <SmSearch />
         </div>
       </header>
