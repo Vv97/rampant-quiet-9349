@@ -1,0 +1,244 @@
+#ch-firstDiv {
+  border: 0px solid black;
+  max-width: 1248px;
+  height: 15vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  /* padding:10px; */
+}
+.ch-firstDiv-1 {
+  border: 0px solid black;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.ch-firstDiv-1 > h1 {
+  margin-top: 15px;
+}
+.ch-firstDiv-2 {
+  border: 0px solid black;
+  width: 30%;
+  padding-top: 40px;
+}
+.ch-firstDiv-2 > p > a {
+  color: blue;
+}
+
+/* secDiv */
+#ch-secDiv {
+  border: 0px solid black;
+  max-width: 1248px;
+  margin: 10px auto;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.ch-secDiv-1 {
+  border: 1px solid black;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.ch-secDiv-1-1 {
+  border-bottom: 1px solid black;
+  height: 10%;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+.ch-secDiv-1-2 {
+  border: 0px solid black;
+  height: 85%;
+}
+
+#country {
+  width: 220px;
+  height: 50px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 30px;
+  font-size: 17px;
+  background-color: rgb(241, 240, 240);
+  font-weight: bold;
+}
+#names-input {
+  margin-top: 10px;
+}
+#names-input > input {
+  margin-left: 10px;
+  width: 220px;
+  height: 45px;
+  border-radius: 5px;
+  margin-right: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid black;
+  background-color: rgb(241, 240, 240);
+  padding-left: 10px;
+}
+#address-input {
+  margin-top: 10px;
+}
+#address-input > input {
+  width: 220px;
+  height: 45px;
+  border-radius: 5px;
+  margin-right: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid black;
+  background-color: rgb(241, 240, 240);
+  padding-left: 10px;
+  margin-left: 10px;
+}
+#city {
+  margin-top: 10px;
+  /* display:flex; */
+}
+#city > input {
+  width: 220px;
+  height: 45px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid black;
+  background-color: rgb(241, 240, 240);
+  padding-left: 10px;
+}
+#phone {
+  margin-top: 10px;
+}
+#phone > input {
+  width: 220px;
+  height: 45px;
+  border-radius: 5px;
+  margin-left: 130px;
+  margin-right: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid black;
+  background-color: rgb(241, 240, 240);
+  padding-left: 10px;
+}
+#ch-checkbox {
+  margin-top: 6px;
+  border: 0px solid black;
+  width: 220px;
+  height: 25px;
+  margin-left: 10px;
+  /* font-size:12px */
+}
+
+#add-button {
+  margin-top: 10px;
+  margin-left: 100px;
+}
+#add-button > button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+
+  font-weight: bold;
+  color: white;
+  margin-right: 2px;
+  background-color: blue;
+  border: none;
+  border-radius: 10px;
+}
+
+.ch-secDiv-2 {
+  border: 1px solid black;
+  width: 30%;
+  height: 70%;
+  border-radius: 5px;
+  padding-top: 10px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+.ch-secDiv-2-1 {
+  border: 0px solid black;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ch-secDiv-2-1-1 {
+  border: 0px solid black;
+  height: 26%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.ch-secDiv-2-1-2 {
+  height: 26%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.ch-secDiv-2-1-3 {
+  height: 26%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  border-top: 1px solid black;
+}
+.ch-secDiv-2-2 {
+  border: 0px solid black;
+  /* margin-top:-30px; */
+  background-color: rgb(241, 240, 240);
+  width: 67%;
+  margin: -30px auto;
+  font-size: 12px;
+  padding: 5px;
+}
+.ch-secDiv-2-2 > p > a {
+  color: blue;
+}
+#googlePay {
+  border: 0px solid black;
+  width: 90%;
+  margin-top: 50px;
+  margin-left: 65px;
+}
+.ch-secDiv-2-4 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10px;
+}
+.ch-secDiv-2-4 > p {
+  border: 0px solid black;
+  padding-top: 10px;
+  font-weight: 100;
+}
+#seedetails {
+  border: 0px solid black;
+  margin-left: 150px;
+  color: blue;
+}
+
+/* footer */
+#footer {
+  border: 0px solid black;
+  height: 200px;
+}
+#footer > p {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 90px;
+}
+#footer > p > a {
+  color: blue;
+}
