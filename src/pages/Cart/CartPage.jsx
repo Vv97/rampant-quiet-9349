@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CartPage.css";
+import {Navbar} from "../../components/fw21_0631/Navbar/Navbar"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// import { currentData } from "../CheckOut/CheckOutPage";
 // const SliderData = [
 //   {
 //     image: "https://i.ebayimg.com/thumbs/images/g/ATcAAOSwquhj1Q0W/s-l200.jpg",
@@ -125,6 +125,8 @@ const responsive = {
   },
 };
 
+
+
 // const cartData={
 //   image:"https://designerbrandsforles.ipage.com/9-21/Nike-CB-804408-Heather-Grey-S__1.JPG",
 
@@ -133,6 +135,7 @@ const responsive = {
 //   return Q
 
 // }
+
 const CartPage = () => {
   let price = 55;
   // let discount=price*7
@@ -147,10 +150,10 @@ const CartPage = () => {
   let x = 14.99 * current;
   let y = 12.38 * current;
   // console.log(x)
-  // currentData(price)
 
   return (
     <div>
+      <Navbar/>
       <div id="firstDiv">
         <div className="firstDiv-1">Shopping Cart</div>
         <div className="firstDiv-2">
@@ -179,7 +182,7 @@ const CartPage = () => {
                   Nike Mens Jogger Athletic Regular Fit <br />
                   Gym Work Out Draw String Casual Sweatpants{" "}
                 </p>
-                <p style={{ fontWeight: "400", marginTop: "1px" }}>L,Grey</p>
+                <p style={{ fontWeight: "400", marginTop: "-18px" }}>L,Grey</p>
                 <p>New with tags</p>
               </div>
             </div>
@@ -193,6 +196,8 @@ const CartPage = () => {
                 >
                   -
                 </button>
+                <button disabled>{current}</button>
+                <button onClick={() => setCurrent((prev) => prev + 1)}>
                 <button disabled style={{ width: "20px" }}>
                   {current}
                 </button>
@@ -200,6 +205,7 @@ const CartPage = () => {
                   style={{ width: "20px" }}
                   onClick={() => setCurrent((prev) => prev + 1)}
                 >
+
                   +
                 </button>
               </div>
@@ -214,12 +220,12 @@ const CartPage = () => {
             <div className="secDiv-1-2-3">
               <div>
                 <p>US ${formatter.format(price - x)}</p>
+                <div>
                 <div style={{ marginTop: "10px" }}>
                   <strike>US ${formatter.format(price)}</strike>
                 </div>
                 <div>+US{formatter.format(x)}</div>
               </div>
-
               <button id="remove-btn">Remove</button>
             </div>
           </div>

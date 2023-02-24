@@ -12,6 +12,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
 
+
+<ChakraProvider> 
+  <BrowserRouter>
+   <Provider store={store}>
   <ChakraProvider resetCSS={false}>
     <BrowserRouter>
       <Provider store={store}>
