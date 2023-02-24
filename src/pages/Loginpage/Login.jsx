@@ -1,12 +1,41 @@
-import { Flex } from '@chakra-ui/react'
-import React from 'react'
+import { border } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { logindata } from '../../utils/accesslocalstore';
 import styles from "./Login.module.css"
 
 export const Login = () => {
+  const [btnval, setbtnval] = useState(false);
+  const [userid, setuserid] = useState("");
+  const [password, setpassword] = useState("");
+  const [regdata, setregdata] = useState([]);
+
+ 
+const navigate = useNavigate()
+
+
+  const handleLogin = (e) => {
+    e.preventDefault()
+    const userdata = regdata.find((el) => el.Email === userid)
+    console.log(userid, "id")
+    console.log(userdata.Email)
+    if(userdata.Email === userid) {
+      navigate("/register")
+    }
+  }
+
+
+  useEffect(() => {
+    logindata().then((res) => setregdata(res.data))
+  }, [])
+
+  console.log(regdata)
+
   return (
+
     <div id={styles.loginbody}>
-      login
       <div id={styles.learn} ><a href="https://connect.ebay.com/srv/survey/a/reg.personalized">Tell us what you think</a></div>
+      
       <div id={styles.logo}>
         <img src="https://i.imgur.com/FQCppUc.png" alt="logo" />
       </div>
@@ -26,47 +55,83 @@ export const Login = () => {
     <div id={styles.formdata}>
       <form >
         <div className={styles.inputDiv} >
-        <input type="text" placeholder='Enter E-mail' />
+        
+        <input type="text" placeholder='Enter or username' style={{ borderRadius: "12px" ,border: "1px solid black" }} 
+        value={userid}
+        onChange={ (e) => setuserid(e.target.value) } />
         </div> 
+
+        {/* <div className={styles.inputDiv} >
+        
+        <input type="text" placeholder='Enter password' style={{ borderRadius: "12px" ,border: "1px solid black" }} 
+        value={password}
+        onChange={ (e) => setpassword(e.target.value) }
+        />
+        </div>  */}
+
+
         <div className={styles.inputDiv} >
-        <button type='submit'>Continue</button>
+        <button type='submit' className={styles.div_btn} disabled={ userid === "" } onClick={handleLogin} >Continue</button>
         </div>
         
       </form>
 
-      {/* <div style={{display: Flex }}>
-        <div><hr /></div>
-        or
-        <div><hr /></div>
-      </div> */}
-    <div className={styles.inputDiv} >
-        <button type='submit'>Continue with Facebook</button>
-        </div>
-
-        <div className={styles.inputDiv} >
-        <button type='submit'>Continue with Google</button>
-        </div>
-
-        <div className={styles.inputDiv} >
-        <button type='submit'>Continue with Apple</button>
-        </div>
-
-    
-    </div>
-
-
-
-
-
-
-
-
-
-
+      <div className={styles.inputDiv} style={{ display: "flex", justifyContent: "center", alignItems: "center", gap:"10px" }} >
+        <div style={{ width:"40%" }} ><hr /></div>
+        <div style={{ paddingBottom:"6px" }}>or</div>
+        <div style={{ width:"40%" }} ><hr /></div>
 
       </div>
 
+    <div className={styles.inputDiv}  style={{background: "#1a73e8"}} >
+    <img src="https://cdn.pixabay.com/photo/2015/05/17/10/51/facebook-770688_1280.png" className={styles.btn_img } alt="fb" />
+        <button type='submit'className={styles.div_btn} style={{ background: "#1a73e8" }} >Continue with Facebook</button>
+        </div>
+
+        <div className={styles.inputDiv} >
+        <img src="https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png" className={styles.btn_img } alt="fb" />
+        <button type='submit' className={styles.div_btn} style={{ background: "white" }}>Continue with Google</button>
+        </div>
+
+        <div className={styles.inputDiv} >
+        <img src="https://cdn.pixabay.com/photo/2018/05/08/21/08/apple-3383931__480.png" alt="fb" className={styles.btn_img } />
+        <button type='submit' className={styles.div_btn} style={{ background: "white" }}>Continue with Apple</button>
+        </div>
+
+     <div style={{ margin:"auto" }}>
+
+      <div id={styles.check_div}> <input type="checkbox"  />
+        <p>  Stay signed in </p> </div>
+      <div id={styles.text_div} ><p>Using a public or shared device?
+Uncheck to protect your account.</p></div>
+         
+    </div>
+
+    <div id={styles.show_box} >
+
+      <div style={{ border: "0px solid black"}} > <button onClick={(e)=> setbtnval((prev) => !prev )} id={styles.show_div} >Learn More ^ </button>
+
+   {btnval ?  <div id={styles.show_btn} >With this box checked, we'll keep you signed in, making it easier to bid and buy. You'll also be all set to pay if you've saved your payment info. You can always turn off this feature in My eBay. We may ask you to sign in again for some activities, such as making changes to your account.</div> : <></> } 
+   </div>
+      
+      
+    </div>
+      
+    
+    </div>
+
+      </div>
+
+        
+     
+     <br />
+     <br />
+     
       <hr />
+
+      <div id={styles.terms}>
+    <p>Copyright © 1995-2023 eBay Inc. All Rights Reserved. <a href="https://www.ebayinc.com/accessibility/">Accessibility</a>, <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-agreement?id=4259">User Agreement</a>, <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260">Privacy</a>, <a href="https://pages.ebay.com/payment/2.0/terms.html">Payments Terms of Use</a>, <a href="https://www.ebay.com/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267">Cookies</a>, <a href="https://www.ebay.com/adchoice/ccpa">Your Privacy Choices</a> and <a href="https://www.ebay.com/adchoice">AdChoice</a></p>
+    </div>
 
       
 
