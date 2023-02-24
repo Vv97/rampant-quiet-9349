@@ -1,7 +1,7 @@
 #mainregister{
     margin: auto;
     max-width: 1248px;
-     border: 1px solid red; 
+     /* border: 1px solid red;  */
     /* height: 700px; */
 
 }
@@ -139,6 +139,9 @@
     height: 60px;
     border-radius: 10px;
     margin: 10px;
+    background-color: #3665f3;
+    font-size: larger;
+    cursor: pointer;
 }
 #btn_div{
     /* border: 1px solid rgb(32, 30, 30); */
@@ -151,6 +154,7 @@
     margin: auto;
     width: 90%;
     height: 150px;
+    
   
 }
 
@@ -159,4 +163,5 @@
     width: 90%;
     margin: auto;
     font-size: 13px;
+    margin-top: 15px;
 }
