@@ -1,5 +1,8 @@
 import React from "react";
+import { Carousal } from "../../components/fw21_0631/Carusol/Carousal";
 import { CatNav } from "../../components/fw21_0631/Cat-nav/CatNav";
+import { DailyCarousal } from "../../components/fw21_0631/DailyCarousal/DailyCarousal";
+import { Footer } from "../../components/fw21_0631/Footer/Footer";
 import { Navbar } from "../../components/fw21_0631/Navbar/Navbar";
 import "./Home.css";
 
@@ -11,6 +14,17 @@ export const Home = () => {
         <div className="homeCatnav">
           <CatNav />
         </div>
+      </div>
+
+      <div>
+        <Carousal />
+      </div>
+
+      <div>
+        <DailyCarousal />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

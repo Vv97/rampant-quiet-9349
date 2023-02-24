@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.carousal{
+    max-width: 1248px;
+    margin: 0 auto;
+    position: relative;
+    transition: 2s ease-in-out;
+    /* border: 1px solid red; */
+}
+
+
+
+
+
+
+.leftArrow{
+    display:block;
+    position: absolute;
+    color: gray;
+    top: 43%;
+    left: 0;
+    z-index: 3;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+}
+
+.rightArrow {
+    display:block;
+    position: absolute;
+    /* border: 1px solid red; */
+    color: gray;
+    top: 43%;
+    right: -10px;
+    z-index: 3;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    border-radius: 50%;
+}
+
+.rightArrow , .leftArrow {
+    display: none;
+}
+
+
+.carousal:hover .rightArrow , .carousal:hover .leftArrow {
+  display: block;
+  transition: 2s ease-in-out;
+}
+
+
+.carousal > div > img{
+    width: 100%;
+
+}
+
+.dailyCarousalHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dailyCarousalHeadimg{
+    height: 200px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dailyCarousalHeadimg >  img {
+    width: 85%;
+    /* border: 1px solid green; */
+    object-fit: contain;
+}
+
