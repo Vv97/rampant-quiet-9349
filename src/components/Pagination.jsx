@@ -23,7 +23,7 @@ const Pagination = ({
   //console.log(currentPage ,typeof totalPages)
   return (
     <div>
-      <Box mt={"2rem"} mb={"1rem"}>
+      <Box mt={"2rem"} mb={"1rem"} display={{ base: "flex" }}>
         <Button
           p={2}
           fontSize={{ sm: "0.7rem", lg: "1rem" }}
