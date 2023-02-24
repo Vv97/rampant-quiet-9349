@@ -16,6 +16,12 @@ export const setLocalDate = (key, data) => {
 
 
 export const Registerdata = (data) => {
-    axios.post(`http://localhost:8080/register`, data)
+   return axios.post(`http://localhost:8080/register`, data)
 
+}
+
+export const logindata = () => {
+
+    return axios.get("http://localhost:8080/register")
+    
 }

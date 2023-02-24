@@ -321,7 +321,7 @@
 .price {
   text-align: left;
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 0px;
   font-size: 20px;
 }
 .discount {
@@ -335,4 +335,7 @@
   margin-top: -1px;
   font-weight: 400;
   font-size: 14px;
+}
+.react-multiple-carousel__arrow{
+  background-color:none;
 }
