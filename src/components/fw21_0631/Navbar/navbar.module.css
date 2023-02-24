@@ -1,17 +1,17 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
 }
 
-.navbarWrapper{
+.navbarWrapper {
     margin: 0px auto;
     /* border: 3px solid orange;    */
 }
 
 
-.nav1wrapper{
+.nav1wrapper {
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -19,12 +19,13 @@
 
 
 .nav1 {
-   
+
     padding: 8px 0px;
 }
 
 
-.nav1 , .nav2{
+.nav1,
+.nav2 {
     max-width: 1248px;
     margin: auto;
     /* padding-top: 2px; */
@@ -35,12 +36,13 @@
     z-index: 1;
 }
 
-.nav2{
+.nav2 {
     /* border: 1px solid green; */
     padding: 12px 0;
 }
 
-.navList1 , .navList2 {
+.navList1,
+.navList2 {
     display: inline-flex;
     /* border: 1px solid slateblue; */
     align-items: center;
@@ -48,61 +50,62 @@
     /* color: #c3c5c7; */
 }
 
-.navList1  > li , .navList2 >  li {
+.navList1>li,
+.navList2>li {
     list-style: none;
-     display: flex;
-     cursor: pointer;
-     justify-content: center;
-     align-items: center;
-     position: relative;
-     z-index: 1;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 
-.navListWithLinks{
+.navListWithLinks {
     text-decoration: none;
     color: inherit;
     transition: 2s;
     font-size: 0.9rem;
-    font-weight:400;
+    font-weight: 400;
 }
 
-.navListWithLinks:hover{
+.navListWithLinks:hover {
     text-decoration: underline;
     transition: 2s;
 }
 
 
 .nav2 {
-    border-bottom: 1px solid  #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 
-.navIcons{
+.navIcons {
     /* font-size: 1.4rem; */
     font-size: 1.3rem;
-    font-weight: bolder;  
-    
+    font-weight: bolder;
+
 }
 
-.Cartdropdownicon{
+.Cartdropdownicon {
     display: none;
     cursor: none;
     opacity: 0;
-  
+
 }
 
 
 
 
-.cartBadges{
+.cartBadges {
     position: absolute;
     top: -5px;
     display: flex;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    right:-5px;
+    right: -5px;
     height: 16px;
     width: 16px;
     background-color: red;
@@ -114,7 +117,7 @@
 /* notification dropdown */
 
 
-.notificationDropdown{
+.notificationDropdown {
     position: absolute;
     top: 23px;
     right: 0;
@@ -128,20 +131,21 @@
     font-weight: 400;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     background-color: #fff;
-    
+
     /* display: none; */
 }
 
-.navList2 li:hover .Cartdropdownicon , .navList2 li:hover .notificationDropdown{
+.navList2 li:hover .Cartdropdownicon,
+.navList2 li:hover .notificationDropdown {
     display: block;
     cursor: pointer;
     opacity: 1;
-    transition: 5s; 
+    transition: 5s;
 }
 
 
 
-.navListWithoutLink{
+.navListWithoutLink {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -150,21 +154,21 @@
     font-size: 0.9rem;
 }
 
-.navList2 > li:hover{
+.navList2>li:hover {
     color: #0000FF;
 }
 
-.NavDownicon{
+.NavDownicon {
     /* font-size: 1rem; */
     font-size: 0.9rem;
 }
 
-.navListWithoutLink:hover .NavDownicon{
+.navListWithoutLink:hover .NavDownicon {
     transform: rotate(-178deg);
     transition: .5s ease-in-out;
 }
 
-.navMyEbayDropdown{
+.navMyEbayDropdown {
     position: absolute;
     top: 22px;
     left: 0;
@@ -181,17 +185,17 @@
 
 
 
-.navMyEbayDropdown > li {
+.navMyEbayDropdown>li {
     list-style: none;
 }
 
-.navMyEbayDropdown > li:hover {
-  text-decoration: underline;
+.navMyEbayDropdown>li:hover {
+    text-decoration: underline;
 }
 
 
 
-.navMyEbayDropdown1{
+.navMyEbayDropdown1 {
     position: absolute;
     top: 22px;
     right: 0;
@@ -207,118 +211,124 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-.navList2 li:hover .Cartdropdownicon , .navList2 > li:hover .notificationDropdown ,.navList2 >  li:hover .navMyEbayDropdown ,.navList2 >li:hover .navMyEbayDropdown1  {
+.navList2 li:hover .Cartdropdownicon,
+.navList2>li:hover .notificationDropdown,
+.navList2>li:hover .navMyEbayDropdown,
+.navList2>li:hover .navMyEbayDropdown1 {
     display: block;
     cursor: pointer;
     opacity: 1;
-    transition: 5s; 
+    transition: 5s;
 }
 
-.navList2 > li:hover .notificationDropdown , .navList2> li:hover .navMyEbayDropdown , .navList2>li:hover .navMyEbayDropdown1 {
-    display: flex; 
+.navList2>li:hover .notificationDropdown,
+.navList2>li:hover .navMyEbayDropdown,
+.navList2>li:hover .navMyEbayDropdown1 {
+    display: flex;
 }
 
 
 /* ------ nav2 ------- */
 
-.nav2Logo{
- width: 12%;
- /* border: 1px solid red; */
- /* padding: 5px 0; */
+.nav2Logo {
+    width: 12%;
+    /* border: 1px solid red; */
+    /* padding: 5px 0; */
 
 }
 
 
-.nav2Logo > a {
+.nav2Logo>a {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.nav2Logo > a > img {
+.nav2Logo>a>img {
     width: 85%;
-   
+
 }
 
-.nav2ShopDropdown{
- width: 10%;
- cursor: pointer;
- display: flex;
- justify-content: center;
- align-items: center;
- gap: 5px;
- position: relative;
- z-index: 2;
-}
-
-
-.nav2DropdownSearch{
- width: 65%;
- height: 41px;
-display: flex;
-border: 2px solid #41413f;
+.nav2ShopDropdown {
+    width: 10%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    z-index: 2;
 }
 
 
+.nav2DropdownSearch {
+    width: 65%;
+    height: 41px;
+    display: flex;
+    border: 2px solid #41413f;
+}
 
-.nav2DropdownSearch > input{
+
+
+.nav2DropdownSearch>input {
     width: 80%;
     font-size: 1.2rem;
     font-weight: 400;
     padding: 5px;
     border: none;
     outline: none;
-    caret-color: #000;  
+    caret-color: #000;
 }
 
-.nav2DropdownSearch > select {
+.nav2DropdownSearch>select {
     width: 20%;
     border: none;
-    border-left: 1px solid #c7c7c7 ;
+    border-left: 1px solid #c7c7c7;
     outline: none;
 }
 
-.nav2DropdownSearchBtn{
-  margin: 0px 5px;
- width: 15%;
- height: 41px;
- border: none;
-background-color: #3665f3;
-color: #fff;
-cursor: pointer;
-font-weight: 100;
-font-size: 1.1rem;
+.nav2DropdownSearchBtn {
+    margin: 0px 5px;
+    width: 15%;
+    height: 41px;
+    border: none;
+    background-color: #3665f3;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 100;
+    font-size: 1.1rem;
 }
 
-.nav2Ad{
-   width: 7%;
-   cursor: pointer;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-size:.8rem ;
-   color: #707070;
+.nav2Ad {
+    width: 7%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    color: #707070;
 }
 
-.navMediumScreenIcon{
+.navMediumScreenIcon {
     display: none;
 }
 
 
 
 
-.Namea , .smallSearchCon{
+.Namea,
+.smallSearchCon {
     display: none;
 }
 
-.signin_loginLink{
+.signin_loginLink {
     font-size: .9rem;
     text-decoration: underline;
     color: #0000FF;
     margin-left: 5px;
 }
 
-.signin_loginLink + span{
+.signin_loginLink+span {
     font-size: 0.7rem;
     margin-left: 5px;
 }
@@ -327,117 +337,119 @@ font-size: 1.1rem;
 
 /* ------ media querie ------- */
 
-@media all and (max-width:1027px){
-  .nav2Logo{
-    width: 15%;
-  }
+@media all and (max-width:1027px) {
+    .nav2Logo {
+        width: 15%;
+    }
 
-  .nav2DropdownSearch{
-    width: 55%;
-  }
+    .nav2DropdownSearch {
+        width: 55%;
+    }
 
-  .nav2Logo > img {
-    width: 100%;
-  }
+    .nav2Logo>img {
+        width: 100%;
+    }
 }
 
 
-@media all and (max-width:930px){
+@media all and (max-width:930px) {
     .nav2Ad {
         display: none;
     }
-  }
+}
 
-@media all and (max-width:786px){
+@media all and (max-width:786px) {
 
-    .nav1  ,.nav2{
-      padding-inline: 1rem;
+    .nav1,
+    .nav2 {
+        padding-inline: 1rem;
     }
 
-    .nav2Logo{
-      width: 20%;
+    .nav2Logo {
+        width: 20%;
     }
 
-    .nav2ShopDropdown{
-       display: none;
-    }
-  
-    .nav2DropdownSearch{
-      width: 71%;
-    }
-
-
-    .nav2Ad{
+    .nav2ShopDropdown {
         display: none;
     }
-  
-    .nav2Logo > img {
-      width: 100%;
+
+    .nav2DropdownSearch {
+        width: 71%;
     }
 
 
-    .nav2DropdownSearchBtn{
-       display: none;
+    .nav2Ad {
+        display: none;
+    }
+
+    .nav2Logo>img {
+        width: 100%;
     }
 
 
-    .nav2DropdownSearch > select{
+    .nav2DropdownSearchBtn {
+        display: none;
+    }
+
+
+    .nav2DropdownSearch>select {
         width: 30%;
     }
 
-    .navMediumScreenIcon{
+    .navMediumScreenIcon {
         display: block;
         width: 7%;
         height: 41px;
         font-size: 1.4rem;
         border: none;
-        background-color:#3665f3;
+        background-color: #3665f3;
         color: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-  }
+}
 
 
-  .navList1 > li >h5{
+.navList1>li>h5 {
     border: 1px solid red;
     display: flex;
     align-items: center;
     margin-left: 5px;
     gap: 5px;
-  }
+}
 
 
-  @media all and (max-width:600px){
+@media all and (max-width:600px) {
 
-    .navList1 , .navList2 {
+    .navList1,
+    .navList2 {
         gap: 15px;
     }
-  }
+}
 
 
-  @media all and (max-width:733px){
-    .navScreenNone{
+@media all and (max-width:733px) {
+    .navScreenNone {
         display: none;
     }
-  }
+}
 
-  @media all and (max-width:530px){
-   .navHamburger , .smallSearchCon{
-    display: block;
-   }
+@media all and (max-width:530px) {
 
-   .nav1 , .nav2{
-    display: none;
-   }
-   
-   
-   .Namea{
-       display: block;
-   }
+    .navHamburger,
+    .smallSearchCon {
+        display: block;
+    }
 
-  }
+    .nav1,
+    .nav2 {
+        display: none;
+    }
 
 
- 
+    .Namea {
+        display: block;
+    }
+
+}
