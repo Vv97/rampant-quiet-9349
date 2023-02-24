@@ -1,6 +1,47 @@
 {
   "admin": [],
-  "register": [],
+  "register": [
+    {
+      "Firstname": "Abhishek",
+      "Lastname": "Jha",
+      "Email": "abhishek.jha001996@gmail.com",
+      "Password": "Abhi@123",
+      "Type": "user",
+      "id": 1
+    },
+    {
+      "Firstname": "Abhishek",
+      "Lastname": "Jha",
+      "Email": "abhishek.jha001996@gmail.com",
+      "Password": "Abhi@123",
+      "Type": "admin",
+      "id": 2
+    },
+    {
+      "Firstname": "Abhishek",
+      "Lastname": "jha",
+      "Email": "ajha6667@gmail.com",
+      "Password": "Abhi123",
+      "Type": "user",
+      "id": 3
+    },
+    {
+      "Firstname": "",
+      "Lastname": "",
+      "Email": "",
+      "Password": "",
+      "Type": "",
+      "id": 4
+    },
+    {
+      "Firstname": "ram",
+      "Lastname": "rahim",
+      "Email": "ajha6667@gmail.com",
+      "Password": "kool123",
+      "Type": "admin",
+      "id": 5
+    }
+  ],
   "MensData": [
     {
       "id": "M1",
@@ -20,7 +61,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/7610386/2022/4/19/c6fe5c9f-9a2b-46c9-90cc-6479f7d8ea581650366004453HRXbyHrithikRoshanMenBlackSolidRapidDryRunningJoggers2.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/7610386/2022/4/19/c6fe5c9f-9a2b-46c9-90cc-6479f7d8ea581650366004453HRXbyHrithikRoshanMenBlackSolidRapidDryRunningJoggers2.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "3.7",
       "rating_count": "13.8k"
     },
@@ -42,7 +90,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1364628/2016/8/31/11472636737718-Roadster-Men-Blue-Regular-Fit-Printed-Casual-Shirt-6121472636737160-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1364628/2016/8/31/11472636737718-Roadster-Men-Blue-Regular-Fit-Printed-Casual-Shirt-6121472636737160-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL", "3XL", "XXXL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "3XL",
+        "XXXL"
+      ],
       "rating": "4.1",
       "rating_count": "25.9k"
     },
@@ -64,7 +120,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/10673544/2019/9/24/6b9c7688-7ca2-4d11-9e5b-a3745ecd8f761569310358973-The-Indian-Garage-Co-Men-Shirts-8481569310357131-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/10673544/2019/9/24/6b9c7688-7ca2-4d11-9e5b-a3745ecd8f761569310358973-The-Indian-Garage-Co-Men-Shirts-8481569310357131-1.jpg"
       ],
-      "size": ["39", "40", "42", "44", "46"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.1",
       "rating_count": "8.2k"
     },
@@ -86,7 +148,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2290972/2018/5/5/11525515544459-Roadster-Men-Grey-Slim-Fit-Solid-Chinos-2351525515544256-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2290972/2018/5/5/11525515544459-Roadster-Men-Grey-Slim-Fit-Solid-Chinos-2351525515544256-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "4.2",
       "rating_count": "5.8k"
     },
@@ -107,7 +177,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2290039/2022/7/13/9f725478-e4a1-4220-8e30-d157a7cf2b291657698446507HIGHLANDERMenBlackTaperedFitChinos1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2290039/2022/7/13/9f725478-e4a1-4220-8e30-d157a7cf2b291657698446507HIGHLANDERMenBlackTaperedFitChinos1.jpg"
       ],
-      "size": ["30", "32", "34", "36"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
       "rating": "4.1",
       "rating_count": "12.7k"
     },
@@ -129,7 +204,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2356421/2019/5/3/a89c3143-0c54-454b-8d7a-f6668d2458731556873152837-Roadster-Men-Black-Slim-Fit-Mid-Rise-Clean-Look-Jeans-339155-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2356421/2019/5/3/a89c3143-0c54-454b-8d7a-f6668d2458731556873152837-Roadster-Men-Black-Slim-Fit-Mid-Rise-Clean-Look-Jeans-339155-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.8",
       "rating_count": "6.6k"
     },
@@ -151,7 +234,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/2/22/d80c3d85-a70b-4a20-8e49-6793311901ea1550824145033-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/2/22/d80c3d85-a70b-4a20-8e49-6793311901ea1550824145033-1.jpg"
       ],
-      "size": ["30", "32", "34", "36", "38"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "3.8",
       "rating_count": "9k"
     },
@@ -173,7 +262,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/10341699/2022/8/25/c23fd879-a9b3-4515-a181-558523a71b9b1661423122029-LOCOMOTIVE-Men-Black--Grey-Slim-Fit-Checked-Casual-Shirt-342-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/10341699/2022/8/25/c23fd879-a9b3-4515-a181-558523a71b9b1661423122029-LOCOMOTIVE-Men-Black--Grey-Slim-Fit-Checked-Casual-Shirt-342-1.jpg"
       ],
-      "size": ["39", "40", "42", "44"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44"
+      ],
       "rating": "4.1",
       "rating_count": "5.7k"
     },
@@ -195,7 +289,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/7488102/2019/8/22/8002a744-0dad-4dbb-9481-cf0090134c3b1566454086786-Dennis-Lingo-Men-Pink-Slim-Fit-Solid-Casual-Shirt-9891566454-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/7488102/2019/8/22/8002a744-0dad-4dbb-9481-cf0090134c3b1566454086786-Dennis-Lingo-Men-Pink-Slim-Fit-Solid-Casual-Shirt-9891566454-1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.1",
       "rating_count": "13.1k"
     },
@@ -217,7 +317,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1376577/2022/6/3/ea10ab6c-883e-437a-8780-ed87484393f81654235830793-Roadster-Men-Black--Grey-Checked-Casual-Sustainable-Shirt-42-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1376577/2022/6/3/ea10ab6c-883e-437a-8780-ed87484393f81654235830793-Roadster-Men-Black--Grey-Checked-Casual-Sustainable-Shirt-42-1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46", "48"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48"
+      ],
       "rating": "4.3",
       "rating_count": "34.3k"
     },
@@ -239,7 +346,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/17565218/2022/6/6/05cf0d21-112c-4163-86eb-43e8048a9d4f1654514626287-United-Colors-of-Benetton-Men-Black-Brand-Logo-Printed-Jogge-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/17565218/2022/6/6/05cf0d21-112c-4163-86eb-43e8048a9d4f1654514626287-United-Colors-of-Benetton-Men-Black-Brand-Logo-Printed-Jogge-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "rating": "4.7",
       "rating_count": "55"
     },
@@ -261,7 +373,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/16119774/2021/11/17/e9c84e47-a9d8-4d34-8b66-df65e81a19561637132978233IVOCMenOliveGreenSlimFitCargosTrousers1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/16119774/2021/11/17/e9c84e47-a9d8-4d34-8b66-df65e81a19561637132978233IVOCMenOliveGreenSlimFitCargosTrousers1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
       "rating": "3.9",
       "rating_count": "700"
     },
@@ -316,7 +434,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/12542686/2020/12/7/7cf52149-982e-484d-9da0-4490f204642e1607324070805-Mast--Harbour-Men-Jeans-631607324067463-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/12542686/2020/12/7/7cf52149-982e-484d-9da0-4490f204642e1607324070805-Mast--Harbour-Men-Jeans-631607324067463-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
       "rating": "3",
       "rating_count": "1.3k"
     },
@@ -338,7 +462,16 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/11306992/2020/6/9/ea2607ea-c2d3-4d27-94c3-5a67a76de4fd1591692498694-Roadster-Men-Tshirts-811591692497497-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/11306992/2020/6/9/ea2607ea-c2d3-4d27-94c3-5a67a76de4fd1591692498694-Roadster-Men-Tshirts-811591692497497-1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "3XL",
+        "4XL"
+      ],
       "rating": "4.2",
       "rating_count": "7.2k"
     },
@@ -360,7 +493,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/14927328/2021/7/26/8fb6fbe5-3c11-4362-9c03-39c7347ac22e1627273135845RelaxedFitSweatshirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/14927328/2021/7/26/8fb6fbe5-3c11-4362-9c03-39c7347ac22e1627273135845RelaxedFitSweatshirt1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.2",
       "rating_count": "3k"
     },
@@ -382,7 +522,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/10046869/2021/12/9/9c11f1af-508a-46c3-beeb-bdc02c7032061639053610049-Roadster-Men-Navy-Blue-Super-Skinny-Fit-Low-Distress-Light-F-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/10046869/2021/12/9/9c11f1af-508a-46c3-beeb-bdc02c7032061639053610049-Roadster-Men-Navy-Blue-Super-Skinny-Fit-Low-Distress-Light-F-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.6",
       "rating_count": "6.7k"
     },
@@ -404,7 +552,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/19597502/2022/8/22/1ddc25a7-9076-438f-b294-226be72fbc341661157159538LeeMenBruceLightBlueSkinnyJeans1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/19597502/2022/8/22/1ddc25a7-9076-438f-b294-226be72fbc341661157159538LeeMenBruceLightBlueSkinnyJeans1.jpg"
       ],
-      "size": ["30", "32", "34", "36", "38"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "4.1",
       "rating_count": "10"
     },
@@ -426,7 +580,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2050688/2018/2/5/11517823120338-HIGHLANDER-Men-White-Slim-Fit-Solid-Casual-Shirt-5911517823120124-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2050688/2018/2/5/11517823120338-HIGHLANDER-Men-White-Slim-Fit-Solid-Casual-Shirt-5911517823120124-1.jpg"
       ],
-      "size": ["39", "40", "42", "44"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44"
+      ],
       "rating": "4.2",
       "rating_count": "6.3k"
     },
@@ -448,7 +607,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/7488103/2019/8/22/acfba45f-8f9c-4b97-b5bc-a909418bdf4c1566454100620-Dennis-Lingo-Men-Green-Slim-Fit-Solid-Casual-Shirt-358156645-3.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/7488103/2019/8/22/acfba45f-8f9c-4b97-b5bc-a909418bdf4c1566454100620-Dennis-Lingo-Men-Green-Slim-Fit-Solid-Casual-Shirt-358156645-3.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.2",
       "rating_count": "8.1k"
     },
@@ -470,7 +635,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/7719550/2018/12/11/24edbba9-73c3-42c6-8ae8-41b09f871a201544530684914-DENNISON-Men-Trousers-5831544530683640-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/7719550/2018/12/11/24edbba9-73c3-42c6-8ae8-41b09f871a201544530684914-DENNISON-Men-Trousers-5831544530683640-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.7",
       "rating_count": "2.8k"
     },
@@ -492,7 +665,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/11959226/2020/9/8/b770f528-4cc0-42db-8d45-b7d5838b84b61599556887939-Roadster-Men-Sweatshirts-8881599556886717-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/11959226/2020/9/8/b770f528-4cc0-42db-8d45-b7d5838b84b61599556887939-Roadster-Men-Sweatshirts-8881599556886717-1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.4",
       "rating_count": "1.2k"
     },
@@ -514,7 +694,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/6788641/2018/11/6/0e8c57eb-31fa-4fcc-b376-ab917a4f98281541494278138-Roadster-Men-Grey-Regular-Fit-Solid-Casual-Shirt-32515414942-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/6788641/2018/11/6/0e8c57eb-31fa-4fcc-b376-ab917a4f98281541494278138-Roadster-Men-Grey-Regular-Fit-Solid-Casual-Shirt-32515414942-1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46", "48"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48"
+      ],
       "rating": "4.2",
       "rating_count": "2.4k"
     },
@@ -536,7 +723,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/8706059/2022/8/25/600ba77d-27a6-4d99-8f31-b349edb6aec81661422693616-HIGHLANDER-Men-Blue-Tapered-Fit-Mid-Rise-Clean-Look-Stretcha-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/8706059/2022/8/25/600ba77d-27a6-4d99-8f31-b349edb6aec81661422693616-HIGHLANDER-Men-Blue-Tapered-Fit-Mid-Rise-Clean-Look-Stretcha-1.jpg"
       ],
-      "size": ["30", "32", "34", "36", "38"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "3.9",
       "rating_count": "11k"
     },
@@ -558,7 +751,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/5669786/2018/6/12/f82ab435-ef59-4b2f-8b8b-cd6a73baae0f1528807444173-Roadster-Men-Navy-Blue-Skinny-Fit-Mid-Rise-Clean-Look-Stretchable-Jeans-4881528807443954-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/5669786/2018/6/12/f82ab435-ef59-4b2f-8b8b-cd6a73baae0f1528807444173-Roadster-Men-Navy-Blue-Skinny-Fit-Mid-Rise-Clean-Look-Stretchable-Jeans-4881528807443954-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.8",
       "rating_count": "2.6k"
     },
@@ -580,7 +781,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/7288105/2018/10/24/a059288c-512c-468a-87d4-ce36b52840441540360274049-HERENOW-Men-Shirts-5241540360273894-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/7288105/2018/10/24/a059288c-512c-468a-87d4-ce36b52840441540360274049-HERENOW-Men-Shirts-5241540360273894-1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.4",
       "rating_count": "5.6k"
     },
@@ -602,7 +809,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2291319/2022/6/20/6461f57a-ad48-43aa-b583-2e573e9be1441655707459223-Roadster-Men-Navy-Blue-Tapered-Fit-High-Rise-Joggers-Trouser-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2291319/2022/6/20/6461f57a-ad48-43aa-b583-2e573e9be1441655707459223-Roadster-Men-Navy-Blue-Tapered-Fit-High-Rise-Joggers-Trouser-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.8",
       "rating_count": "5.1k"
     },
@@ -624,7 +839,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/18074930/2022/9/7/3e1e406e-df87-4b58-a237-0ef99c6c117f1662549504850-Levis-Men-Black-512-Slim-Tapered-Fit-Light-Fade-Mid-Rise-Str-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/18074930/2022/9/7/3e1e406e-df87-4b58-a237-0ef99c6c117f1662549504850-Levis-Men-Black-512-Slim-Tapered-Fit-Light-Fade-Mid-Rise-Str-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "4.3",
       "rating_count": "80"
     },
@@ -646,7 +868,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/6832202/2022/2/22/c76c4342-4777-48ee-a72c-5496dcb3988b1645509675836-WROGN-Men-Charcoal-Grey-Solid-Bomber-4691645509675159-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/6832202/2022/2/22/c76c4342-4777-48ee-a72c-5496dcb3988b1645509675836-WROGN-Men-Charcoal-Grey-Solid-Bomber-4691645509675159-1.jpg"
       ],
-      "size": ["M", "L", "XL", "XXL"],
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4",
       "rating_count": "1.6k"
     },
@@ -668,7 +895,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/19904808/2022/9/10/7d249b45-0305-4161-8c59-1bd99d3d1f8f1662808752903HIGHLANDERMenPurpleHoodedSweatshirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/19904808/2022/9/10/7d249b45-0305-4161-8c59-1bd99d3d1f8f1662808752903HIGHLANDERMenPurpleHoodedSweatshirt1.jpg"
       ],
-      "size": ["S", "M", "L", "XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "rating": "4.9",
       "rating_count": "23"
     },
@@ -690,7 +922,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/12377258/2020/9/11/ce1b7bcb-a65a-4eb0-a317-42ac02718f1e1599798741705UrbanoFashionPrintedMenRoundNeckDarkGreenT-Shirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/12377258/2020/9/11/ce1b7bcb-a65a-4eb0-a317-42ac02718f1e1599798741705UrbanoFashionPrintedMenRoundNeckDarkGreenT-Shirt1.jpg"
       ],
-      "size": ["S", "M", "L", "XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "rating": "4",
       "rating_count": "7.3k"
     },
@@ -712,7 +949,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2032621/2018/8/7/9dc8cfa9-a511-4504-840b-4c7e7b3320391533643723775-WROGN-Men-Blue--Green-Slim-Fit-Checked-Casual-Shirt-with-Det-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2032621/2018/8/7/9dc8cfa9-a511-4504-840b-4c7e7b3320391533643723775-WROGN-Men-Blue--Green-Slim-Fit-Checked-Casual-Shirt-with-Det-1.jpg"
       ],
-      "size": ["39", "40", "42", "44", "46"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.2",
       "rating_count": "2.2k"
     },
@@ -734,7 +977,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/11275832/2022/4/6/0fedd175-efa2-4346-a6dd-a592b4790f2f1649234504796-High-Star-Men-Black-Solid-Denim-Jacket-3971649234504005-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/11275832/2022/4/6/0fedd175-efa2-4346-a6dd-a592b4790f2f1649234504796-High-Star-Men-Black-Solid-Denim-Jacket-3971649234504005-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "rating": "4.3",
       "rating_count": "4.4k"
     },
@@ -756,7 +1004,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/6772714/2018/7/31/c1b18bd9-f317-41a4-a626-f3d274e9bc7b1533015389260-Roadster-Men-Jeans-9121533015387558-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/6772714/2018/7/31/c1b18bd9-f317-41a4-a626-f3d274e9bc7b1533015389260-Roadster-Men-Jeans-9121533015387558-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "4",
       "rating_count": "2k"
     },
@@ -778,7 +1034,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/8890027/2022/9/26/f49a7b13-801f-42eb-8f9d-68daa2ad7ff41664184958547HIGHLANDERMenBlackSlimFitMid-RiseCleanLookStretchableJeans1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/8890027/2022/9/26/f49a7b13-801f-42eb-8f9d-68daa2ad7ff41664184958547HIGHLANDERMenBlackSlimFitMid-RiseCleanLookStretchableJeans1.jpg"
       ],
-      "size": ["30", "32", "34", "36", "38"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "3.9",
       "rating_count": "9.4k"
     },
@@ -800,7 +1062,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/19557604/2022/9/19/9f5d5187-0fff-4d20-957f-301aa920b99a1663583460445KRAMenGreySlimFitOversizedPocketsCargosTrousers1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/19557604/2022/9/19/9f5d5187-0fff-4d20-957f-301aa920b99a1663583460445KRAMenGreySlimFitOversizedPocketsCargosTrousers1.jpg"
       ],
-      "size": ["30", "32", "34", "36"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
       "rating": "4.2",
       "rating_count": "9"
     },
@@ -822,7 +1089,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/9838377/2019/7/12/78179e92-0f78-4fca-8eb5-b0ca44a060b01562927656990-HIGHLANDER-Men-Black-Solid-Slim-Fit-Track-Pants-270156292765-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/9838377/2019/7/12/78179e92-0f78-4fca-8eb5-b0ca44a060b01562927656990-HIGHLANDER-Men-Black-Solid-Slim-Fit-Track-Pants-270156292765-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "rating": "4",
       "rating_count": "10k"
     },
@@ -844,7 +1116,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/17852694/2022/8/9/658f9c06-5250-493d-9fb1-c6d0d48601f21660044685137-Blackberrys-Men-Shirts-3141660044684550-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/17852694/2022/8/9/658f9c06-5250-493d-9fb1-c6d0d48601f21660044685137-Blackberrys-Men-Shirts-3141660044684550-1.jpg"
       ],
-      "size": ["38", "39", "40", "42", "44", "46"],
+      "size": [
+        "38",
+        "39",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "3.3",
       "rating_count": "3"
     },
@@ -866,7 +1145,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2038071/2019/4/9/ace5c891-0717-485c-8080-9c37c5c759821554799993054-Roadster-Men-Black--White-Slim-Fit-Solid-Casual-Shirt-322155-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2038071/2019/4/9/ace5c891-0717-485c-8080-9c37c5c759821554799993054-Roadster-Men-Black--White-Slim-Fit-Solid-Casual-Shirt-322155-1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46", "48"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48"
+      ],
       "rating": "4.2",
       "rating_count": "4.4k"
     },
@@ -888,7 +1174,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/7229767/2022/6/9/a12fb5e1-6aed-482b-bd23-a4f03d42eaaf1654769232455-WROGN-Men-Blue-Slim-Fit-Light-Fade-Stretchable-Jeans-2541654-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/7229767/2022/6/9/a12fb5e1-6aed-482b-bd23-a4f03d42eaaf1654769232455-WROGN-Men-Blue-Slim-Fit-Light-Fade-Stretchable-Jeans-2541654-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "3.6",
       "rating_count": "1.5k"
     },
@@ -910,7 +1203,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2414313/2022/4/18/c08becf1-36fc-4c1f-a3c9-92542d3ef8221650284958075HERENOWMenRedBlackCheckedPureCottonCasualShirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2414313/2022/4/18/c08becf1-36fc-4c1f-a3c9-92542d3ef8221650284958075HERENOWMenRedBlackCheckedPureCottonCasualShirt1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.3",
       "rating_count": "13.5k"
     },
@@ -932,7 +1231,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1291760/2017/12/5/11512469309123-Highlander-Dark-Green-Slim-Fit-Casual-Shirt-5071512469308877-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1291760/2017/12/5/11512469309123-Highlander-Dark-Green-Slim-Fit-Casual-Shirt-5071512469308877-1.jpg"
       ],
-      "size": ["39", "40", "42", "44", "46"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.3",
       "rating_count": "15.8k"
     },
@@ -954,7 +1259,16 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/3314157/2018/4/18/11524041081440-Roadster-Men-Grey-Melange-Solid-Round-Neck-T-shirt-3461524041081257-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/3314157/2018/4/18/11524041081440-Roadster-Men-Grey-Melange-Solid-Round-Neck-T-shirt-3461524041081257-1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "3XL",
+        "4XL"
+      ],
       "rating": "4.1",
       "rating_count": "8.7k"
     },
@@ -976,7 +1290,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2312011/2018/4/20/11524215901340-Roadster-Men-Navy-Blue-Slim-Fit-Mid-Rise-Clean-Look-Jeans-5181524215901159-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2312011/2018/4/20/11524215901340-Roadster-Men-Navy-Blue-Slim-Fit-Mid-Rise-Clean-Look-Jeans-5181524215901159-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.8",
       "rating_count": "4.9k"
     },
@@ -998,7 +1320,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/15611412/2021/9/29/9b684f64-c8a6-4808-952e-604516fa5a001632884361405HMMenGreyRelaxedFitSweatshirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/15611412/2021/9/29/9b684f64-c8a6-4808-952e-604516fa5a001632884361405HMMenGreyRelaxedFitSweatshirt1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.4",
       "rating_count": "2.7k"
     },
@@ -1020,7 +1349,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/9162835/2022/8/5/9a32d6ad-f53d-44f3-91c0-a7e73b37dc7d1659708668549HIGHLANDERMenGreyTaperedFitMid-RiseCleanLookStretchableJeans1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/9162835/2022/8/5/9a32d6ad-f53d-44f3-91c0-a7e73b37dc7d1659708668549HIGHLANDERMenGreyTaperedFitMid-RiseCleanLookStretchableJeans1.jpg"
       ],
-      "size": ["30", "32", "34", "36", "38"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "3.8",
       "rating_count": "7.4k"
     },
@@ -1042,7 +1377,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2389865/2019/2/11/3a933326-e756-4d16-a403-5dd2362bfca41549869035664-Mast--Harbour-Men-Green-Slim-Fit-Solid-Casual-Shirt-48154986-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2389865/2019/2/11/3a933326-e756-4d16-a403-5dd2362bfca41549869035664-Mast--Harbour-Men-Green-Slim-Fit-Solid-Casual-Shirt-48154986-1.jpg"
       ],
-      "size": ["38", "40", "42", "44"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
       "rating": "4.3",
       "rating_count": "1.4k"
     },
@@ -1064,7 +1404,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/10143657/2022/8/25/8ca8519c-a5fb-4b63-8c86-82d8a6db0ecd1661423073986-LOCOMOTIVE-Men-Navy-Blue-Tapered-Fit-Mid-Rise-Clean-Look-Str-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/10143657/2022/8/25/8ca8519c-a5fb-4b63-8c86-82d8a6db0ecd1661423073986-LOCOMOTIVE-Men-Navy-Blue-Tapered-Fit-Mid-Rise-Clean-Look-Str-1.jpg"
       ],
-      "size": ["30", "32", "34", "36"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
       "rating": "3.9",
       "rating_count": "2k"
     },
@@ -1086,7 +1431,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/8894747/2019/7/1/f20f58d4-acd3-4abe-af31-268f828e81191561981847991-Roadster-Men-Coffee-Brown-Regular-Fit-Solid-Casual-Shirt-464-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/8894747/2019/7/1/f20f58d4-acd3-4abe-af31-268f828e81191561981847991-Roadster-Men-Coffee-Brown-Regular-Fit-Solid-Casual-Shirt-464-1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46", "48"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48"
+      ],
       "rating": "4",
       "rating_count": "3k"
     },
@@ -1108,7 +1460,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/10498568/2020/6/10/f1bc48ac-9997-4be1-8ce3-81cc6d5e61061591736177979-HRX-by-Hrithik-Roshan-Men-Grey-Solid-Regular-Fit-Training-Jo-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/10498568/2020/6/10/f1bc48ac-9997-4be1-8ce3-81cc6d5e61061591736177979-HRX-by-Hrithik-Roshan-Men-Grey-Solid-Regular-Fit-Training-Jo-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "3.9",
       "rating_count": "2.4k"
     },
@@ -1130,7 +1488,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/10498568/2020/6/10/f1bc48ac-9997-4be1-8ce3-81cc6d5e61061591736177979-HRX-by-Hrithik-Roshan-Men-Grey-Solid-Regular-Fit-Training-Jo-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/10498568/2020/6/10/f1bc48ac-9997-4be1-8ce3-81cc6d5e61061591736177979-HRX-by-Hrithik-Roshan-Men-Grey-Solid-Regular-Fit-Training-Jo-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "3.9",
       "rating_count": "2.4k"
     },
@@ -1152,7 +1516,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/3880938/2018/3/27/11522151773410-HIGHLANDER-Men-Blue-Tapered-Fit-Mid-Rise-Clean-Look-Stretchable-Jeans-7601522151773234-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/3880938/2018/3/27/11522151773410-HIGHLANDER-Men-Blue-Tapered-Fit-Mid-Rise-Clean-Look-Stretchable-Jeans-7601522151773234-1.jpg"
       ],
-      "size": ["30", "32", "34", "36", "38"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "3.8",
       "rating_count": "5.9k"
     },
@@ -1174,7 +1544,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/9716725/2019/7/16/f5d1a03b-1105-4365-bc34-a78cd484d59e1563255429047-Roadster-Men-Jeans-3711563255427297-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/9716725/2019/7/16/f5d1a03b-1105-4365-bc34-a78cd484d59e1563255429047-Roadster-Men-Jeans-3711563255427297-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.8",
       "rating_count": "2.1k"
     },
@@ -1196,7 +1574,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/11964920/2020/6/24/aba49564-4134-4126-ab19-8df7ae2a34d71593000903721HIGHLANDERMenWhiteSlimFitPrintedCasualShirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/11964920/2020/6/24/aba49564-4134-4126-ab19-8df7ae2a34d71593000903721HIGHLANDERMenWhiteSlimFitPrintedCasualShirt1.jpg"
       ],
-      "size": ["39", "40", "42", "44"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44"
+      ],
       "rating": "4.3",
       "rating_count": "4.9k"
     },
@@ -1218,7 +1601,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1352998/2016/8/31/11472645521752-Roadster-Men-Charcoal-Regular-Fit-Washed-Casual-Shirt-1861472645521489-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1352998/2016/8/31/11472645521752-Roadster-Men-Charcoal-Regular-Fit-Washed-Casual-Shirt-1861472645521489-1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46", "48"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46",
+        "48"
+      ],
       "rating": "4.2",
       "rating_count": "2.6k"
     },
@@ -1242,7 +1632,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/6832694/2019/6/20/fb075493-21ab-46ec-a99c-02226b877bbe1561011505646-WROGN-Men-Blue-Slim-Fit-Faded-Casual-Shirt-6921561011503453-1.jpg",
         "https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/6832694/2019/6/20/0ce54d77-9b6c-4fd9-a973-955901158e111561011505531-WROGN-Men-Blue-Slim-Fit-Faded-Casual-Shirt-6921561011503453-6.jpg"
       ],
-      "size": ["39", "40", "42", "44", "46"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.1",
       "rating_count": "2.2k"
     },
@@ -1264,7 +1660,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/10106341/2020/12/4/ebd42abb-c45f-4290-b8e7-073f18f3b8541607088518050-HRX-by-Hrithik-Roshan-Ultralyte-Men-Black-Solid-Running-T-sh-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/10106341/2020/12/4/ebd42abb-c45f-4290-b8e7-073f18f3b8541607088518050-HRX-by-Hrithik-Roshan-Ultralyte-Men-Black-Solid-Running-T-sh-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.4",
       "rating_count": "11.3k"
     },
@@ -1283,7 +1685,16 @@
         "https://assets.myntassets.com/f_webp,dpr_2.0,q_60,w_210,c_limit,fl_progressive/assets/images/16849036/2022/1/21/577a40e4-335d-4608-8050-254409713b951642750442776LooseJeans1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.2,q_60,w_210,c_limit,fl_progressive/assets/images/16849036/2022/1/21/577a40e4-335d-4608-8050-254409713b951642750442776LooseJeans1.jpg"
       ],
-      "size": ["28, ", "29, ", "30, ", "31, ", "32, ", "33, ", "34, ", "36, "],
+      "size": [
+        "28, ",
+        "29, ",
+        "30, ",
+        "31, ",
+        "32, ",
+        "33, ",
+        "34, ",
+        "36, "
+      ],
       "rating": "4.2",
       "rating_count": "130"
     },
@@ -1305,7 +1716,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1265391/2018/8/28/20ed5c08-b7f2-4314-ae55-4940ea6bd7881535444945463-Highlander-Burgundy-Slim-Fit-Casual-Shirt-3631535444945249-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1265391/2018/8/28/20ed5c08-b7f2-4314-ae55-4940ea6bd7881535444945463-Highlander-Burgundy-Slim-Fit-Casual-Shirt-3631535444945249-1.jpg"
       ],
-      "size": ["39", "40", "42", "44", "46"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.2",
       "rating_count": "9.6k"
     },
@@ -1327,7 +1744,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1380186/2019/3/15/25c47c73-44ed-4939-89a2-eaefce6733c81552645766838-Highlander-Black-Solid-Chinos-801552645765097-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1380186/2019/3/15/25c47c73-44ed-4939-89a2-eaefce6733c81552645766838-Highlander-Black-Solid-Chinos-801552645765097-1.jpg"
       ],
-      "size": ["30", "32", "34", "36", "38"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "4.2",
       "rating_count": "2.9k"
     },
@@ -1349,7 +1772,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/12816466/2020/11/30/62fa7132-82a3-4466-b4c6-9ee3e1a33d141606736025690-HERENOW-Men-Tshirts-4781606736024364-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/12816466/2020/11/30/62fa7132-82a3-4466-b4c6-9ee3e1a33d141606736025690-HERENOW-Men-Tshirts-4781606736024364-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "rating": "4.2",
       "rating_count": "1.8k"
     },
@@ -1371,7 +1799,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/7139455/2020/9/24/39287e29-0f88-47b3-b1d9-b33095aab3a31600932034431-Roadster-Men-Blue-Skinny-Fit-Mid-Rise-Clean-Look-Stretchable-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/7139455/2020/9/24/39287e29-0f88-47b3-b1d9-b33095aab3a31600932034431-Roadster-Men-Blue-Skinny-Fit-Mid-Rise-Clean-Look-Stretchable-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.6",
       "rating_count": "1.7k"
     },
@@ -1393,7 +1829,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2292044/2018/3/12/11520858607537-Roadster-Men-Charcoal-Solid-Regular-Fit-Regular-Shorts-5591520858607363-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2292044/2018/3/12/11520858607537-Roadster-Men-Charcoal-Solid-Regular-Fit-Regular-Shorts-5591520858607363-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
       "rating": "4.1",
       "rating_count": "4.8k"
     },
@@ -1415,7 +1857,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/10167307/2022/4/18/3afd98da-3278-4179-827f-647bbac0e9511650284917884TheRoadsterLifestyleCoMenBlackSolidHoodedSweatshirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/10167307/2022/4/18/3afd98da-3278-4179-827f-647bbac0e9511650284917884TheRoadsterLifestyleCoMenBlackSolidHoodedSweatshirt1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL", "3XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "3XL"
+      ],
       "rating": "4.4",
       "rating_count": "5.1k"
     },
@@ -1437,7 +1887,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2032637/2018/4/4/11522828290402-WROGN-Men-Blue--Brown-Slim-Fit-Checked-Casual-Shirt-1451522828290200-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2032637/2018/4/4/11522828290402-WROGN-Men-Blue--Brown-Slim-Fit-Checked-Casual-Shirt-1451522828290200-1.jpg"
       ],
-      "size": ["39", "40", "42", "44", "46"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.2",
       "rating_count": "2.8k"
     },
@@ -1459,7 +1915,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/11/17/f4305e3c-c3c8-41d9-8a86-910e4d143eef1605626008106-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/11/17/f4305e3c-c3c8-41d9-8a86-910e4d143eef1605626008106-1.jpg"
       ],
-      "size": ["30", "32", "34", "37", "41"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "37",
+        "41"
+      ],
       "rating": "4.3",
       "rating_count": "4.2k"
     },
@@ -1481,7 +1943,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/4607725/2018/11/19/246c798f-5955-456b-983b-a4edd54fd5d91542623547987-Roadster-Men-Jeans-311542623547790-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/4607725/2018/11/19/246c798f-5955-456b-983b-a4edd54fd5d91542623547987-Roadster-Men-Jeans-311542623547790-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.3",
       "rating_count": "1.2k"
     },
@@ -1503,7 +1973,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/19672416/2022/8/26/da8b5762-613a-479b-ae6d-d8fc1daaba291661524114870FITINCMenBlueSolidSlim-FitTrackPants1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/19672416/2022/8/26/da8b5762-613a-479b-ae6d-d8fc1daaba291661524114870FITINCMenBlueSolidSlim-FitTrackPants1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL", "3XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "3XL"
+      ],
       "rating": "4.3",
       "rating_count": "7"
     },
@@ -1524,7 +2001,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.4,q_60,w_210,c_limit,fl_progressive/assets/images/12654938/2020/12/1/e5d1b51e-5b35-42c2-8b72-172ef691e4611606827861846-HERENOW-Men-Shirts-5891606827859535-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/12654938/2020/12/1/e5d1b51e-5b35-42c2-8b72-172ef691e4611606827861846-HERENOW-Men-Shirts-5891606827859535-1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.4",
       "rating_count": "2k"
     },
@@ -1546,7 +2029,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/15118596/2022/5/4/18db07c3-5992-482c-9cdd-9de07b6ab6e41651662010592PumaMenBlackSolidSlimFitTrackSuit1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/15118596/2022/5/4/18db07c3-5992-482c-9cdd-9de07b6ab6e41651662010592PumaMenBlackSolidSlimFitTrackSuit1.jpg"
       ],
-      "size": ["XXS", "XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XXS",
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.4",
       "rating_count": "109"
     },
@@ -1568,7 +2059,16 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2308267/2018/1/29/11517216335231-Roadster-Men-Maroon-Printed-Round-Neck-T-shirt-5591517216335098-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2308267/2018/1/29/11517216335231-Roadster-Men-Maroon-Printed-Round-Neck-T-shirt-5591517216335098-1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "3XL",
+        "4XL"
+      ],
       "rating": "4",
       "rating_count": "21.2k"
     },
@@ -1590,7 +2090,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/11067734/2019/12/10/34b589c2-80b9-4ad9-81ea-84333fbc46761575972548055-DILLINGER-Men-Tshirts-4071575972546110-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/11067734/2019/12/10/34b589c2-80b9-4ad9-81ea-84333fbc46761575972548055-DILLINGER-Men-Tshirts-4071575972546110-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.3",
       "rating_count": "11.1k"
     },
@@ -1612,7 +2118,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/5830514/2018/10/12/df770860-fbe0-49a1-ab4f-0f79dc55a3fd1539333747455-HIGHLANDER-Men-Teal-Slim-Fit-Solid-Casual-Shirt-167153933374-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/5830514/2018/10/12/df770860-fbe0-49a1-ab4f-0f79dc55a3fd1539333747455-HIGHLANDER-Men-Teal-Slim-Fit-Solid-Casual-Shirt-167153933374-1.jpg"
       ],
-      "size": ["39", "40", "42", "44"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44"
+      ],
       "rating": "4.1",
       "rating_count": "1.9k"
     },
@@ -1634,7 +2145,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/19904764/2022/9/10/7b7be50e-942b-42f2-afc5-c485b3c5e7a51662808302101HIGHLANDERMenBlueSweatshirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/19904764/2022/9/10/7b7be50e-942b-42f2-afc5-c485b3c5e7a51662808302101HIGHLANDERMenBlueSweatshirt1.jpg"
       ],
-      "size": ["S", "M", "L", "XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "rating": "4.7",
       "rating_count": "17"
     },
@@ -1656,7 +2172,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/18138024/2022/5/4/1b126a1a-259c-4e77-8039-503fb250daad1651661065083HERENOWMenWhiteSlimFitStripedCasualShirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/18138024/2022/5/4/1b126a1a-259c-4e77-8039-503fb250daad1651661065083HERENOWMenWhiteSlimFitStripedCasualShirt1.jpg"
       ],
-      "size": ["38", "40", "42", "44", "46"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.2",
       "rating_count": "90"
     },
@@ -1678,7 +2200,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1875815/2017/11/15/11510738725818-Roadster-Men-Black-Solid-Bomber-Jacket-4161510738725637-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1875815/2017/11/15/11510738725818-Roadster-Men-Black-Solid-Bomber-Jacket-4161510738725637-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL", "XXXL", "3XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "XXXL",
+        "3XL"
+      ],
       "rating": "4.4",
       "rating_count": "1.8k"
     },
@@ -1700,7 +2230,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/9951439/2019/8/22/90ae3074-3fe6-4802-94d9-a1234fb74e8f1566474919386-Roadster-Men-Shirts-321566474918087-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/9951439/2019/8/22/90ae3074-3fe6-4802-94d9-a1234fb74e8f1566474919386-Roadster-Men-Shirts-321566474918087-1.jpg"
       ],
-      "size": ["38", "40", "42", "44"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
       "rating": "4",
       "rating_count": "616"
     },
@@ -1722,7 +2257,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2314359/2018/5/17/4010da6c-79a6-4452-aca8-006502ec55141526534323055-HRX-by-Hrithik-Roshan-Men-Track-Pants-451526534322918-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2314359/2018/5/17/4010da6c-79a6-4452-aca8-006502ec55141526534323055-HRX-by-Hrithik-Roshan-Men-Track-Pants-451526534322918-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.1",
       "rating_count": "11k"
     },
@@ -1744,7 +2285,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/14274384/2021/6/10/7debf1ea-bcd6-4e10-96bf-ae5c922717491623319392863-Nike-DNA-Mens-Basketball-Woven-Pants-2681623319392407-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/14274384/2021/6/10/7debf1ea-bcd6-4e10-96bf-ae5c922717491623319392863-Nike-DNA-Mens-Basketball-Woven-Pants-2681623319392407-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.1",
       "rating_count": "214"
     },
@@ -1766,7 +2313,16 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/10941384/2020/2/13/9447a845-892a-49f5-91ee-4de8a6589a541581587257528-Roadster-Men-Tshirts-8221581587255142-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/10941384/2020/2/13/9447a845-892a-49f5-91ee-4de8a6589a541581587257528-Roadster-Men-Tshirts-8221581587255142-1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "3XL",
+        "4XL"
+      ],
       "rating": "4",
       "rating_count": "6.5k"
     },
@@ -1788,7 +2344,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/16057202/2021/11/10/e3541adf-3a1e-4ccc-bedd-644c2e0f29221636560314413RelaxedFitHoodie1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/16057202/2021/11/10/e3541adf-3a1e-4ccc-bedd-644c2e0f29221636560314413RelaxedFitHoodie1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.5",
       "rating_count": "1.1k"
     },
@@ -1810,7 +2373,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/18074882/2022/6/7/9dde956b-a0a3-41d4-8833-7d3c312a8bce1654604272747-Levis-Men-Jeans-8141654604272117-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/18074882/2022/6/7/9dde956b-a0a3-41d4-8833-7d3c312a8bce1654604272747-Levis-Men-Jeans-8141654604272117-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "4.4",
       "rating_count": "53"
     },
@@ -1832,7 +2402,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/14919518/2021/8/25/3dc42c85-a54c-435c-bb74-3503de8e705f1629889229951-PUMA-Motorsport-Men-Jackets-1761629889229282-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/14919518/2021/8/25/3dc42c85-a54c-435c-bb74-3503de8e705f1629889229951-PUMA-Motorsport-Men-Jackets-1761629889229282-1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.5",
       "rating_count": "182"
     },
@@ -1854,7 +2431,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2378362/2018/6/9/270e0a7e-365b-4640-9433-b269c60bf3061528527188563-Moda-Rapido-Men-Maroon-Printed-Round-Neck-T-shirt-3811528527-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2378362/2018/6/9/270e0a7e-365b-4640-9433-b269c60bf3061528527188563-Moda-Rapido-Men-Maroon-Printed-Round-Neck-T-shirt-3811528527-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "3.7",
       "rating_count": "23.8k"
     },
@@ -1876,7 +2459,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2338117/2022/6/9/91d0d216-25f0-499b-a009-91dafc07cb3a1654769216992-WROGN-Men-Grey-Slim-Fit-Light-Fade-Stretchable-Jeans-3201654-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2338117/2022/6/9/91d0d216-25f0-499b-a009-91dafc07cb3a1654769216992-WROGN-Men-Grey-Slim-Fit-Light-Fade-Stretchable-Jeans-3201654-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
       "rating": "4",
       "rating_count": "1.3k"
     },
@@ -1898,7 +2488,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/12817134/2020/11/7/6c19e91e-911e-4a01-8fef-94db92e30f1e1604727921718-HERENOW-Men-Sweatshirts-5491604727920321-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/12817134/2020/11/7/6c19e91e-911e-4a01-8fef-94db92e30f1e1604727921718-HERENOW-Men-Sweatshirts-5491604727920321-1.jpg"
       ],
-      "size": ["S", "M", "L", "XL", "XXL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.4",
       "rating_count": "1.1k"
     },
@@ -1920,7 +2516,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/17394970/2022/5/12/400cfe3d-6a9a-45d8-8008-41ab431ce5721652350717156-Puma-Men-Track-Pants-3831652350716513-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/17394970/2022/5/12/400cfe3d-6a9a-45d8-8008-41ab431ce5721652350717156-Puma-Men-Track-Pants-3831652350716513-1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4.7",
       "rating_count": "32"
     },
@@ -1942,7 +2545,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2525011/2022/7/18/a99fc558-0245-419f-932b-efd5f1895d581658124980099-Roadster-Men-Black-Slim-Fit-Mid-Rise-Stretchable-Jeans-61416-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2525011/2022/7/18/a99fc558-0245-419f-932b-efd5f1895d581658124980099-Roadster-Men-Black-Slim-Fit-Mid-Rise-Stretchable-Jeans-61416-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
       "rating": "3.8",
       "rating_count": "670"
     },
@@ -1964,7 +2573,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/15/5b9a1046-2369-4976-9ece-d8e0013e06fb1602716976713-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/15/5b9a1046-2369-4976-9ece-d8e0013e06fb1602716976713-1.jpg"
       ],
-      "size": ["39", "40", "42", "44"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44"
+      ],
       "rating": "4.3",
       "rating_count": "1.5k"
     },
@@ -1986,7 +2600,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/19457740/2022/8/10/0f8da751-ec7b-460d-8b74-e373b05708621660117706801AllenSollyWhiteShirt1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/19457740/2022/8/10/0f8da751-ec7b-460d-8b74-e373b05708621660117706801AllenSollyWhiteShirt1.jpg"
       ],
-      "size": ["38", "39", "40", "42"],
+      "size": [
+        "38",
+        "39",
+        "40",
+        "42"
+      ],
       "rating": "4.8",
       "rating_count": "5"
     },
@@ -2008,7 +2627,16 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1371410/2016/8/31/11472626355661-Roadster-Men-Bronze-Printed-V-Neck-T-Shirt-2251472626355441-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1371410/2016/8/31/11472626355661-Roadster-Men-Bronze-Printed-V-Neck-T-Shirt-2251472626355441-1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL",
+        "3XL",
+        "4XL"
+      ],
       "rating": "4.2",
       "rating_count": "5.6k"
     },
@@ -2030,7 +2658,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/13137108/2021/7/27/c19d430d-ea70-42d4-ba4b-da3cde8478e11627373157096HIGHLANDERMenPurpleSolidDenimJacket1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/13137108/2021/7/27/c19d430d-ea70-42d4-ba4b-da3cde8478e11627373157096HIGHLANDERMenPurpleSolidDenimJacket1.jpg"
       ],
-      "size": ["S", "M", "L", "XL"],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "rating": "4.2",
       "rating_count": "1.3k"
     },
@@ -2052,7 +2685,15 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/2356405/2021/3/15/c07aadad-5fee-423b-a280-f90d46d8a3b11615788949490-Roadster-Men-Navy-Blue-Skinny-Fit-Mid-Rise-Clean-Look-Stretc-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/2356405/2021/3/15/c07aadad-5fee-423b-a280-f90d46d8a3b11615788949490-Roadster-Men-Navy-Blue-Skinny-Fit-Mid-Rise-Clean-Look-Stretc-1.jpg"
       ],
-      "size": ["28", "30", "32", "34", "36", "38", "40"],
+      "size": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36",
+        "38",
+        "40"
+      ],
       "rating": "3.7",
       "rating_count": "405"
     },
@@ -2074,7 +2715,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/6/5/30ed37f1-beb1-478f-893c-1dafb21fae721559718143504-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/6/5/30ed37f1-beb1-478f-893c-1dafb21fae721559718143504-1.jpg"
       ],
-      "size": ["30", "32", "34", "36"],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
       "rating": "3.9",
       "rating_count": "1.4k"
     },
@@ -2096,7 +2742,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/17091614/2022/2/18/779ac019-8b8c-48f7-9c5e-b3e2fe3004b01645166457327-Men-White-Casual-Shirt-5731645166456476-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/17091614/2022/2/18/779ac019-8b8c-48f7-9c5e-b3e2fe3004b01645166457327-Men-White-Casual-Shirt-5731645166456476-1.jpg"
       ],
-      "size": ["38", "40", "42", "44"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
       "rating": "3.9",
       "rating_count": "340"
     },
@@ -2118,7 +2769,14 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/6510458/2018/10/30/da83c4d2-8416-4f3a-bc6d-46129eaf5ef71540895310508-Roadster-Men-Black-Solid-Sweatshirt-9721540895310347-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/6510458/2018/10/30/da83c4d2-8416-4f3a-bc6d-46129eaf5ef71540895310508-Roadster-Men-Black-Solid-Sweatshirt-9721540895310347-1.jpg"
       ],
-      "size": ["XS", "S", "M", "L", "XL", "XXL"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "rating": "4",
       "rating_count": "8.1k"
     },
@@ -2140,7 +2798,12 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1352820/2022/7/20/3477af99-9ab7-4786-b0b0-120fd3908ebf1658313200930-Mast--Harbour-Men-Blue-Solid-Casual-Pure-Cotton-Shirt-180165-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1352820/2022/7/20/3477af99-9ab7-4786-b0b0-120fd3908ebf1658313200930-Mast--Harbour-Men-Blue-Solid-Casual-Pure-Cotton-Shirt-180165-1.jpg"
       ],
-      "size": ["38", "40", "42", "44"],
+      "size": [
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
       "rating": "3.9",
       "rating_count": "1.5k"
     },
@@ -2162,7 +2825,13 @@
         "https://assets.myntassets.com/f_webp,dpr_2.6,q_60,w_210,c_limit,fl_progressive/assets/images/1265392/2020/1/20/12fc0ced-84b7-4933-8cbc-5a7832c7686e1579504849580-Highlander-Black-Slim-Fit-Casual-Shirt-2521579504847937-1.jpg",
         "https://assets.myntassets.com/f_webp,dpr_2.8,q_60,w_210,c_limit,fl_progressive/assets/images/1265392/2020/1/20/12fc0ced-84b7-4933-8cbc-5a7832c7686e1579504849580-Highlander-Black-Slim-Fit-Casual-Shirt-2521579504847937-1.jpg"
       ],
-      "size": ["39", "40", "42", "44", "46"],
+      "size": [
+        "39",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
       "rating": "4.3",
       "rating_count": "10.2k"
     }

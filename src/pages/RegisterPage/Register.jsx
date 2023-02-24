@@ -1,18 +1,20 @@
 import React, { useState } from 'react'
 import styles from "./Register.module.css"
-import logo from "./ebay.jpeg"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Registerdata } from '../../utils/accesslocalstore'
 
-export const Register = () => {
-    const [data, setdata] = useState({
-        Firstname: "",
-        Lastname: "",
-        Email: "",
-        Password: "",
-        Type: "" 
+const initstate = {
+    Firstname: "",
+    Lastname: "",
+    Email: "",
+    Password: "",
+    Type: "",
+}
 
-    })
+
+export const Register = () => {
+    const [data, setdata] = useState(initstate)
+    const navigate = useNavigate()
 
     console.log(data)
 
@@ -23,8 +25,10 @@ const handlechange = (e) => {
 const handleSubmit = (e) => {
     e.preventDefault()
     Registerdata(data)
-    console.log(data, "OK")
-}
+    setdata(initstate)
+    navigate("/login")
+
+};
 
 
   return (
@@ -35,7 +39,7 @@ const handleSubmit = (e) => {
         </div>
 
         <div id={styles.singintext}>
-            <p>Already a member? <Link rel="stylesheet" href="/" >Sign in </ Link></p>
+            <p>Already a member? <a rel="stylesheet" href="http://localhost:3000/login" >Sign in </ a></p>
         </div>
     <br />
     <br />
@@ -48,9 +52,6 @@ const handleSubmit = (e) => {
             <img src="https://secureir.ebaystatic.com/pictures/aw/OCS_SelfService/Inflowhelp_Feedback_Blue_Icon.svg" alt="note" />
       
        </div>
-
-
-
 
 
         <div id={styles.abjdesc}>
@@ -69,9 +70,9 @@ const handleSubmit = (e) => {
     </h1>
     </div>
     <div style={{display: "flex", justifyContent: "space-around", alignItems: "center"  }} onChange={ (e) => handlechange(e)  }>    
-    <input type="radio" name="Type" value={"Personal"} />
+    <input type="radio" name="Type" value={"user"} />
     <label>Personal account</label>
-    <input type="radio" name="Type" value={"Business"} />
+    <input type="radio" name="Type" value={"admin"} />
     <label >Business account</label>
     </div>
     </div>
@@ -98,7 +99,7 @@ const handleSubmit = (e) => {
         </div>
 
         <div id={styles.btn_div}>
-        <button id={styles.btn} >Register</button>
+        <button id={styles.btn} type="submit" disabled={ data.Firstname === "" || data.Lastname === "" || data.Email === "" || data.Password ==="" || data.Type === "" }  >Register</button>
         </div>
     </form>
     </div>
@@ -111,11 +112,6 @@ const handleSubmit = (e) => {
     </div>
 
  
-
-
-
-
-
 
     </div>
   )
