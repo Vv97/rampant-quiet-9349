@@ -14,7 +14,7 @@ export default function Final() {
         height: "60vh",
         width: "75%",
         backgroundColor: "white",
-        marginLeft: "300px",
+        marginLeft: "280px",
         marginBottom: "30px",
         borderRadius: "10px",
         padding: "10px",

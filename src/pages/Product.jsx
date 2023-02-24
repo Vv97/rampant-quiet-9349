@@ -28,9 +28,9 @@ import SampleBrand from "./SampleBrands";
 import Final from "../components/Carousel/Final";
 
 let brands = [
-  "HRX by Hrithik Roshan ",
+  "HRX by Hrithik Roshan",
   "Roadster",
-  "The Indian Garage Co ",
+  "The Indian Garage Co",
   "HIGHLANDER",
   "LOCOMOTIVE",
   "United Colors of Benetton",
@@ -44,10 +44,6 @@ let brands = [
   "WROGN",
   "Urbano Fashion",
   "High Star",
-  "KRA",
-  "Blackberrys",
-  "Artengo By Decathlon",
-  "FITINC",
 ]; /**
 ,
 */
@@ -157,13 +153,13 @@ const Product = () => {
           justifyContent={"space-between"}
         >
           <Box
-            border={"px solid red"}
+            border={"0px solid red"}
             backgroundColor={"white"}
             textAlign={"left"}
             zIndex={"100"}
             w={"20%"}
-            // position={"fixed"}
-            top={29}
+            position={"fixed"}
+            top={-35}
             display={{
               base: "none",
               sm: "none",
@@ -190,11 +186,12 @@ const Product = () => {
               md: "none",
               lg: "inline-block",
             }}
-            // position={"fixed"}
+            position={"fixed"}
             w={"20%"}
-            top={"9rem"}
+            top={"6rem"}
             zIndex={"100"}
             backgroundColor={"#FFF"}
+            border={"0px solid red"}
           >
             <Flex
               justifyContent={"space-between"}
@@ -248,11 +245,12 @@ const Product = () => {
             border={"0px solid gray"}
             w={{ lg: "80%", sm: "100%", md: "100%", base: "100%" }}
             ml={{ base: 0, sm: 0, md: 0, lg: "22%" }}
+            marginTop={"-70px"}
           >
             <div className={prodStyle.products}>
               <Flex
                 justifyContent={"space-between"}
-                borderBottom={"2px solid gray"}
+                borderBottom={"0px solid gray"}
                 zIndex={14}
                 backgroundColor={"white"}
               >

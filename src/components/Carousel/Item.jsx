@@ -4,7 +4,7 @@ export default function Item(props) {
   const style1 = {
     margin: "10px",
     height: "250px",
-    fontWeight: "200",
+    fontWeight: "50",
 
     borderRadius: "10px",
     color: "black",
@@ -26,7 +26,14 @@ export default function Item(props) {
           borderRadius: "10px",
         }}
       />
-      <h2 style={{ color: "black", marginTop: "50px", marginLeft: "50px" }}>
+      <h2
+        style={{
+          color: "black",
+          marginTop: "60px",
+          textAlign: "center",
+          fontSize: "15px",
+        }}
+      >
         {props.name}
       </h2>
     </div>
