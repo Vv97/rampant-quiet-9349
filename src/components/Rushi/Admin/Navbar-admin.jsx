@@ -19,9 +19,14 @@ const NavbarAdmin = () => {
 
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const redirect_Products = () => {
     console.log("hello")
     navigate("/admin_products")
+  }
+
+  const redirect_AdminHome = () => {
+    console.log("hello")
+    navigate("/admin")
   }
   return (
     <div className="nav_main">
@@ -29,10 +34,10 @@ const NavbarAdmin = () => {
         <img src="https://i.imgur.com/FQCppUc.png" alt="logo" />
       </div>
       <div className="navigate_section">
-        <div className="navigate_section_home">
+        <div onClick={redirect_AdminHome} className="navigate_section_home">
           <b>Home</b>
         </div>
-        <div onClick={handleClick} className="navigate_section_products">
+        <div onClick={redirect_Products} className="navigate_section_products">
           <b>Products</b>
         </div>
       </div>
