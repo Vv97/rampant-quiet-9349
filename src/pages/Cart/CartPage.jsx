@@ -125,10 +125,9 @@ const responsive = {
   },
 };
 
-
 // const cartData={
 //   image:"https://designerbrandsforles.ipage.com/9-21/Nike-CB-804408-Heather-Grey-S__1.JPG",
-  
+
 // }
 // export function currentData(Q){
 //   return Q
@@ -189,13 +188,18 @@ const CartPage = () => {
                 <label id="quantity">Qty </label>
                 <button
                   disabled={current === 1}
-                  style={{width:"20px"}}
+                  style={{ width: "20px" }}
                   onClick={() => setCurrent((prev) => prev - 1)}
                 >
                   -
                 </button>
-                <button disabled style={{width:"20px"}}>{current}</button>
-                <button style={{width:"20px"}} onClick={() => setCurrent((prev) => prev + 1)}>
+                <button disabled style={{ width: "20px" }}>
+                  {current}
+                </button>
+                <button
+                  style={{ width: "20px" }}
+                  onClick={() => setCurrent((prev) => prev + 1)}
+                >
                   +
                 </button>
               </div>
@@ -210,7 +214,7 @@ const CartPage = () => {
             <div className="secDiv-1-2-3">
               <div>
                 <p>US ${formatter.format(price - x)}</p>
-                <div style={{marginTop:"10px"}}>
+                <div style={{ marginTop: "10px" }}>
                   <strike>US ${formatter.format(price)}</strike>
                 </div>
                 <div>+US{formatter.format(x)}</div>

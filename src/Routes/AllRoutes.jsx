@@ -7,7 +7,9 @@ import CheckOutPage from "../pages/CheckOut/CheckOutPage";
 import SeeDetails from "../pages/CheckOut/SeeDetails/SeeDetails";
 import { Home } from "../pages/Home/Home";
 import { Login } from "../pages/Loginpage/Login";
+import Product from "../pages/Product";
 import { Register } from "../pages/RegisterPage/Register";
+import SingleProductPage from "../pages/SingleProductPage";
 
 export const AllRoutes = () => {
   return (
@@ -15,12 +17,14 @@ export const AllRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/admin" element={<Admin />} />
-      <Route path="/checkout" element={<CheckOutPage/>}/>
+      <Route path="/checkout" element={<CheckOutPage />} />
       {/* <Route path="/seeDetails" element={<SeeDetails/>}/> */}
       <Route path="*" element={<h1>page not found</h1>} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/admin_products" element={<AdminProducts/>}/>
+      <Route path="/admin_products" element={<AdminProducts />} />
+      <Route path="/product" element={<Product />} />
+      <Route path="/product/:id" element={<SingleProductPage />}></Route>
     </Routes>
   );
 };
