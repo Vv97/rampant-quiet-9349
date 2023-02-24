@@ -25,6 +25,7 @@ import Pagination from "../components/Pagination";
 import { useCallback } from "react";
 
 import SampleBrand from "./SampleBrands";
+import Final from "../components/Carousel/Final";
 
 let brands = [
   "HRX by Hrithik Roshan ",
@@ -144,6 +145,7 @@ const Product = () => {
 
   return (
     <div>
+      <Final />
       <Box
         className={prodStyle.product_container}
         mt={{ base: "5rem", sm: "5rem", md: "3.9rem", lg: "7.2rem" }}
@@ -155,12 +157,12 @@ const Product = () => {
           justifyContent={"space-between"}
         >
           <Box
-            border={"0px solid red"}
+            border={"px solid red"}
             backgroundColor={"white"}
             textAlign={"left"}
             zIndex={"100"}
             w={"20%"}
-            position={"fixed"}
+            // position={"fixed"}
             top={29}
             display={{
               base: "none",
@@ -188,7 +190,7 @@ const Product = () => {
               md: "none",
               lg: "inline-block",
             }}
-            position={"fixed"}
+            // position={"fixed"}
             w={"20%"}
             top={"9rem"}
             zIndex={"100"}
