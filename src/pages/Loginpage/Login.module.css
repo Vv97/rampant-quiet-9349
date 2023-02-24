@@ -4,7 +4,7 @@
 }
 
 #learn{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-align: right;
     padding-right: 10px;
 }
@@ -15,7 +15,7 @@
 #logo{
     width: 15%;
     height: 40px;
-    border: 1px solid rgb(169, 72, 72);
+    /* border: 1px solid rgb(169, 72, 72); */
 }
 
 #logo > img {
@@ -24,20 +24,22 @@
 }
 
 #formDiv {
-    border: 1px solid rgb(64, 0, 255);
+    /* border: 1px solid rgb(64, 0, 255); */
     margin: auto;
     width: 60%;
-    height: 800px;
+    height: 1000px;
 }
 
 
 
 #desc{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
     width: 50%;
     height: 140px;
     margin-top: 30px;
+    padding: 5px;
+    background-color: blueviolet;
     
 }
 
@@ -50,7 +52,7 @@
 #hello{
     width: 30%;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
 }
@@ -61,7 +63,7 @@
 } */
 
 #sign {
-    border: 1px solid rgb(153, 138, 138);
+    /* border: 1px solid rgb(153, 138, 138); */
     width: 36%;
     margin: auto;
     justify-content: center;
@@ -72,22 +74,112 @@
 
 #formdata {
     margin: auto;
-    width: 50%;
-    border: 1px solid red;
-    height: 400px;
+    width: 60%;
+    /* border: 1px solid red; */
+    height: 600px;
     margin-top: 40px;
+    
 
 }
 
 #formdata > form > div {
-    border: 1px solid rgb(0, 255, 47);
-    width: 90%;
-    height: 60px;
+    /* border: 1px solid rgb(0, 255, 47); */
+    width: 95%;
+    height: 70px;
     margin: auto;
+    margin-top: 15px;
+   
 }
 
-.inputDiv > input, button{
+.inputDiv{
+    /* border: 1px solid rgb(0, 4, 255); */
+    width: 95%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    border-radius: 25px;
+    
+}
+
+.btn_img{
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+   
+}
+
+.inputDiv > input{
     margin: auto;
     width: 95%;
     height: 90%;
+
+}
+.div_btn{
+    margin: auto;
+    width: 95%;
+    height: 90%;
+    border-radius: 25px;
+    font-size: large;
+    border: none;
+    background-color: rgb(76, 76, 221);
+    cursor: pointer;
+}
+
+
+#check_div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#text_div{
+    margin: auto;
+    width: 60%;
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+#show_box{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    
+
+}
+
+#show_div {
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: auto;
+    margin-left: 25%;
+  
+}
+
+#show_btn {
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: auto;
+    height: 180px;
+    background-color: blueviolet;
+
+}
+
+
+
+
+#terms{
+    margin: auto;
+    width: 90%;
+    height: 150px;
+  
+}
+
+
+#terms > p {
+    width: 90%;
+    margin: auto;
+    font-size: 13px;
 }
