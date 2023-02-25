@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.customcard{
+  display: flex;
+  max-width: 1248px;
+  margin: auto;
+}
+
+
+.customcard > div:first-child{
+    width: 283px;
+    box-sizing: border-box;
+    max-width: 283px;
+    padding-left: 1rem;
+    padding-top:1rem;
+}
+
+.customcard > div:last-child > img {
+    width: 100%;
+}
+
+
+.customcard > div:first-child > h3{
+    color: #21491c;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.customcard > div:first-child > p {
+    color: #21491c;
+   margin: 5px 0px 20px 0px;
+}
+
+.customcard > div:first-child > button{
+    border: 1px solid #21491c;
+    width: 140px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #21491c;
+}
+
+
+@media all and (max-width : 960px){
+  .customcard > div:first-child {
+    max-width: 261px;
+    width: 261px;
+  }
+}
+
+
+@media all and (max-width:768px){
+    .customcard > div:first-child {
+    max-width: 247px;
+    width: 247px;
+    }
+}
