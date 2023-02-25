@@ -4,6 +4,8 @@ import "./CartPage.css";
 import {Navbar} from "../../components/fw21_0631/Navbar/Navbar"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Footer } from "../../components/fw21_0631/Footer/Footer";
+
 // const SliderData = [
 //   {
 //     image: "https://i.ebayimg.com/thumbs/images/g/ATcAAOSwquhj1Q0W/s-l200.jpg",
@@ -537,6 +539,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
    
   );
