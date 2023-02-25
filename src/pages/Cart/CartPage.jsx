@@ -196,8 +196,7 @@ const CartPage = () => {
                 >
                   -
                 </button>
-                {/* <button disabled>{current}</button> */}
-                {/* <button onClick={() => setCurrent((prev) => prev + 1)}></button> */}
+                
                 <button disabled style={{ width: "20px" }}>
                   {current}
                 </button>
@@ -539,7 +538,7 @@ const CartPage = () => {
         </div>
       </div>
     </div>
-    
+   
   );
 };
 
