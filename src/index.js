@@ -13,16 +13,16 @@ root.render(
 
 
 
-<ChakraProvider> 
-  <BrowserRouter>
-   <Provider store={store}>
+//  <ChakraProvider> 
+//   <BrowserRouter>
+//    <Provider store={store}> 
   <ChakraProvider resetCSS={false}>
     <BrowserRouter>
       <Provider store={store}>
         <App />
       </Provider>
     </BrowserRouter>
-  </ChakraProvider>
+   </ChakraProvider>
 
 );
 
