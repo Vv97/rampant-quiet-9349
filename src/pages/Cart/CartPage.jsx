@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CartPage.css";
-import {Navbar} from "../../components/fw21_0631/Navbar/Navbar"
+import { Navbar } from "../../components/fw21_0631/Navbar/Navbar";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 // const SliderData = [
@@ -125,8 +125,6 @@ const responsive = {
   },
 };
 
-
-
 // const cartData={
 //   image:"https://designerbrandsforles.ipage.com/9-21/Nike-CB-804408-Heather-Grey-S__1.JPG",
 
@@ -149,7 +147,7 @@ const CartPage = () => {
   });
   let x = 14.99 * current;
   let y = 12.38 * current;
-  // console.log(x)
+  console.log(x)
 
   return (
     <div >
@@ -182,7 +180,7 @@ const CartPage = () => {
                   Nike Mens Jogger Athletic Regular Fit <br />
                   Gym Work Out Draw String Casual Sweatpants{" "}
                 </p>
-                <p style={{ fontWeight: "400", marginTop: "-18px" }}>L,Grey</p>
+                <p style={{ fontWeight: "400", marginTop: "8px" }}>L,Grey</p>
                 <p>New with tags</p>
               </div>
             </div>
@@ -200,6 +198,10 @@ const CartPage = () => {
                 <button onClick={() => setCurrent((prev) => prev + 1)} 
                 /////find
                 disabled style={{ width: "20px" }}>
+
+                
+                <button disabled style={{ width: "20px" }}>
+
                   {current}
                 </button>
                 <button
@@ -230,6 +232,7 @@ const CartPage = () => {
               <button id="remove-btn">Remove</button>
             </div>
           </div>
+            </div>
           <div className="secDiv-1-3">
             {/* {current>1} */}
             {current === 1 ? (
@@ -246,6 +249,7 @@ const CartPage = () => {
               </p>
             )}
           </div>
+      
         </div>
         <div className="secDiv-2">
           <div>
@@ -266,6 +270,8 @@ const CartPage = () => {
             <div>US ${formatter.format(price - x + y)}</div>
           </div>
         </div>
+
+      
       </div>
       <div id="third-Div">
         <div className="thirdDiv-1">Related sponsored items </div>
@@ -536,6 +542,7 @@ const CartPage = () => {
         </div>
       </div>
     </div>
+
     </div>
   );
 };
