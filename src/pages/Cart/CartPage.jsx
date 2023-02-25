@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CartPage.css";
-import {Navbar} from "../../components/fw21_0631/Navbar/Navbar"
+import { Navbar } from "../../components/fw21_0631/Navbar/Navbar";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 // const SliderData = [
@@ -125,8 +125,6 @@ const responsive = {
   },
 };
 
-
-
 // const cartData={
 //   image:"https://designerbrandsforles.ipage.com/9-21/Nike-CB-804408-Heather-Grey-S__1.JPG",
 
@@ -149,7 +147,7 @@ const CartPage = () => {
   });
   let x = 14.99 * current;
   let y = 12.38 * current;
-  // console.log(x)
+  console.log(x)
 
   return (
     <div>
