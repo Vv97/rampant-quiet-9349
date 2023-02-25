@@ -133,9 +133,14 @@ const responsive = {
 //   return Q
 
 // }
+let data = localStorage.getItem("bookData");
+let res = JSON.parse(data);
+
+let data1 = localStorage.getItem("bookSize");
+let res1 = JSON.parse(data1);
 
 const CartPage = () => {
-  let price = 55;
+  let price = +res.discounted_price;
   // let discount=price*7
   const [current, setCurrent] = React.useState(1);
   //   const length = SliderData.length;
@@ -145,9 +150,11 @@ const CartPage = () => {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
-  let x = 14.99 * current;
-  let y = 12.38 * current;
-  console.log(x)
+
+  let x = 100 * current;
+  let y = 100 * current;
+  // console.log(x)
+
 
   return (
     <div >
@@ -171,16 +178,18 @@ const CartPage = () => {
           <div className="secDiv-1-2">
             <div className="secDiv-1-2-1">
               <img
-                src="https://designerbrandsforles.ipage.com/9-21/Nike-CB-804408-Heather-Grey-S__1.JPG"
+                src={res.images[1]}
                 style={{ width: "120px", height: "140px" }}
                 alt=""
               />
               <div>
                 <p>
-                  Nike Mens Jogger Athletic Regular Fit <br />
+                  {res.title} <br />
                   Gym Work Out Draw String Casual Sweatpants{" "}
                 </p>
-                <p style={{ fontWeight: "400", marginTop: "8px" }}>L,Grey</p>
+                <p style={{ fontWeight: "400", marginTop: "8px" }}>
+                  {res1},Grey
+                </p>
                 <p>New with tags</p>
               </div>
             </div>
@@ -222,19 +231,26 @@ const CartPage = () => {
             </div>
             <div className="secDiv-1-2-3">
               <div>
-                <p>US ${formatter.format(price - x)}</p>
+                <p>Rs. {price}</p>
+
                 <div>
-                <div style={{ marginTop: "10px" }}>
-                  <strike>US ${formatter.format(price)}</strike>
+
+                  <div style={{ marginTop: "10px" }}>
+                    <strike>Rs. {res.strike_price}</strike>
+                  </div>
+                  <div>{res.discount}</div>
+
                 </div>
-                <div>+US{formatter.format(x)}</div>
-              </div>
+             
               <button id="remove-btn">Remove</button>
             </div>
           </div>
+
+
             </div>
           <div className="secDiv-1-3">
             {/* {current>1} */}
+
             {current === 1 ? (
               <p>
                 Save up to 7% when you buy more
@@ -249,7 +265,7 @@ const CartPage = () => {
               </p>
             )}
           </div>
-      
+
         </div>
         <div className="secDiv-2">
           <div>
@@ -258,26 +274,33 @@ const CartPage = () => {
           <div className="secDiv-2-2">
             <div className="secDiv-2-2-1">
               <p>Item ({current})</p>
-              <p>US ${formatter.format(price - x)}</p>
+              <p>Rs. {formatter.format(price)}</p>
             </div>
             <div className="secDiv-2-2-2">
               <p>Shipping to 110034</p>
-              <p>US ${formatter.format(y)}</p>
+              <p>Rs. {formatter.format(y)}</p>
             </div>
           </div>
           <div className="secDiv-2-3">
             <div>Subtotal</div>
-            <div>US ${formatter.format(price - x + y)}</div>
+            <div>Rs. {formatter.format(price - x + y)}</div>
           </div>
         </div>
 
+      </div>
+
+
+
       
       </div>
+
       <div id="third-Div">
         <div className="thirdDiv-1">Related sponsored items </div>
         <div className="thirdDiv-2">
           <div className="thirdDiv-2-1">
+
             <Carousel responsive={responsive} style={{ diplay: "flex" }}>
+
               <div>
                 <img
                   src="https://i.ebayimg.com/thumbs/images/g/ATcAAOSwquhj1Q0W/s-l200.jpg"
@@ -337,7 +360,9 @@ const CartPage = () => {
                 <p className="design">New</p>
                 <p className="price">$17.18</p>
                 <p className="discount">
-                  {/* <strike>US $5.87</strike> 5% off */}
+
+                  <strike>US $5.87</strike> 5% off
+
                 </p>
                 <p className="shipping">Free Shipping</p>
               </div>
@@ -543,7 +568,9 @@ const CartPage = () => {
       </div>
     </div>
 
+
     </div>
+
   );
 };
 
