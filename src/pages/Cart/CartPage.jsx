@@ -182,7 +182,7 @@ const CartPage = () => {
                   Nike Mens Jogger Athletic Regular Fit <br />
                   Gym Work Out Draw String Casual Sweatpants{" "}
                 </p>
-                <p style={{ fontWeight: "400", marginTop: "-18px" }}>L,Grey</p>
+                <p style={{ fontWeight: "400", marginTop: "8px" }}>L,Grey</p>
                 <p>New with tags</p>
               </div>
             </div>
@@ -196,8 +196,8 @@ const CartPage = () => {
                 >
                   -
                 </button>
-                <button disabled>{current}</button>
-                <button onClick={() => setCurrent((prev) => prev + 1)}>
+                {/* <button disabled>{current}</button> */}
+                {/* <button onClick={() => setCurrent((prev) => prev + 1)}></button> */}
                 <button disabled style={{ width: "20px" }}>
                   {current}
                 </button>
@@ -229,6 +229,7 @@ const CartPage = () => {
               <button id="remove-btn">Remove</button>
             </div>
           </div>
+            </div>
           <div className="secDiv-1-3">
             {/* {current>1} */}
             {current === 1 ? (
@@ -245,6 +246,7 @@ const CartPage = () => {
               </p>
             )}
           </div>
+      
         </div>
         <div className="secDiv-2">
           <div>
@@ -265,6 +267,8 @@ const CartPage = () => {
             <div>US ${formatter.format(price - x + y)}</div>
           </div>
         </div>
+
+      
       </div>
       <div id="third-Div">
         <div className="thirdDiv-1">Related sponsored items </div>
@@ -535,6 +539,7 @@ const CartPage = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 
