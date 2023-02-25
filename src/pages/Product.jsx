@@ -26,6 +26,7 @@ import { useCallback } from "react";
 
 import SampleBrand from "./SampleBrands";
 import Final from "../components/Carousel/Final";
+import { Navbar } from "../components/fw21_0631/Navbar/Navbar";
 
 let brands = [
   "HRX by Hrithik Roshan",
@@ -141,6 +142,7 @@ const Product = () => {
 
   return (
     <div>
+      <Navbar />
       <Final />
       <Box
         className={prodStyle.product_container}
@@ -159,7 +161,7 @@ const Product = () => {
             zIndex={"100"}
             w={"20%"}
             position={"fixed"}
-            top={-35}
+            top={"7rem"}
             display={{
               base: "none",
               sm: "none",
@@ -172,7 +174,6 @@ const Product = () => {
               fontSize={"1.2rem"}
               fontWeight={"bold"}
               color={"pink.400"}
-              mt={"5rem"}
             >
               {" "}
               Mens -
@@ -188,7 +189,7 @@ const Product = () => {
             }}
             position={"fixed"}
             w={"20%"}
-            top={"6rem"}
+            top={"9rem"}
             zIndex={"100"}
             backgroundColor={"#FFF"}
             border={"0px solid red"}

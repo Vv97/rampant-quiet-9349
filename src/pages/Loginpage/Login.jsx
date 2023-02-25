@@ -1,5 +1,5 @@
-import { border } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logindata } from '../../utils/accesslocalstore';
 import styles from "./Login.module.css"
@@ -7,29 +7,36 @@ import styles from "./Login.module.css"
 export const Login = () => {
   const [btnval, setbtnval] = useState(false);
   const [userid, setuserid] = useState("");
-  const [password, setpassword] = useState("");
-  const [regdata, setregdata] = useState([]);
+  // const [password, setpassword] = useState("");
+  // const [regdata, setregdata] = useState([]);
 
  
-const navigate = useNavigate()
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
 
+  const register = useSelector((store) => store.registerReducer.register)
+
+    
 
   const handleLogin = (e) => {
     e.preventDefault()
-    const userdata = regdata.find((el) => el.Email === userid)
-    console.log(userid, "id")
-    console.log(userdata.Email)
+    const userdata = register.find((el) => el.Email === userid);
     if(userdata.Email === userid) {
-      navigate("/register")
+      console.log(userdata)
+      navigate("/");
     }
+    
   }
 
-
+ 
+  
   useEffect(() => {
-    logindata().then((res) => setregdata(res.data))
-  }, [])
 
-  console.log(regdata)
+    dispatch(logindata)
+    
+
+  }, []);
+
 
   return (
 
@@ -49,7 +56,7 @@ const navigate = useNavigate()
        <h1>Hello</h1> 
       </div>
       
-    <div id={styles.sign}> Sign in to eBay or <a href="/">create an account</a> </div>
+    <div id={styles.sign}> Sign in to eBay or <a href="http://localhost:3000/register">create an account</a> </div>
     
 
     <div id={styles.formdata}>
@@ -83,18 +90,18 @@ const navigate = useNavigate()
 
       </div>
 
-    <div className={styles.inputDiv}  style={{background: "#1a73e8"}} >
+    <div className={styles.inputDiv}  style={{background: "#385898"}} >
     <img src="https://cdn.pixabay.com/photo/2015/05/17/10/51/facebook-770688_1280.png" className={styles.btn_img } alt="fb" />
-        <button type='submit'className={styles.div_btn} style={{ background: "#1a73e8" }} >Continue with Facebook</button>
+        <button type='submit'className={styles.div_btn} style={{ background: "#385898" }} >Continue with Facebook</button>
         </div>
 
-        <div className={styles.inputDiv} >
+        <div className={styles.inputDiv} style={{ border: "1px solid black"}} >
         <img src="https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png" className={styles.btn_img } alt="fb" />
         <button type='submit' className={styles.div_btn} style={{ background: "white" }}>Continue with Google</button>
         </div>
 
-        <div className={styles.inputDiv} >
-        <img src="https://cdn.pixabay.com/photo/2018/05/08/21/08/apple-3383931__480.png" alt="fb" className={styles.btn_img } />
+        <div className={styles.inputDiv} style={{ border: "1px solid black"}} >
+        <img src="https://w7.pngwing.com/pngs/695/105/png-transparent-apple-logo-business-apple-logo-outline-heart-logo-computer-wallpaper-thumbnail.png" alt="fb" className={styles.btn_img } />
         <button type='submit' className={styles.div_btn} style={{ background: "white" }}>Continue with Apple</button>
         </div>
 

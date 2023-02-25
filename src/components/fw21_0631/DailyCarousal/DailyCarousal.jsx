@@ -84,6 +84,28 @@ export const DailyCarousal = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 5,
+    responsive: [
+      {
+        breakpoint: 1252,
+        settings: { slidesToShow: 4 },
+      },
+
+      {
+        breakpoint: 773,
+        settings: { slidesToShow: 3 },
+      },
+
+      {
+        breakpoint: 567,
+        settings: { slidesToShow: 2 },
+      },
+
+      {
+        breakpoint: 420,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -92,16 +114,18 @@ export const DailyCarousal = () => {
   return (
     <Slider className={styles.carousal} {...settings}>
       {data.length > 0 &&
-        data.map((user) => (
-          <div className={styles.dailyCarousalHead}>
+        data.map((user, i) => (
+          <div className={styles.dailyCarousalHead} key={i}>
             <div className={styles.dailyCarousalHeadimg}>
               <img src={user.img} alt="" />
             </div>
-            <div style={{ padding: "10px" }}>
+            <div className={styles.DailyCarousaltext}>
               <p>{user.price}</p>
-              <div style={{ display: "flex", gap: "15px", color: "#707070" }}>
-                <div>{user.discount}</div>
-                <div>{user.off}</div>
+              <div style={{ display: "flex", gap: "20px", color: "#707070" }}>
+                <div style={{ textDecoration: " line-through" }}>
+                  {user.discount && user.discount}
+                </div>
+                <div>{user.off && user.off}</div>
               </div>
             </div>
           </div>

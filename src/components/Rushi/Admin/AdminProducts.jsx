@@ -1,72 +1,136 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavbarAdmin from "./Navbar-admin";
 import "./Navbar-admin.css";
+import { ChakraProvider } from "@chakra-ui/react";
+// import "./AdminProducts.css";
+import axios from "axios";
 import {
-  ChakraProvider,
-  FormControl,
-  FormLabel,
-  Input,
-  Select,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  TableContainer,
+  Button,
 } from "@chakra-ui/react";
+import { DeleteIcon, EditIcon } from "@chakra-ui/icons";
 
 const AdminProducts = () => {
+  const [data, setData] = useState([]);
+
+  const getData = () => {
+    axios
+      .get("http://localhost:8080/admin")
+      .then((res) => {
+        console.log(res.data);
+        setData(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <div>
+    <div style={{ backgroundColor: "#cec6c6" }}>
       <ChakraProvider>
         <NavbarAdmin />
+        <div>
+          {/* <Button>Sort  by</Button> */}
+        </div>
         <div
           style={{
-            border: "1px solid grey",
-            borderRadius: "10px",
-            width: "60%",
+            width: "80%",
             margin: "auto",
-            marginTop: "50px",
-            padding: "60px 20px",
+            border: "1px solid black",
+            marginTop: "20px",
+            marginBottom: "20px",
+            borderRadius: "10px",
+            background: "white",
           }}>
-          <h1
-            style={{
-              textAlign: "center",
-              marginTop: "-30px",
-              marginBottom: "40px",
-              fontSize: "30px",
-            }}>
-            <b>
-              <u>Add Product</u>
-            </b>
-          </h1>
-          <FormControl>
-            <FormLabel>Select Category</FormLabel>
-            <Select placeholder="Select Category">
-              <option>Men's</option>
-              <option>Women's</option>
-              <option>Kids</option>
-              <option>Grocery</option>
-              <option>Furniture</option>
-              <option>Electronics</option>
-            </Select>
-            <FormLabel>Select Product</FormLabel>
-            <Select placeholder="Select Product">
-              <option>Shirts</option>
-              <option>T-shirt</option>
-              <option>Hoodie</option>
-              <option>Pants</option>
-              <option>Watches</option>
-              <option>Wooden Chair</option>
-              <option>USB cable</option>
-            </Select>
-            <FormLabel>Title</FormLabel>
-            <Input placeholder="Product Title" />
-            <FormLabel>Image</FormLabel>
-            <Input type="text" placeholder="Image URL" />
-            <FormLabel>Brand</FormLabel>
-            <Input type="text" placeholder="Brand" />
-            <FormLabel>strike price</FormLabel>
-            <Input type="number" placeholder="strike price" />
-            <FormLabel>Price</FormLabel>
-            <Input type="number" placeholder="Price" />
-            <FormLabel>Description</FormLabel>
-            <Input type="text" placeholder="Description" />
-          </FormControl>
+          <TableContainer>
+            <Table variant="simple">
+              {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
+              <Thead>
+                <Tr>
+                  <Th style={{ color: "black", textDecoration: "underline" }}>
+                    Sr. No
+                  </Th>
+                  <Th style={{ color: "black", textDecoration: "underline" }}>
+                    Category
+                  </Th>
+                  <Th
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      color: "black",
+                      textDecoration: "underline",
+                    }}>
+                    Product Name
+                  </Th>
+                  <Th style={{ color: "black", textDecoration: "underline" }}>
+                    Brand
+                  </Th>
+                  <Th style={{ color: "black", textDecoration: "underline" }}>
+                    Price
+                  </Th>
+                  <Th
+                    style={{
+                      color: "black",
+                      textDecoration: "underline",
+                    }}></Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {data?.map((el) => {
+                  return (
+                    <Tr key={el.id}>
+                      <Td>{el.id}</Td>
+                      <Td>{el.category}</Td>
+                      <Td
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "5px",
+                        }}>
+                        <img
+                          style={{ width: "100px", height: "100px" }}
+                          src={el.image}
+                          alt={el.id}
+                        />
+                        <p>{el.title}</p>
+                      </Td>
+                      <Td>{el.brand}</Td>
+                      <Td>{el.price}</Td>
+                      <Td>
+                        <button>
+                          <EditIcon />
+                        </button>
+                        {"   "}
+                        <button>
+                          <DeleteIcon />
+                        </button>
+                      </Td>
+                    </Tr>
+                  );
+                })}
+              </Tbody>
+            </Table>
+          </TableContainer>
+        </div>
+
+        <div
+          style={{
+            textAlign: "center",
+            fontSize: "12px",
+            marginTop: "70px",
+            paddingBottom: "25px",
+          }}>
+          Copyright © 1995-2023 eBay Inc. All Rights Reserved. Accessibility,
+          User Agreement, Privacy, Payments Terms of Use, Cookies, Your Privacy
+          Choices and AdChoice
         </div>
       </ChakraProvider>
     </div>

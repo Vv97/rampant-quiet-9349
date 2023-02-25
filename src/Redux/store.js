@@ -3,10 +3,13 @@ import {legacy_createStore , applyMiddleware ,compose , combineReducers} from "r
 import thunk from "redux-thunk"
 
 import { mensProductReducer } from "./Product/Product.reducer"
-
+import { registerReducer } from "./Registerdata/registerReducer"
 
 const rootReducer = combineReducers({
     mens: mensProductReducer,
+    registerReducer,
+
+
 
 })
 

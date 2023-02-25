@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import styles from "./Register.module.css"
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Registerdata } from '../../utils/accesslocalstore'
+import { useDispatch, useSelector } from 'react-redux'
 
 const initstate = {
     Firstname: "",
@@ -15,8 +16,10 @@ const initstate = {
 export const Register = () => {
     const [data, setdata] = useState(initstate)
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
-    console.log(data)
+    const register = useSelector((store) => console.log(store))
+
 
 const handlechange = (e) => {
     setdata({...data, [e.target.name]: e.target.value})
@@ -24,7 +27,7 @@ const handlechange = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault()
-    Registerdata(data)
+    dispatch(Registerdata(data))
     setdata(initstate)
     navigate("/login")
 
