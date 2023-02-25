@@ -16,6 +16,7 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getSingleProductAPI } from "../Redux/Product/Product.api";
 import { useDispatch } from "react-redux";
+import { Navbar } from "../components/fw21_0631/Navbar/Navbar";
 // import { fetchCartData } from "../Redux/Cart/Cart.action";
 
 const SingleProductPage = () => {
@@ -69,9 +70,20 @@ const SingleProductPage = () => {
   //       .catch((err) => alert("Already Exists in Your Bag"));
   //   };
 
+  let dataLS = JSON.parse(localStorage.getItem("dataKey"));
+  console.log("dataLS", dataLS);
+
   return (
     <div style={{ width: "100%", border: "0px solid red", margin: "auto" }}>
-      <div style={{ width: "100%", border: "0px solid red", margin: "auto" }}>
+      <Navbar />
+      <div
+        style={{
+          width: "100%",
+          border: "0px solid red",
+          margin: "auto",
+          marginTop: "-60px",
+        }}
+      >
         <Box
           mb={"4rem"}
           width={"100%"}
@@ -180,6 +192,9 @@ const SingleProductPage = () => {
                       border={"1px solid gray"}
                       borderRadius={"50%"}
                       p={"1rem"}
+                      onClick={() => {
+                        localStorage.setItem("bookSize", JSON.stringify(sz));
+                      }}
                     >
                       {sz}
                     </Button>
@@ -302,6 +317,12 @@ const SingleProductPage = () => {
                     fontWeight={700}
                     //border={'2px solid gray'}
                     px={2}
+                    onClick={() => {
+                      localStorage.setItem(
+                        "bookData",
+                        JSON.stringify(singleProduct)
+                      );
+                    }}
                   >
                     Add To Bag
                   </Button>
