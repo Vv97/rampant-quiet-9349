@@ -19,7 +19,12 @@ const NavbarAdmin = () => {
 
   const navigate = useNavigate();
 
-  const redirect_Products = () => {
+  const redirect_AddProducts = () => {
+    console.log("hello")
+    navigate("/add_products")
+  }
+
+  const redirect_AdminProducts = () => {
     console.log("hello")
     navigate("/admin_products")
   }
@@ -37,13 +42,13 @@ const NavbarAdmin = () => {
         <div onClick={redirect_AdminHome} className="navigate_section_home">
           <b>Home</b>
         </div>
-        <div onClick={redirect_Products} className="navigate_section_products">
+        <div onClick={redirect_AdminProducts} className="navigate_section_products">
           <b>Products</b>
         </div>
       </div>
 
       <div className="add_product_btn_div">
-        <button>
+        <button onClick={redirect_AddProducts}>
           <b>Add Products</b>
         </button>
       </div>

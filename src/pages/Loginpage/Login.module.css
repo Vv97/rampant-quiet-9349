@@ -35,11 +35,12 @@
 #desc{
     /* border: 1px solid red; */
     margin: auto;
-    width: 50%;
+    width: 60%;
     height: 140px;
     margin-top: 30px;
     padding: 5px;
-    background-color: blueviolet;
+    background-color: #3665f3;
+    color: white;
     
 }
 
@@ -68,6 +69,7 @@
     margin: auto;
     justify-content: center;
     align-items: center;
+    font-size: medium;
     
 }
 
@@ -100,6 +102,7 @@
     justify-content: center;
     margin-top: 15px;
     border-radius: 25px;
+   
     
 }
 
@@ -122,7 +125,7 @@
     border-radius: 25px;
     font-size: large;
     border: none;
-    background-color: rgb(76, 76, 221);
+    background-color: #3665f3;
     cursor: pointer;
 }
 
@@ -163,7 +166,9 @@
     width: 100%;
     margin: auto;
     height: 180px;
-    background-color: blueviolet;
+    background-color: #3665f3;
+    color: white;
+    padding: 10px;
 
 }
 
