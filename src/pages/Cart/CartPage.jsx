@@ -152,7 +152,7 @@ const CartPage = () => {
   // console.log(x)
 
   return (
-    <div>
+    <div >
       <Navbar/>
       <div id="firstDiv">
         <div className="firstDiv-1">Shopping Cart</div>
@@ -197,8 +197,9 @@ const CartPage = () => {
                   -
                 </button>
                 <button disabled>{current}</button>
-                <button onClick={() => setCurrent((prev) => prev + 1)}>
-                <button disabled style={{ width: "20px" }}>
+                <button onClick={() => setCurrent((prev) => prev + 1)} 
+                /////find
+                disabled style={{ width: "20px" }}>
                   {current}
                 </button>
                 <button
@@ -534,6 +535,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

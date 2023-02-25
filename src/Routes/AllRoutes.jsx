@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { PrivateCompo } from "../components/PrivateCompo";
 import Admin from "../components/Rushi/Admin/Admin";
 import AdminProducts from "../components/Rushi/Admin/AdminProducts";
 import CartPage from "../pages/Cart/CartPage";
@@ -15,7 +16,7 @@ export const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/cart" element={<CartPage />} />
+      <Route path="/cart" element={  <CartPage />   } />
       <Route path="/admin" element={<Admin />} />
       <Route path="/checkout" element={<CheckOutPage />} />
       {/* <Route path="/seeDetails" element={<SeeDetails/>}/> */}

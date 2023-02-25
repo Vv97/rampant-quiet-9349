@@ -1,4 +1,5 @@
 import axios from "axios"
+import { loginSucessAction, postFailAction, postRequestAction, postSucessAction } from "../Redux/Registerdata/action"
 
 export const getLocalData = (key) => {
     try {
@@ -15,13 +16,25 @@ export const setLocalDate = (key, data) => {
 }
 
 
-export const Registerdata = (data) => {
-   return axios.post(`http://localhost:8080/register`, data)
 
-}
+export const Registerdata = (data) => (dispatch) => {
+    dispatch(postRequestAction())
 
-export const logindata = () => {
+   axios.post(`https://63f8b80a1dc21d5465c55f0f.mockapi.io/register`, data)
+   .then((res) => dispatch(postSucessAction(res.data)))
+   .catch((err) => dispatch(postFailAction()))
 
-    return axios.get("http://localhost:8080/register")
+};
+
+export const logindata = (dispatch) => {
+    dispatch(postRequestAction())
+ return axios.get("https://63f8b80a1dc21d5465c55f0f.mockapi.io/register")
+ .then((res) => dispatch(loginSucessAction(res.data)))
+ .catch((err) => dispatch(postFailAction()))
     
-}
+};
+
+export const logoutdata = (dispatch) => {
+    dispatch(logoutdata())
+};
+
