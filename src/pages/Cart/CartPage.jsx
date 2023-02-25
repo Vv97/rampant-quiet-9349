@@ -4,8 +4,6 @@ import "./CartPage.css";
 import { Navbar } from "../../components/fw21_0631/Navbar/Navbar";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Footer } from "../../components/fw21_0631/Footer/Footer";
-
 // const SliderData = [
 //   {
 //     image: "https://i.ebayimg.com/thumbs/images/g/ATcAAOSwquhj1Q0W/s-l200.jpg",
@@ -152,15 +150,13 @@ const CartPage = () => {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
-
   let x = 100 * current;
   let y = 100 * current;
   // console.log(x)
 
-
   return (
-    <div >
-      <Navbar/>
+    <div>
+      <Navbar />
       <div id="firstDiv">
         <div className="firstDiv-1">Shopping Cart</div>
         <div className="firstDiv-2">
@@ -171,7 +167,7 @@ const CartPage = () => {
         <div className="secDiv-1">
           <div className="secDiv-1-1">
             <div>
-              Seller <Link>designerbrandforless</Link>
+              Seller <a href="#">designerbrandforless</a>
             </div>
             <div>
               Request total <span id="i-btn">i</span>
@@ -205,21 +201,15 @@ const CartPage = () => {
                 >
                   -
                 </button>
-                <button disabled>{current}</button>
-                <button onClick={() => setCurrent((prev) => prev + 1)} 
-                /////find
-                disabled style={{ width: "20px" }}>
-
-                
+                {/* <button disabled>{current}</button> */}
+                {/* <button onClick={() => setCurrent((prev) => prev + 1)}></button> */}
                 <button disabled style={{ width: "20px" }}>
-
                   {current}
                 </button>
                 <button
                   style={{ width: "20px" }}
                   onClick={() => setCurrent((prev) => prev + 1)}
                 >
-
                   +
                 </button>
               </div>
@@ -236,23 +226,16 @@ const CartPage = () => {
                 <p>Rs. {price}</p>
 
                 <div>
-
                   <div style={{ marginTop: "10px" }}>
                     <strike>Rs. {res.strike_price}</strike>
                   </div>
                   <div>{res.discount}</div>
-
                 </div>
-             
-              <button id="remove-btn">Remove</button>
+                <button id="remove-btn">Remove</button>
+              </div>
             </div>
           </div>
-
-
-            </div>
           <div className="secDiv-1-3">
-            {/* {current>1} */}
-
             {current === 1 ? (
               <p>
                 Save up to 7% when you buy more
@@ -267,7 +250,6 @@ const CartPage = () => {
               </p>
             )}
           </div>
-
         </div>
         <div className="secDiv-2">
           <div>
@@ -288,21 +270,13 @@ const CartPage = () => {
             <div>Rs. {formatter.format(price - x + y)}</div>
           </div>
         </div>
-
-      </div>
-
-
-
-      
       </div>
 
       <div id="third-Div">
         <div className="thirdDiv-1">Related sponsored items </div>
         <div className="thirdDiv-2">
           <div className="thirdDiv-2-1">
-
-            <Carousel responsive={responsive} style={{ diplay: "flex" }}>
-
+            <Carousel responsive={responsive} style={{ display: "flex" }}>
               <div>
                 <img
                   src="https://i.ebayimg.com/thumbs/images/g/ATcAAOSwquhj1Q0W/s-l200.jpg"
@@ -362,9 +336,7 @@ const CartPage = () => {
                 <p className="design">New</p>
                 <p className="price">$17.18</p>
                 <p className="discount">
-
                   <strike>US $5.87</strike> 5% off
-
                 </p>
                 <p className="shipping">Free Shipping</p>
               </div>
@@ -568,12 +540,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
-
-
-    </div>
-
   );
 };
 
