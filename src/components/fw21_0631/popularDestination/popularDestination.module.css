@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.popularDestination {
+  max-width: 1248px;
+  margin: 64px auto 32px auto;
+}
+
+.popularDestination > div:first-child {
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+}
+
+.popularDestination > div:first-child > div:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-right: 20px;
+  border-right: 2px solid #eeeeee;
+}
+
+.popularDestination > div:first-child > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.popularDestination > div:first-child > div:last-child {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.popularDestination > div:first-child > div:last-child > svg {
+  font-size: 2rem;
+}
+
+/* .popularDestination > div:first-child > div:last-child::before {
+  content: "";
+  width: 1px;
+  height: 30px;
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+} */
+
+.popularDestination > div:first-child > div:first-child:hover {
+  text-decoration: underline;
+}
+
+.popularDestinationDiv {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.popularDestinationDiv > div > img {
+  width: 100%;
+}
+
+.popularDestinationDiv > div > h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.popularDestinationDiv > div > h3 > a {
+  color: #111820;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.popularDestinationDiv > div:hover {
+  text-decoration: underline;
+}
+
+/* @media all and (max-width: 1007px) {
+  .popularDestination {
+    margin: 25px;
+  }
+} */
+
+@media all and (max-width: 1067px) {
+  .popularDestination {
+    margin: 55px;
+  }
+
+  .popularDestinationDiv > div > img {
+    width: 85%;
+  }
+
+  .popularDestinationDiv {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media all and (max-width: 775px) {
+  .popularDestination {
+    margin: 55px;
+  }
+
+  .popularDestinationDiv {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media all and (max-width: 569px) {
+  .popularDestination {
+    margin: 30px 20px;
+  }
+
+  .popularDestinationDiv > div > img {
+    width: 85%;
+  }
+
+  .popularDestinationDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .PopularDestinationBlockDiv {
+    display: none;
+  }
+}
+
+@media all and (max-width: 486px) {
+  .popularDestination {
+    margin: 30px 0px;
+  }
+
+  .popularDestination > div:first-child > div:first-child {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-right: 20px;
+    border: 1px solid red;
+    margin-left: 10px;
+    border-right: 2px solid #eeeeee;
+  }
+
+  .popularDestinationDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .popularDestinationDiv > div > img {
+    width: 80%;
+    display: block;
+    margin: 5px auto;
+  }
+
+  .popularDestination > div:first-child > div:last-child {
+    font-size: 1rem;
+  }
+
+  .popularDestination > div:first-child > div:last-child > svg {
+    font-size: 1.2rem;
+  }
+
+  .PopularDestinationBlockDiv {
+    display: none;
+  }
+}
