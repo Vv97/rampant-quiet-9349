@@ -22,7 +22,7 @@ const Admin = () => {
           <div className="explore_button">
             <Button>Explore Now!</Button>
           </div>
-          <div className="footer">Copyright © 1995-2023 eBay Inc. All Rights Reserved. Accessibility, User Agreement, Privacy, Payments Terms of Use, Cookies, Your Privacy Choices and AdChoice</div>
+          <div className="footer">Copyright © 1995-2023 eBuzz Inc. All Rights Reserved. Accessibility, User Agreement, Privacy, Payments Terms of Use, Cookies, Your Privacy Choices and AdChoice</div>
         </div>
       </ChakraProvider>
     </div>

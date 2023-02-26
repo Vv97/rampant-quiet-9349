@@ -1,10 +1,4 @@
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Box,
-} from "@chakra-ui/react";
+import { Menu, MenuButton, MenuList, MenuItem, Box } from "@chakra-ui/react";
 import { CgProfile } from "react-icons/cg";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FaHistory } from "react-icons/fa";
@@ -16,22 +10,26 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 
 const NavbarAdmin = () => {
-
   const navigate = useNavigate();
 
   const redirect_AddProducts = () => {
-    console.log("hello")
-    navigate("/add_products")
-  }
+   // console.log("hello");
+    navigate("/add_products");
+  };
 
   const redirect_AdminProducts = () => {
-    console.log("hello")
-    navigate("/admin_products")
-  }
+    //console.log("hello");
+    navigate("/admin_products");
+  };
 
   const redirect_AdminHome = () => {
-    console.log("hello")
-    navigate("/admin")
+    //console.log("hello");
+    navigate("/admin");
+  };
+
+  const handleSignOut = () => {
+   // console.log("inside signout");
+    navigate("/login");
   }
   return (
     <div className="nav_main">
@@ -42,26 +40,28 @@ const NavbarAdmin = () => {
         <div onClick={redirect_AdminHome} className="navigate_section_home">
           <b>Home</b>
         </div>
-        <div onClick={redirect_AdminProducts} className="navigate_section_products">
+        <div
+          onClick={redirect_AdminProducts}
+          className="navigate_section_products">
           <b>Products</b>
         </div>
       </div>
 
       <div className="add_product_btn_div">
         <button onClick={redirect_AddProducts}>
-          <b>Add Products</b>
+          <b>Add Product</b>
         </button>
       </div>
 
       <div className="nav_drop_down_section">
         <Menu>
           <div className="dropbtn_text">
-            <MenuButton>
+            <MenuButton style={{ color: "white"}}>
               Hi Rushi
               <ChevronDownIcon />
             </MenuButton>
           </div>
-          <MenuList border={"1px solid black"}>
+          <MenuList marginTop={"15px"} border={"1px solid black"}>
             <MenuItem>
               <b>Profile</b>
               <Box marginLeft={3}>
@@ -86,7 +86,7 @@ const NavbarAdmin = () => {
                 <TiContacts />
               </Box>
             </MenuItem>
-            <MenuItem>
+            <MenuItem onClick={handleSignOut}>
               <b>Sign Out</b>
               <Box marginLeft={3}>
                 <FiLogOut />

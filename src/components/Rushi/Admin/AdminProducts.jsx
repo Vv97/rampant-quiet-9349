@@ -13,10 +13,36 @@ import {
   Td,
   TableContainer,
   Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  FormControl,
+  FormLabel,
+  Input,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { DeleteIcon, EditIcon } from "@chakra-ui/icons";
 
 const AdminProducts = () => {
+
+  const [editPrice, setEditPrice] = useState(0);
+  const [saveId, setSaveId] = useState(1)
+
+  const getPrice = (id) => {
+    axios
+      .get(`http://localhost:8080/admin/${id}`)
+      .then((res) => {
+        console.log(res.data, res.data.price);
+        setEditPrice(res.data.price)
+      })
+      .catch((err) => console.log(err));
+  };
+  const { isOpen, onClose, onOpen } = useDisclosure();
+
   const [data, setData] = useState([]);
 
   const getData = () => {
@@ -28,18 +54,40 @@ const AdminProducts = () => {
       })
       .catch((err) => console.log(err));
   };
+  //axios.patch(`http://localhost:8080/admin/${id}`, )
+
+  // HANDLE EDIT FUNCTIONALITY
+  const handleEditAdmin = (id) => {
+    //console.log("inside handleAdmin")
+    axios.patch(`http://localhost:8080/admin/${id}`, { "price": +editPrice })
+    .then((res) => {
+      //console.log(res)
+      getData();
+    })
+    .catch((err) => console.log(err));
+  };
+  const handleSubmittedData = (id) => {
+    handleEditAdmin(id);
+  }
+
+  // HANDLE DELETE FUNCTIONALITY
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:8080/admin/${id}`)
+    .then((res) => {
+      getData();
+    })
+  }
+
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [setData]);
 
   return (
     <div style={{ backgroundColor: "#cec6c6" }}>
       <ChakraProvider>
         <NavbarAdmin />
-        <div>
-          {/* <Button>Sort  by</Button> */}
-        </div>
+        <div>{/* <Button>Sort  by</Button> */}</div>
         <div
           style={{
             width: "80%",
@@ -105,13 +153,55 @@ const AdminProducts = () => {
                       <Td>{el.brand}</Td>
                       <Td>{el.price}</Td>
                       <Td>
-                        <button>
+                        <Button bg={"white"} onClick={(e) => {
+                          onOpen();
+                          setSaveId(el.id)
+                          getPrice(el.id)
+                          
+                        }}>
                           <EditIcon />
-                        </button>
-                        {"   "}
-                        <button>
+                          <Modal isOpen={isOpen} onClose={onClose}>
+                            <ModalOverlay />
+                            <ModalContent>
+                              <ModalHeader>
+                                <ModalCloseButton bg={"white"} color={"black"}/>
+                              </ModalHeader>
+                              <ModalBody>
+                                <form
+                                  // id={}
+                                  onSubmit={(e) => {
+                                    e.preventDefault();
+                                    //console.log(saveId)
+                                    handleSubmittedData(saveId)
+                                    onClose();
+                                  }}>
+                                  <FormControl>
+                                    <FormLabel>xxxx</FormLabel>
+                                    <Input
+                                    isRequired
+                                      value={editPrice}
+                                      onChange={(e) => {
+                                        setEditPrice(e.target.value)
+                                        // console.log(editPrice)
+                                        // console.log(e.target.value)
+                                      }}
+                                      type="number" />
+                                      <Button type="submit">Submit</Button>
+                                  </FormControl>
+                                </form>
+                              </ModalBody>
+                              <ModalFooter>
+                                
+                              </ModalFooter>
+                            </ModalContent>
+                          </Modal>
+                        </Button>
+                        <Button bg={"white"} onClick={() => {
+                          //console.log(el.id)
+                          handleDelete(el.id)
+                        }}>
                           <DeleteIcon />
-                        </button>
+                        </Button>
                       </Td>
                     </Tr>
                   );
@@ -128,7 +218,7 @@ const AdminProducts = () => {
             marginTop: "70px",
             paddingBottom: "25px",
           }}>
-          Copyright © 1995-2023 eBay Inc. All Rights Reserved. Accessibility,
+          Copyright © 1995-2023 eBuzz Inc. All Rights Reserved. Accessibility,
           User Agreement, Privacy, Payments Terms of Use, Cookies, Your Privacy
           Choices and AdChoice
         </div>

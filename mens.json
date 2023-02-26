@@ -7,18 +7,18 @@
       "image": "https://via.placeholder.com/150",
       "brand": "adibas",
       "strikePrice": 3444,
-      "price": 2344,
+      "price": 1230,
       "description": "egsgddh",
       "id": 1
     },
     {
       "category": "men",
       "product": "pant",
-      "title": "Nike Mens Jogger Athletic Regular Fit Sweatpants",
+      "title": "Nike Mens Jogger Regular Fit Sweatpants",
       "image": "https://via.placeholder.com/150 ",
       "brand": "Nike",
       "strikePrice": 1499,
-      "price": 1099,
+      "price": 11230,
       "description": "A brand-new, unused, and unworn item (including handmade items) in the original packaging (such as the original box or bag) and/or with the original tags attached.",
       "id": 2
     },
@@ -29,14 +29,14 @@
       "image": "https://via.placeholder.com/150 ",
       "brand": "Nike",
       "strikePrice": 1499,
-      "price": 1099,
+      "price": 1090,
       "description": "A brand-new, unused, and unworn item (including handmade items) in the original packaging (such as the original box or bag) and/or with the original tags attached.",
       "id": 3
     },
     {
       "category": "men",
       "product": "pant",
-      "title": "Gym Work Out Draw String Casual Sweatpants",
+      "title": "Gym Work Out Draw String Sweatpants",
       "image": "https://via.placeholder.com/150 ",
       "brand": "Nike",
       "strikePrice": 1499,
@@ -51,7 +51,7 @@
       "image": "https://via.placeholder.com/150",
       "brand": "3wfwrgwr",
       "strikePrice": 314,
-      "price": 3133,
+      "price": 313,
       "description": "rrgeg",
       "id": 5
     },
@@ -73,7 +73,7 @@
       "image": "https://via.placeholder.com/150",
       "brand": "dfsdfdsf",
       "strikePrice": 343434,
-      "price": 343433,
+      "price": 3434,
       "description": "rfefer",
       "id": 7
     },
@@ -84,7 +84,7 @@
       "image": "https://via.placeholder.com/150",
       "brand": "sdsad",
       "strikePrice": 444,
-      "price": 333,
+      "price": 7852,
       "description": "afaffd",
       "id": 8
     },
@@ -94,8 +94,8 @@
       "title": "dff",
       "image": "https://via.placeholder.com/150",
       "brand": "sdasdasd",
-      "strikePrice": null,
-      "price": null,
+      "strikePrice": 9999,
+      "price": 8000,
       "description": "dsdsd",
       "id": 9
     },
@@ -109,17 +109,6 @@
       "price": 344343,
       "description": "nfgnfnfg",
       "id": 10
-    },
-    {
-      "category": "grocery",
-      "product": "pant",
-      "title": "hello",
-      "image": "dadad",
-      "brand": "adadad",
-      "strikePrice": 44234,
-      "price": 34343,
-      "description": "ffffddf",
-      "id": 11
     }
   ],
   "register": [
