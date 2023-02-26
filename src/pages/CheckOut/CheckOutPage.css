@@ -9,14 +9,16 @@
 }
 .ch-firstDiv-1 {
   border: 0px solid black;
-  width: 30%;
+  width: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
 }
 .ch-firstDiv-1 > h1 {
-  margin-top: 15px;
+  margin-top: 0px;
+  font-size:25px;
+  border:0px solid black;
 }
 .ch-firstDiv-2 {
   border: 0px solid black;
