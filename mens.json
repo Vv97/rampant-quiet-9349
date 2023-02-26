@@ -120,6 +120,17 @@
       "price": 34343,
       "description": "ffffddf",
       "id": 11
+    },
+    {
+      "category": "grocery",
+      "product": "t-shirt",
+      "title": "lovely",
+      "image": "boy",
+      "brand": "honeymoon",
+      "strikePrice": 4888,
+      "price": 100000000,
+      "description": "love yourself",
+      "id": 12
     }
   ],
   "register": [
