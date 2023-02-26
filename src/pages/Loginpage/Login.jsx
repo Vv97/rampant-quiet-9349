@@ -1,32 +1,43 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { logindata } from '../../utils/accesslocalstore';
+import { authSucessAction } from '../../Redux/Registerdata/action';
+import { logindata, setLocalDate } from '../../utils/accesslocalstore';
 import styles from "./Login.module.css"
 
 export const Login = () => {
   const [btnval, setbtnval] = useState(false);
   const [userid, setuserid] = useState("");
+  const [userEmail, setuserEmail] = useState("")
+  
   // const [password, setpassword] = useState("");
   // const [regdata, setregdata] = useState([]);
 
- 
+  
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
   const register = useSelector((store) => store.registerReducer.register)
 
+  const auth = useSelector((store) => store.registerReducer.isAuth)
     
+  console.log(auth)
 
   const handleLogin = (e) => {
     e.preventDefault()
     const userdata = register.find((el) => el.Email === userid);
     if(userdata.Email === userid) {
-      console.log(userdata)
+      setLocalDate("userdata",userdata )
+      dispatch(authSucessAction())
+
       navigate("/");
     }
     
   }
+
+  // if(userEmail === "") {
+  //   alert("wrong userid")
+  // }
 
  
   
@@ -43,9 +54,13 @@ export const Login = () => {
     <div id={styles.loginbody}>
       <div id={styles.learn} ><a href="https://connect.ebay.com/srv/survey/a/reg.personalized">Tell us what you think</a></div>
       
+      <a href="http://localhost:3000/">
       <div id={styles.logo}>
         <img src="https://i.imgur.com/FQCppUc.png" alt="logo" />
       </div>
+      </a>
+
+
       <div id={styles.formDiv}>
 
 
