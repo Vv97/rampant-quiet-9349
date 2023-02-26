@@ -1,8 +1,16 @@
 import React from "react";
 import styles from "./profiledropdown.module.css";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logoutSucessAction } from "../../../Redux/Registerdata/action";
 
-export const ProfileDropdown = () => {
+export const ProfileDropdown = ({ Firstname, Lastname, Type }) => {
+  const dispatch = useDispatch();
+
+  function handleLogout() {
+    dispatch(logoutSucessAction());
+  }
+
   return (
     <div className={styles.profileDropdown}>
       <div>
@@ -13,14 +21,14 @@ export const ProfileDropdown = () => {
           />
         </div>
         <div>
-          <h2>Vishal Varma</h2>
+          <h2>{`${Firstname} ${Lastname}`}</h2>
         </div>
       </div>
 
       <div>
         <p>Account Settings</p>
-        <Link to="/admin">Admin</Link>
-        <button>Sign out</button>
+        {Type == "admin" && <Link to="/admin">Admin</Link>}
+        <button onClick={handleLogout}>Sign out</button>
       </div>
     </div>
   );
