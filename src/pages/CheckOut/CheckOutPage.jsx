@@ -28,11 +28,13 @@ const CheckOutPage = () => {
     <div>
       <div id="ch-firstDiv">
         <div className="ch-firstDiv-1">
+          <Link to="/">
           <img
             src="https://i.imgur.com/FQCppUc.png"
             alt=""
-            style={{ width: "50%", height: "70%" }}
+            style={{ width: "90%", height: "70%" }}
           />
+          </Link>
           <h1>Checkout</h1>
         </div>
         <div className="ch-firstDiv-2">
