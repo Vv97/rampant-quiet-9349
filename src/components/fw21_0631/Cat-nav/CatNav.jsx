@@ -42,6 +42,8 @@ let arr2 = [
       "Jewelry",
     ],
 
+    link: "/product",
+
     data1: [
       "Accessories for men",
       "Accessories for women",
@@ -87,7 +89,12 @@ export const CatNav = () => {
               <CatnavDroopdown l="0" arr1={arr2} />
             </div>
           </li>
-          <li>Sports</li>
+          <li>
+            Sports
+            <div className={styles.catNavDropdownContainer}>
+              <CatnavDroopdown l="0" arr1={arr1} />
+            </div>
+          </li>
           <li>Health & Beauty</li>
           <li>Industrial & equipment</li>
           <li>Home & Garden</li>

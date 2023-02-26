@@ -1,21 +1,27 @@
 import React, { useState } from "react";
 import styles from "./navbar.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BsCart2, BsChevronDown, BsSearch } from "react-icons/bs";
 import { Cartdropdown } from "../cartdropdown/Cartdropdown";
 import { CategoryDropdown } from "../CategoryDropdown/CategoryDropdown";
 import { Nava } from "../Nava/Nava";
 import { SmSearch } from "../scInputSearch/SmSearch";
+import { ProfileDropdown } from "../profileDropdown/ProfileDropdown";
 
 export const Navbar = () => {
-  const [name, setname] = useState("hii");
-  const [cart, setcart] = useState([]);
+  const [name, setname] = useState("Vishal");
+  const [cart, setcart] = useState([{}]);
   const [auth, setauth] = useState(false);
   const [Category, setcategory] = useState(false);
+  const navigate = useNavigate();
 
   const handleCategory = () => {
     setcategory((prev) => !prev);
+  };
+
+  const redirect = () => {
+    navigate("/cart");
   };
 
   return (
@@ -24,13 +30,19 @@ export const Navbar = () => {
         <div className={styles.nav1wrapper}>
           <div className={styles.nav1}>
             <ul className={styles.navList1}>
-              <li>
+              <li style={{ zIndex: "9" }}>
                 Hi!
                 {name.length > 0 ? (
                   name && (
-                    <h5>
-                      {name} <BsChevronDown />
-                    </h5>
+                    <>
+                      <h5>
+                        {name} <BsChevronDown />
+                      </h5>
+
+                      <div className={styles.profileDropdown}>
+                        <ProfileDropdown />
+                      </div>
+                    </>
                   )
                 ) : (
                   <>
@@ -86,10 +98,13 @@ export const Navbar = () => {
                   <li>Selling</li>
                 </ul>
               </li>
-              <li className={styles.navIcons}>
+              <li className={styles.navIcons} style={{ zIndex: 8 }}>
                 <IoNotificationsOutline />
 
-                <div className={styles.notificationDropdown}>
+                <div
+                  className={styles.notificationDropdown}
+                  style={{ background: "#fff" }}
+                >
                   <p>There are no new notifications.</p>
                 </div>
               </li>
@@ -99,7 +114,7 @@ export const Navbar = () => {
                   <div className={styles.cartBadges}>{cart.length}</div>
                 )}
                 <div className={styles.Cartdropdownicon}>
-                  <Cartdropdown />
+                  <Cartdropdown onClick={redirect} />
                 </div>
               </li>
             </ul>

@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styles from "./DailyCarousal.module.css";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
@@ -112,24 +113,36 @@ export const DailyCarousal = () => {
   };
 
   return (
-    <Slider className={styles.carousal} {...settings}>
-      {data.length > 0 &&
-        data.map((user, i) => (
-          <div className={styles.dailyCarousalHead} key={i}>
-            <div className={styles.dailyCarousalHeadimg}>
-              <img src={user.img} alt="" />
-            </div>
-            <div className={styles.DailyCarousaltext}>
-              <p>{user.price}</p>
-              <div style={{ display: "flex", gap: "20px", color: "#707070" }}>
-                <div style={{ textDecoration: " line-through" }}>
-                  {user.discount && user.discount}
+    <div className={styles.maincontainer}>
+      <div className={styles.maincontainerText} >
+        <h3>Daily Deals</h3>
+        <div>
+          See all <BiRightArrowAlt />
+        </div>
+      </div>
+      <div>
+        <Slider className={styles.carousal} {...settings}>
+          {data.length > 0 &&
+            data.map((user, i) => (
+              <div className={styles.dailyCarousalHead} key={i}>
+                <div className={styles.dailyCarousalHeadimg}>
+                  <img src={user.img} alt="" />
                 </div>
-                <div>{user.off && user.off}</div>
+                <div className={styles.DailyCarousaltext}>
+                  <p>{user.price}</p>
+                  <div
+                    style={{ display: "flex", gap: "20px", color: "#707070" }}
+                  >
+                    <div style={{ textDecoration: " line-through" }}>
+                      {user.discount && user.discount}
+                    </div>
+                    <div>{user.off && user.off}</div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
-    </Slider>
+            ))}
+        </Slider>
+      </div>
+    </div>
   );
 };

@@ -1,26 +1,26 @@
-
-.Nava{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 10px;
-    position: relative;
+.Nava {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  position: relative;
+  z-index: 8;
 }
 
-.NavasmallScreen > img{
-    width: 30%;
+.NavasmallScreen > img {
+  width: 30%;
 }
 
-.navHamburger{
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.5rem;
-    gap: 25px;
-    color: #1d1d1d;
+.navHamburger {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 25px;
+  color: #1d1d1d;
 }
 
-@media all and (max-width:395px) {
-    .NavasmallScreen > img{
-        width: 45%;
-    }
+@media all and (max-width: 395px) {
+  .NavasmallScreen > img {
+    width: 45%;
+  }
 }

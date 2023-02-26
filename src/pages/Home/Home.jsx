@@ -7,6 +7,7 @@ import { DailyCarousal } from "../../components/fw21_0631/DailyCarousal/DailyCar
 import { Footer } from "../../components/fw21_0631/Footer/Footer";
 import { Navbar } from "../../components/fw21_0631/Navbar/Navbar";
 import { PopularDestination } from "../../components/fw21_0631/popularDestination/PopularDestination";
+import { BiRightArrowAlt } from "react-icons/bi";
 import "./Home.css";
 
 export const Home = () => {
@@ -24,18 +25,39 @@ export const Home = () => {
       </div>
 
       <div>
-        <Customcard />
+        <DailyCarousal />
+      </div>
+
+      <div className="HomebannerDiv">
+        <div>
+          <img
+            src="https://i.ebayimg.com/images/g/hSMAAOSw9Ftj2KBp/s-l96.webp"
+            alt=""
+          />
+        </div>
+        <div>
+          <div>
+            <h2>Up to 40% OFF. Kick off the year with new tech!</h2>
+          </div>
+          <div>Everything you need to help you succeed.</div>
+        </div>
+        <div>
+          <button>
+            Let's go <BiRightArrowAlt />
+          </button>
+        </div>
       </div>
 
       <div>
-        <DailyCarousal />
+        <PopularDestination />
       </div>
+
       <div>
         <Bleedbanner />
       </div>
 
       <div>
-        <PopularDestination />
+        <Customcard />
       </div>
 
       <div>
