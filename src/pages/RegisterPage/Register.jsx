@@ -79,7 +79,7 @@ const handleSubmit = (e) => {
     <input type="radio" name="Type" value={"user"} />
     <label>Personal account</label>
     <input type="radio" name="Type" value={"admin"} />
-    <label >Business account</label>
+    <label >Admin account</label>
     </div>
     </div>
 
