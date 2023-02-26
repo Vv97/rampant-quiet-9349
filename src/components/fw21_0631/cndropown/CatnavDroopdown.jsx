@@ -4,6 +4,8 @@ import styles from "./CatNav.module.css";
 import { Link } from "react-router-dom";
 
 export const CatnavDroopdown = ({ l = "0", arr1 }) => {
+  let l2 = "*",
+    l1 = "/product";
   return (
     <div className={styles.CatnavDroopdown} style={{ left: l }}>
       <div>
@@ -15,7 +17,7 @@ export const CatnavDroopdown = ({ l = "0", arr1 }) => {
             arr1[0].data.map((user, i) => {
               return (
                 <li key={user}>
-                  <Link to="*">{user}</Link>
+                  <Link to={`${user.link ? l1 : l2}`}>{user}</Link>
                 </li>
               );
             })}

@@ -1,41 +1,39 @@
-.smallDropdown{
-    position:absolute;
-    background-color: #fff;
-    width: 100vw;
-    height: 100vh;
-    inset: 0 0 0 0;
-    z-index: 1;
-    padding: 10px 15px;
+.smallDropdown {
+  position: absolute;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  inset: 0 0 0 0;
+  padding: 10px 15px;
 }
 
-.smallDropdownCrossIcon{
-    /* position: absolute;
+.smallDropdownCrossIcon {
+  /* position: absolute;
     top: 10px;
     right: 25px; */
-    display: flex;
-    justify-content: flex-end;
-     width: 100%;
-    z-index: 2;
-   border: none;
-   background-color: transparent;    
-   font-size: 1.7rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 1.7rem;
 }
 
-.smallNavSection{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-bottom: 15px;
-    font-size: 1.2rem;
-    font-weight: bolder;
-    border-bottom: 1px solid #bfbfbf ;
+.smallNavSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  border-bottom: 1px solid #bfbfbf;
 }
 
-.smallDropdownBtn{
-    border: none;
-    background-color: transparent;
-    font-size: 1.3rem;
-    margin-top: 15px;
-    color: #006efc;
-    font-weight: bolder;
+.smallDropdownBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  margin-top: 15px;
+  color: #006efc;
+  font-weight: bolder;
 }

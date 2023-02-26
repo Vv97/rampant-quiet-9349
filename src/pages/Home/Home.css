@@ -1,7 +1,74 @@
+.HomebannerDiv {
+  max-width: 1248px;
+  margin: 46px auto 0px auto;
+  display: flex;
+  align-items: center;
+  height: 113px;
+  background-color: #feb887;
+  border-color: #feb887;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.HomebannerDiv > div:first-child {
+  width: 8%;
+}
 
-@media all and (max-width:530px) {
-    .homeCatnav{
-        display: none;
-    }
+.HomebannerDiv > div:first-child > img {
+  width: 100%;
+}
+
+.HomebannerDiv > div:nth-child(2) {
+  /* border: 1px solid red; */
+  width: 80%;
+}
+
+.HomebannerDiv > div:nth-child(2) > div:first-child > h2,
+.HomebannerDiv > div:nth-child(2) > div:last-child {
+  margin-bottom: 3px;
+  color: #781b19;
+  /* border: 1px solid red; */
+}
+.HomebannerDiv > .HomebannerDiv > div:nth-child(3) {
+  width: 12%;
+}
+
+.HomebannerDiv > div:nth-child(3) > button {
+  padding: 12px 20px;
+  border: 1px solid #781b19;
+  background: transparent;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #781b19;
+}
+
+.HomebannerDiv > div:nth-child(3) > button > svg {
+  font-size: 1.4rem;
+}
+
+@media all and (max-width: 1117px) {
+  .HomebannerDiv {
+    margin: 0px 15px;
+  }
+
+  .HomebannerDiv > div:nth-child(2) {
+    border: 1px solid red;
+    width: 75%;
+  }
+
+  .HomebannerDiv > div:nth-child(3) {
+    width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 530px) {
+  .homeCatnav {
+    display: none;
+  }
 }
