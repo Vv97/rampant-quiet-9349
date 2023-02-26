@@ -11,7 +11,7 @@ import { ProfileDropdown } from "../profileDropdown/ProfileDropdown";
 
 export const Navbar = () => {
   const [name, setname] = useState("Vishal");
-  const [cart, setcart] = useState([{}]);
+  const [cart, setcart] = useState([]);
   const [auth, setauth] = useState(false);
   const [Category, setcategory] = useState(false);
   const navigate = useNavigate();

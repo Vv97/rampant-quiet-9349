@@ -11,4 +11,7 @@ export const LOGIN_FAIL = "LOGIN_FAIL";
 
 export const LOGOUT_SUCESS = "LOGOUT_SUCESS";
 
+export const AUTHLOGIN_SUCESS = "AUTHLOGIN_SUCESS";
+
+
 

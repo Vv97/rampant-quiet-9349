@@ -21,15 +21,20 @@ const CheckOutPage = () => {
   const handleChange = (e) => {
     setDetails(e.target.value);
   };
+
+  let data = localStorage.getItem("bookData") || [];
+  let res = JSON.parse(data);
   return (
     <div>
       <div id="ch-firstDiv">
         <div className="ch-firstDiv-1">
+          <Link to="/">
           <img
             src="https://i.imgur.com/FQCppUc.png"
             alt=""
-            style={{ width: "50%", height: "70%" }}
+            style={{ width: "90%", height: "70%" }}
           />
+          </Link>
           <h1>Checkout</h1>
         </div>
         <div className="ch-firstDiv-2">
@@ -362,15 +367,15 @@ const CheckOutPage = () => {
           <div className="ch-secDiv-2-1">
             <div className="ch-secDiv-2-1-1">
               <p>Items (1)</p>
-              <p>US $40.01</p>
+              <p>Rs. {res.discounted_price}</p>
             </div>
             <div className="ch-secDiv-2-1-2">
               <p>Shipping </p>
-              <p>US $14.99</p>
+              <p>Rs. 100</p>
             </div>
             <div className="ch-secDiv-2-1-3">
               <p>Order Total</p>
-              <p>US $53.87</p>
+              <p>Rs. {+res.discounted_price + 100}</p>
             </div>
           </div>
           <div className="ch-secDiv-2-2">
@@ -408,7 +413,7 @@ const CheckOutPage = () => {
                 transactionInfo: {
                   totalPriceStatus: "FINAL",
                   totalPriceLabel: "Total",
-                  totalPrice: "100.00",
+                  totalPrice: `${+res.discounted_price + 100}`,
                   currencyCode: "USD",
                   countryCode: "US",
                 },
@@ -449,9 +454,12 @@ const CheckOutPage = () => {
         <br />
         <hr />
         <p>
-          Copyright © 1995-2023 eBay Inc. All Rights Reserved.<a href="#">Accessibility,
-          User Agreement, Privacy, Payments Terms of Use, Cookies, Your Privacy
-          Choices</a>  and AdChoice
+          Copyright © 1995-2023 eBay Inc. All Rights Reserved.
+          <a href="#">
+            Accessibility, User Agreement, Privacy, Payments Terms of Use,
+            Cookies, Your Privacy Choices
+          </a>{" "}
+          and AdChoice
         </p>
       </div>
     </div>
