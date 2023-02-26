@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CartPage.css";
@@ -135,168 +137,163 @@ const responsive = {
 // }
 let data = localStorage.getItem("bookData");
 let res = JSON.parse(data);
+console.log(res);
 
 let data1 = localStorage.getItem("bookSize");
 let res1 = JSON.parse(data1);
+console.log(res1);
 
 const CartPage = () => {
   let price = +res.discounted_price;
   // let discount=price*7
   const [current, setCurrent] = React.useState(1);
-  //   const length = SliderData.length;
 
   price = price * Number(current);
   const formatter = new Intl.NumberFormat("en-US", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
-
   let x = 100 * current;
   let y = 100 * current;
   // console.log(x)
 
-
   return (
-    <div >
-      <Navbar/>
+    <div>
+      <Navbar />
       <div id="firstDiv">
         <div className="firstDiv-1">Shopping Cart</div>
         <div className="firstDiv-2">
           <Link>Send Us Your Comments</Link>
         </div>
       </div>
-      <div id="sec-Div">
-        <div className="secDiv-1">
-          <div className="secDiv-1-1">
-            <div>
-              Seller <Link>designerbrandforless</Link>
-            </div>
-            <div>
-              Request total <span id="i-btn">i</span>
-            </div>
-          </div>
-          <div className="secDiv-1-2">
-            <div className="secDiv-1-2-1">
-              <img
-                src={res.images[1]}
-                style={{ width: "120px", height: "140px" }}
-                alt=""
-              />
-              <div>
-                <p>
-                  {res.title} <br />
-                  Gym Work Out Draw String Casual Sweatpants{" "}
-                </p>
-                <p style={{ fontWeight: "400", marginTop: "8px" }}>
-                  {res1},Grey
-                </p>
-                <p>New with tags</p>
-              </div>
-            </div>
-            <div className="secDiv-1-2-2">
-              <div>
-                <label id="quantity">Qty </label>
-                <button
-                  disabled={current === 1}
-                  style={{ width: "20px" }}
-                  onClick={() => setCurrent((prev) => prev - 1)}
-                >
-                  -
-                </button>
-                <button disabled>{current}</button>
-                <button onClick={() => setCurrent((prev) => prev + 1)} 
-                disabled style={{ width: "20px" }} disabled style={{ width: "20px" }} >
 
-                  {current}
-                </button>
-                <button
-                  style={{ width: "20px" }}
-                  onClick={() => setCurrent((prev) => prev + 1)}
-                >
-
-                  +
-                </button>
+      {res1 && res ? (
+        <div id="sec-Div">
+          <div className="secDiv-1">
+            <div className="secDiv-1-1">
+              <div>
+                Seller <a href="#">designerbrandforless</a>
               </div>
               <div>
-                Economy
-                <br />
-                International
-                <br />
-                Shipping
+                Request total <span id="i-btn">i</span>
               </div>
             </div>
-            <div className="secDiv-1-2-3">
-              <div>
-                <p>Rs. {price}</p>
-
+            <div className="secDiv-1-2">
+              <div className="secDiv-1-2-1">
+                <img
+                  src={res.images[1]}
+                  style={{ width: "120px", height: "140px" }}
+                  alt=""
+                />
                 <div>
-
-                  <div style={{ marginTop: "10px" }}>
-                    <strike>Rs. {res.strike_price}</strike>
-                  </div>
-                  <div>{res.discount}</div>
-
+                  <p>
+                    {res.title} <br />
+                    Gym Work Out Draw String Casual Sweatpants{" "}
+                  </p>
+                  <p style={{ fontWeight: "400", marginTop: "8px" }}>
+                    {res1},Grey
+                  </p>
+                  <p>New with tags</p>
                 </div>
-             
-              <button id="remove-btn">Remove</button>
+              </div>
+              <div className="secDiv-1-2-2">
+                <div>
+                  <label id="quantity">Qty </label>
+                  <button
+                    disabled={current === 1}
+                    style={{ width: "20px" }}
+                    onClick={() => setCurrent((prev) => prev - 1)}
+                  >
+                    -
+                  </button>
+                  {/* <button disabled>{current}</button> */}
+                  {/* <button onClick={() => setCurrent((prev) => prev + 1)}></button> */}
+                  <button disabled style={{ width: "20px" }}>
+                    {current}
+                  </button>
+                  <button
+                    style={{ width: "20px" }}
+                    onClick={() => setCurrent((prev) => prev + 1)}
+                  >
+                    +
+                  </button>
+                </div>
+                <div>
+                  Economy
+                  <br />
+                  International
+                  <br />
+                  Shipping
+                </div>
+              </div>
+              <div className="secDiv-1-2-3">
+                <div>
+                  <p>Rs. {price}</p>
+
+                  <div>
+                    <div style={{ marginTop: "10px" }}>
+                      <strike>Rs. {res.strike_price}</strike>
+                    </div>
+                    <div>{res.discount}</div>
+                  </div>
+                  <button
+                    id="remove-btn"
+                    onClick={() => {
+                      window.location.reload(false);
+                      localStorage.removeItem("bookSize");
+                    }}
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="secDiv-1-3">
+              {current === 1 ? (
+                <p>
+                  Save up to 7% when you buy more
+                  <br />
+                  Increase your item quantity to qualify
+                </p>
+              ) : (
+                <p>
+                  <i class="fa-sharp fa-solid fa-circle-check"></i> Offer
+                  applied
+                  <br />
+                  Save up to 7% when you buy more
+                </p>
+              )}
             </div>
           </div>
-
-
+          <div className="secDiv-2">
+            <div>
+              <Link to="/checkout">Go To CheckOut</Link>
             </div>
-          <div className="secDiv-1-3">
-            {/* {current>1} */}
-
-            {current === 1 ? (
-              <p>
-                Save up to 7% when you buy more
-                <br />
-                Increase your item quantity to qualify
-              </p>
-            ) : (
-              <p>
-                <i class="fa-sharp fa-solid fa-circle-check"></i> Offer applied
-                <br />
-                Save up to 7% when you buy more
-              </p>
-            )}
+            <div className="secDiv-2-2">
+              <div className="secDiv-2-2-1">
+                <p>Item ({current})</p>
+                <p>Rs. {formatter.format(price)}</p>
+              </div>
+              <div className="secDiv-2-2-2">
+                <p>Shipping to 110034</p>
+                <p>Rs. {formatter.format(y)}</p>
+              </div>
+            </div>
+            <div className="secDiv-2-3">
+              <div>Subtotal</div>
+              <div>Rs. {formatter.format(price - x + y)}</div>
+            </div>
           </div>
-
         </div>
-        <div className="secDiv-2">
-          <div>
-            <Link to="/checkout">Go To CheckOut</Link>
-          </div>
-          <div className="secDiv-2-2">
-            <div className="secDiv-2-2-1">
-              <p>Item ({current})</p>
-              <p>Rs. {formatter.format(price)}</p>
-            </div>
-            <div className="secDiv-2-2-2">
-              <p>Shipping to 110034</p>
-              <p>Rs. {formatter.format(y)}</p>
-            </div>
-          </div>
-          <div className="secDiv-2-3">
-            <div>Subtotal</div>
-            <div>Rs. {formatter.format(price - x + y)}</div>
-          </div>
-        </div>
-
-      </div>
-
-
-
-      
-     
+      ) : (
+        <h1>Cart is Empty</h1>
+      )}
 
       <div id="third-Div">
         <div className="thirdDiv-1">Related sponsored items </div>
         <div className="thirdDiv-2">
           <div className="thirdDiv-2-1">
-
-            <Carousel responsive={responsive} style={{ diplay: "flex" }}>
-
+            <Carousel responsive={responsive} style={{ display: "flex" }}>
               <div>
                 <img
                   src="https://i.ebayimg.com/thumbs/images/g/ATcAAOSwquhj1Q0W/s-l200.jpg"
@@ -356,9 +353,7 @@ const CartPage = () => {
                 <p className="design">New</p>
                 <p className="price">$17.18</p>
                 <p className="discount">
-
                   <strike>US $5.87</strike> 5% off
-
                 </p>
                 <p className="shipping">Free Shipping</p>
               </div>
@@ -563,9 +558,6 @@ const CartPage = () => {
         </div>
       </div>
     </div>
-
-    
-
   );
 };
 
