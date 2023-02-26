@@ -35,7 +35,7 @@
 
 .HomebannerDiv > div:nth-child(3) > button {
   padding: 12px 20px;
-  border: 1px solid #781b19;
+  /* border: 1px solid #781b19; */
   background: transparent;
   font-size: 1.1rem;
   display: flex;
@@ -43,6 +43,12 @@
   justify-content: center;
   gap: 5px;
   color: #781b19;
+  border: 1px solid #781b19;
+  cursor: pointer;
+}
+
+.HomebannerDiv > div:nth-child(2) > div:last-child > button {
+  display: none;
 }
 
 .HomebannerDiv > div:nth-child(3) > button > svg {
@@ -51,12 +57,12 @@
 
 @media all and (max-width: 1117px) {
   .HomebannerDiv {
-    margin: 0px 15px;
+    margin: 46px 15px 0px 15px;
   }
 
   .HomebannerDiv > div:nth-child(2) {
-    border: 1px solid red;
-    width: 75%;
+    /* border: 1px solid red; */
+    width: 80%;
   }
 
   .HomebannerDiv > div:nth-child(3) {
@@ -67,8 +73,75 @@
   }
 }
 
+@media all and (max-width: 829px) {
+  .HomebannerDiv > div:nth-child(3) {
+    display: none;
+  }
+
+  .HomebannerDiv > div:nth-child(2) > div:last-child > button {
+    display: none;
+  }
+
+  .HomebannerDiv > div:nth-child(2) {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+
+  .HomebannerDiv > div:nth-child(2) > div:last-child {
+    display: flex;
+    gap: 25px;
+  }
+
+  .HomebannerDiv > div:nth-child(2) > div:last-child > button {
+    border: none;
+    background: transparent;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #781b19;
+  }
+
+  .HomebannerDiv > div:first-child {
+    width: 15%;
+  }
+}
+
+@media all and (max-width: 656px) {
+  .HomebannerDiv > div:nth-child(2) > div:first-child > h2 {
+    font-size: 1.2rem;
+    /* border: 1px solid red; */
+  }
+
+  .HomebannerDiv > div:nth-child(2) > div:last-child {
+    font-size: 0.877rem;
+  }
+}
+
 @media all and (max-width: 530px) {
   .homeCatnav {
+    display: none;
+  }
+
+  .HomebannerDiv {
+    margin: 30px 15px 0px 15px;
+  }
+
+  .HomebannerDiv {
+    height: 80px;
+  }
+
+  .HomebannerDiv > div:nth-child(2) > div:first-child > h2 {
+    font-size: 0.8rem;
+    /* border: 1px solid red; */
+  }
+
+  .HomebannerDiv > div:nth-child(2) > div:last-child {
+    font-size: 0.707rem;
+  }
+
+  .HomebannerDiv > div:nth-child(2) > div:last-child > button {
     display: none;
   }
 }

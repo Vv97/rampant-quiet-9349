@@ -175,6 +175,12 @@
   }
 }
 
+@media all and (max-width: 510px) {
+  .carousal {
+    margin-top: 30px;
+  }
+}
+
 @media all and (max-width: 877px) {
   .carousalImage > div {
     flex-direction: column;
@@ -512,6 +518,11 @@
 
   .pikkachuimg > div:last-child {
     width: 100%;
+  }
+
+  .campageHeadText {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

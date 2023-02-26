@@ -39,7 +39,12 @@ export const Home = () => {
           <div>
             <h2>Up to 40% OFF. Kick off the year with new tech!</h2>
           </div>
-          <div>Everything you need to help you succeed.</div>
+          <div>
+            Everything you need to help you succeed.{" "}
+            <button className="HomebannerDIvBtn">
+              Let's go <BiRightArrowAlt />
+            </button>
+          </div>
         </div>
         <div>
           <button>

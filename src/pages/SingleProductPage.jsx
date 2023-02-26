@@ -17,6 +17,8 @@ import { Link, useParams } from "react-router-dom";
 import { getSingleProductAPI } from "../Redux/Product/Product.api";
 import { useDispatch } from "react-redux";
 import { Navbar } from "../components/fw21_0631/Navbar/Navbar";
+import Carousel from "react-multi-carousel";
+import { Footer } from "../components/fw21_0631/Footer/Footer";
 // import { fetchCartData } from "../Redux/Cart/Cart.action";
 
 const SingleProductPage = () => {
@@ -72,6 +74,41 @@ const SingleProductPage = () => {
 
   let dataLS = JSON.parse(localStorage.getItem("dataKey"));
   console.log("dataLS", dataLS);
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+
+  let count = 0;
+  function showMessage() {
+    if (count == 0) {
+      alert("Select Size");
+    } else {
+      alert("Added to Cart");
+    }
+    count++;
+
+    console.log(count);
+  }
+  const addToCart = () => {
+    localStorage.setItem("bookData", JSON.stringify(singleProduct));
+    showMessage();
+  };
 
   return (
     <div style={{ width: "100%", border: "0px solid red", margin: "auto" }}>
@@ -81,7 +118,7 @@ const SingleProductPage = () => {
           width: "100%",
           border: "0px solid red",
           margin: "auto",
-          marginTop: "-60px",
+          marginTop: "-100px",
         }}
       >
         <Box
@@ -318,10 +355,7 @@ const SingleProductPage = () => {
                     //border={'2px solid gray'}
                     px={2}
                     onClick={() => {
-                      localStorage.setItem(
-                        "bookData",
-                        JSON.stringify(singleProduct)
-                      );
+                      addToCart();
                     }}
                   >
                     Add To Bag
@@ -454,6 +488,262 @@ const SingleProductPage = () => {
           </Flex>
         </Box>
       </div>
+      <h1>Trending Items</h1>
+      <Carousel responsive={responsive} style={{ display: "flex" }}>
+        <div>
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/ATcAAOSwquhj1Q0W/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            Trousers Sweatpants Jogger Pants Cargo Casual Training Running...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$5.58</p>
+          <p className="discount">
+            <strike>US $5.87</strike> 5% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/JwwAAOSwJv5j5jMr/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            Men's Casual Fleece Sweatpants Jogger Loungewear High...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$13.96</p>
+          <p className="discount">
+            <strike>US $14.85</strike> 6% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/gqIAAOSwtfdi6fUW/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            Men's Casual Fleece Sweatpants Jogger Loungewear High...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$17.18</p>
+          <p className="discount">
+            <strike>US $5.87</strike> 5% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/HnAAAOSw5VlgmKCP/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            Men's Fashion New Cargo Pants with Pockets Jogger SweatPants...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$44.62</p>
+          <p className="discount">
+            <strike>US $46.97</strike> 5% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/gAAAAOSwLQFikIcN/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            Men Jogger Sweatpants Zipper Pocket Elastic Waistband Basketball...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$6.99</p>
+          <p className="discount">
+            <strike>US $7.37</strike> 5% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/MY0AAOSwVH5bkN4H/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            New Man Style Casual Sport Gym Jogger Bodybuilding Trouser...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$25.19</p>
+          <p className="discount">
+            <strike>US $27.99</strike> 10% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/WlgAAOSwvaRh2TH8/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            Men's Fashion Jogger Sweat Shorts Undershirt Gym Running Workout...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$20.09</p>
+          <p className="discount">
+            <strike>US $29.99</strike> 33% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/Nt8AAOSwyFZgioNg/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            Men's Jogger Heavy Weight Fleece Cargo Pocket Sweat Pants...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$16.58</p>
+          <p className="discount">
+            <strike>US $17.83</strike> 7% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/rukAAOSw-NZiUuem/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            VTG Nike Pants Mens Large Blue White Jogger Sweatpants Y2K Leg zi...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$29.04</p>
+          <p className="discount">
+            <strike>US $33.00</strike> 12% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/6EUAAOSwOI5jdqe6/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            3 Pack Men's Shorts Quick Dry Jogger Shorts Gym Casual Workout...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$18.94</p>
+          <p className="discount">
+            <strike>US $19.94</strike> 5% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/YDMAAOSwzuVjTlM2/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            Mens Camo Cargo Pants Combat Jogger Gym Casual Trouser Pocket...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$13.39</p>
+          <p className="discount">
+            <strike>US $5.87</strike> 5% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+        <div>
+          {" "}
+          <img
+            src="https://i.ebayimg.com/thumbs/images/g/isMAAOSwuONixRyY/s-l200.jpg"
+            style={{
+              width: "95%",
+              height: "230px",
+              borderRadius: "10px",
+            }}
+            alt="Avatar-1"
+          />
+          <p id="title">
+            Cargo Pants Jogger Trousers Sweatpants Training Running Casual...
+          </p>
+          <p className="design">New</p>
+          <p className="price">$29.99</p>
+          <p className="discount">
+            <strike>US $5.87</strike> 5% off
+          </p>
+          <p className="shipping">Free Shipping</p>
+        </div>
+      </Carousel>
+      <Footer />
     </div>
   );
 };
