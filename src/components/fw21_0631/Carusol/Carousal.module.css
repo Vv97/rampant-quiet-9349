@@ -1,572 +1,503 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-.carousal{
-    max-width: 1248px;
-    margin: 0 auto;
-    position: relative;
-    transition: 2s ease-in-out;
-    /* border: 1px solid red; */
+.carousal {
+  max-width: 1248px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 4;
+  transition: 2s ease-in-out;
+  /* border: 1px solid red; */
 }
 
-
-
-.leftArrow{
-    display:block;
-    position: absolute;
-    color: #fff;
-    top: 43%;
-    left: 0;
-    z-index: 3;
-    height: 50px;
-    width: 50px;
-    font-size: 40px;
+.leftArrow {
+  display: block;
+  position: absolute;
+  color: #fff;
+  top: 43%;
+  left: 0;
+  z-index: 3;
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
 }
 
 .rightArrow {
-    display:block;
-    position: absolute;
-    color: #fff;
-    top: 43%;
-    right: -10px;
-    z-index: 3;
-    height: 50px;
-    width: 50px;
-    font-size: 40px;
+  display: block;
+  position: absolute;
+  color: #fff;
+  top: 43%;
+  right: -10px;
+  z-index: 3;
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
 }
 
-.rightArrow , .leftArrow {
-    display: none;
+.rightArrow,
+.leftArrow {
+  display: none;
 }
 
-
-.carousal:hover .rightArrow , .carousal:hover .leftArrow {
+.carousal:hover .rightArrow,
+.carousal:hover .leftArrow {
   display: block;
   transition: 2s ease-in-out;
 }
 
-
-.carousalImage{
-    display: flex;
-    /* border: 1px solid purple; */
-
+.carousalImage {
+  display: flex;
+  /* border: 1px solid purple; */
 }
 
-.carousalImage > div{
-  
-    display: flex;
-    /* border: 1px solid orange; */
+.carousalImage > div {
+  display: flex;
+  /* border: 1px solid orange; */
 }
 
-.carousalImage > div> div >  img {
-    width: 100%;
-    /* border: 1px solid red; */
+.carousalImage > div > div > img {
+  width: 100%;
+  /* border: 1px solid red; */
 }
 
-.carousalImage > div > div:first-child  {
-   width: 30%;
-   /* border: 1px solid green; */
-   background-color: #f5de6a;
- display: flex;
- align-items: center;
-
+.carousalImage > div > div:first-child {
+  width: 30%;
+  /* border: 1px solid green; */
+  background-color: #f5de6a;
+  display: flex;
+  align-items: center;
 }
-
 
 .carousalImage > div > div:last-child {
-    width: 70%;
-    /* border: 18px solid purple;   */
- }
-
-
-
-
-
-.carousalImagehead{
-    font-size: 1.0625rem;
-max-width: 288px; 
-margin: auto;
+  width: 70%;
+  /* border: 18px solid purple;   */
 }
 
+.carousalImagehead {
+  font-size: 1.0625rem;
+  max-width: 288px;
+  margin: auto;
+}
 
 .carousalImagehead > p {
-    line-height: 1.2;
-    color: #5c1b05;
-    font-weight: 500;
-    font-size: 2.5rem;
+  line-height: 1.2;
+  color: #5c1b05;
+  font-weight: 500;
+  font-size: 2.5rem;
 }
 
 .carousalImagehead > span {
-    font-size: 1.1rem;
-    color: #5c1b05;
-    font-weight: 400;
-    margin-top: 10px;
-    display: block;
+  font-size: 1.1rem;
+  color: #5c1b05;
+  font-weight: 400;
+  margin-top: 10px;
+  display: block;
 }
 
-
- .carousalImage > div> div:last-child > div > img {
-    width: 100%;
- }
-
-.carousalImage2{
-    display: flex;
+.carousalImage > div > div:last-child > div > img {
+  width: 100%;
 }
 
-
-.carousalImagebbtn{
-    width: 40%;
-    height: 40%;
-    margin-top: 20px;
-    border: none;
-    padding: 10px 0px;
-    color: #5c1b05;
-    border: 1px solid #5c1b05 ;
-    font-weight: 600;
-    background-color: transparent;
+.carousalImage2 {
+  display: flex;
 }
 
-
-.CarousalFlexContain{
-    display: flex;
-}
-
-
-
-.carousalFirstChild{
-    width: 33.33%;
+.carousalImagebbtn {
+  width: 40%;
+  height: 40%;
+  margin-top: 20px;
+  border: none;
+  padding: 10px 0px;
+  color: #5c1b05;
+  border: 1px solid #5c1b05;
+  font-weight: 600;
+  background-color: transparent;
 }
 
 .CarousalFlexContain {
-    width: 66.67%;
+  display: flex;
 }
 
-.CarousalFlexContain >div > img {
-    width: 100%;
+.carousalFirstChild {
+  width: 33.33%;
 }
 
-
-@media all and (max-width : 1065px) {
-    .CarousalFlexContain{
-        display: flex;
-        flex-direction: column;
-        /* height: 308px; */
-    }
-
-    .CarousalFlexContain {
-        width: 60%;
-        /* border: 1px solid red;s */
-        /* height: 320px; */
-    }
-
-    .carousalFirstChild{
-        width: 40%;
-        background-color: #f9cc2c;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    
-    .CarousalFlexContain >div > img {
-        /* border: 1px solid red; */
-        width: 35%;
-        overflow: hidden;
-    }
-
-    .CarousalFlexContain > div:first-child{
-        background-color: #f99147 ;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .CarousalFlexContain > div:last-child{
-        background-color:  #77e6e7  ;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-  
+.CarousalFlexContain {
+  width: 66.67%;
 }
 
+.CarousalFlexContain > div > img {
+  width: 100%;
+}
 
-@media all and (max-width :877px) {
-
-   .carousalImage > div{
+@media all and (max-width: 1065px) {
+  .CarousalFlexContain {
+    display: flex;
     flex-direction: column;
-   }
+    /* height: 308px; */
+  }
 
-   .carousalImagehead{
+  .CarousalFlexContain {
+    width: 60%;
+    /* border: 1px solid red;s */
+    /* height: 320px; */
+  }
+
+  .carousalFirstChild {
+    width: 40%;
+    background-color: #f9cc2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .CarousalFlexContain > div > img {
+    /* border: 1px solid red; */
+    width: 35%;
+    overflow: hidden;
+  }
+
+  .CarousalFlexContain > div:first-child {
+    background-color: #f99147;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .CarousalFlexContain > div:last-child {
+    background-color: #77e6e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 877px) {
+  .carousalImage > div {
+    flex-direction: column;
+  }
+
+  .carousalImagehead {
     width: 100%;
     margin: 0;
     padding: 10px 20px;
     max-width: 100%;
-   }
+  }
 
-   .carousalImage > div > div:first-child  {
+  .carousalImage > div > div:first-child {
     width: 100%;
-  justify-content: flex-start;
- }
+    justify-content: flex-start;
+  }
 
+  .CarousalFlexContain {
+    display: flex;
+    flex-direction: row;
+  }
 
+  .CarousalFlexContain {
+    width: 66.68%;
+    /* border: 1px solid red; */
+  }
 
-    .CarousalFlexContain{
-        display: flex;
-        flex-direction:row;
-        
-        
-    }
+  .carousalFirstChild {
+    width: 33.33%;
+    background-color: #f9cc2c;
+  }
 
+  .CarousalFlexContain > div:first-child {
+    background-color: #f99147;
+    display: flex;
+    /* height: 100%; */
+    align-items: center;
+    justify-content: center;
+  }
 
+  .CarousalFlexContain > div:last-child {
+    background-color: #77e6e7;
+    display: flex;
+    align-items: center;
+    /* height: 100%; */
+    /* border: 1px solid green; */
+    justify-content: center;
+  }
 
+  .carousalImagehead > p {
+    line-height: 1.2;
+    color: #5c1b05;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
 
-    .CarousalFlexContain {
-        width: 66.68%;
-        /* border: 1px solid red; */
-    }
+  .carousalImagehead > span {
+    font-size: 1.1rem;
+    color: #5c1b05;
+    font-weight: 400;
+    margin-top: 2px;
+    display: block;
+  }
 
-    .carousalFirstChild{
-        width: 33.33%;
-        background-color: #f9cc2c;
-    }
+  .carousalImagebbtn {
+    border: none;
+    margin-top: 2px;
+    text-align: left;
+    width: 20%;
+  }
 
+  .carousalImage > div > div:last-child {
+    width: 100%;
+    /* border: 1px solid green; */
+  }
 
-    .CarousalFlexContain > div:first-child{
-        background-color: #f99147 ;
-        display: flex;
-        /* height: 100%; */
-        align-items: center;
-        justify-content: center;
-    }
+  .CarousalFlexContain > div > img {
+    width: 100%;
+    /* border: 1px solid gray; */
+  }
 
-    .CarousalFlexContain > div:last-child{
-        background-color:  #77e6e7  ;
-        display: flex;
-        align-items: center;
-        /* height: 100%; */
-        /* border: 1px solid green; */
-        justify-content: center;
-    }
+  .carousalFirstChild {
+    justify-content: center;
+  }
 
-
-
-
-    .carousalImagehead > p {
-        line-height: 1.2;
-        color: #5c1b05;
-        font-weight: 500;
-        font-size: 1.5rem;
-    }
-    
-    .carousalImagehead > span {
-        font-size: 1.1rem;
-        color: #5c1b05;
-        font-weight: 400;
-        margin-top: 2px;
-        display: block;
-    }
-
-
-    .carousalImagebbtn{
-        border: none;
-        margin-top: 2px;
-        text-align: left;
-        width: 20%;
-    }
-
-
-    .carousalImage > div > div:last-child {
-        width: 100%;
-        /* border: 1px solid green; */
-     }
-    
-
-     .CarousalFlexContain >div > img {
-        width: 100%;
-        /* border: 1px solid gray; */
-    }
-
-
-    .carousalFirstChild{
-        justify-content: center;
-    }
-    
-
-    .carousalFirstChild > img{
-        width: 100%;
-        /* border: 1px solid red; */
-    }
-  
+  .carousalFirstChild > img {
+    width: 100%;
+    /* border: 1px solid red; */
+  }
 }
 
-
-@media all and (max-width :597px) {
-    .carousalImage > div > div:last-child  {
-        width: 100%;
-        /* height: 200px;
+@media all and (max-width: 597px) {
+  .carousalImage > div > div:last-child {
+    width: 100%;
+    /* height: 200px;
         overflow: hidden; */
-      justify-content: flex-start;
-     }
+    justify-content: flex-start;
+  }
 
+  .CarousalFlexContain {
+    /* border: 1px solid red; */
+    /* height: 0; */
+  }
 
-     .CarousalFlexContain {
-        /* border: 1px solid red; */
-        /* height: 0; */
-     }
-     
-    .CarousalFlexContain > div:first-child{
-        background-color: #f99147 ;
-        display: flex;
-        /* height: 100%; */
-        align-items: center;
-        justify-content: center;
-    }
+  .CarousalFlexContain > div:first-child {
+    background-color: #f99147;
+    display: flex;
+    /* height: 100%; */
+    align-items: center;
+    justify-content: center;
+  }
 
-    .CarousalFlexContain > div:last-child{
-        background-color:  #77e6e7  ;
-        display: flex;
-        align-items: center;
-  
-        /* border: 1px solid green; */
-        justify-content: center;
-    }
+  .CarousalFlexContain > div:last-child {
+    background-color: #77e6e7;
+    display: flex;
+    align-items: center;
+
+    /* border: 1px solid green; */
+    justify-content: center;
+  }
 }
 
+@media all and (max-width: 491px) {
+  .carousalImagehead > span {
+    font-size: 0.857rem;
+    padding-top: 7px;
+  }
+}
 
 /* campage  */
 
-.campageHead{
-    display: flex;
-    background-color: #fec99c;
-    /* gap: 2px; */
+.campageHead {
+  display: flex;
+  background-color: #fec99c;
+  /* gap: 2px; */
 }
 
-
-.campageHead> div:first-child{
-    background-color: #fec99c;
-    /* border: 1px solid red; */
-    width: 30%;
+.campageHead > div:first-child {
+  background-color: #fec99c;
+  /* border: 1px solid red; */
+  width: 30%;
 }
 
-.campageHead2{
-    display: flex;
-    /* gap: 1px; */
-  
+.campageHead2 {
+  display: flex;
+  /* gap: 1px; */
 }
 
-.campageHeaddiv2{
-    display: flex;
-    width: 70%;
-    /* border: 1px solid red; */
-    /* gap: 5px; */
+.campageHeaddiv2 {
+  display: flex;
+  width: 70%;
+  /* border: 1px solid red; */
+  /* gap: 5px; */
 }
 
-
-.campageHeaddiv2 > div >  img{
-    width: 100%;
+.campageHeaddiv2 > div > img {
+  width: 100%;
 }
 
 .campageHead2 > div > img {
-    width: 100%;
+  width: 100%;
 }
 
-
-
-.campageHeadText{
-    font-size: 1.0625rem;
-    max-width: 288px; 
-    margin: auto;
-    width: 100%;
-    background-color: #f9cc2c;
-    color: #5c1b05;
-    padding: 10px 0;
+.campageHeadText {
+  font-size: 1.0625rem;
+  max-width: 288px;
+  margin: auto;
+  width: 100%;
+  background-color: #f9cc2c;
+  color: #5c1b05;
+  padding: 10px 0;
 }
-
 
 .campageHeadText > p {
-    font-size: 2.4rem;
-    line-height: 1.2;
-    font-weight: 600;
-    margin-top: 10px;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-
-.campageHeadText > span{
-    display: block;
-    font-size: 1rem;
-    margin-top: 10px;
+.campageHeadText > span {
+  display: block;
+  font-size: 1rem;
+  margin-top: 10px;
 }
-
-
 
 .campageHeadText > button {
-    width: 40%;
-    height: 40%;
-    margin-top: 15px;
-    border: 1px solid #5c1b05;
-    padding: 10px 0px;
-    background-color: transparent;
-    color: #5c1b05;
-    outline: none;
+  width: 40%;
+  height: 40%;
+  margin-top: 15px;
+  border: 1px solid #5c1b05;
+  padding: 10px 0px;
+  background-color: transparent;
+  color: #5c1b05;
+  outline: none;
 }
 
-
-
-@media all and (max-width :  1065px){
-   .campageHead2{
+@media all and (max-width: 1065px) {
+  .campageHead2 {
     flex-direction: column;
-   } 
+  }
 
-   
-
-
- .campageHeaddiv2FirstChild{
+  .campageHeaddiv2FirstChild {
     width: 39%;
     border: 4px solid #fdb784;
- }
+  }
 
-
- .campageHead2{
+  .campageHead2 {
     width: 59%;
- }
+  }
 
-   .campageHead2 > div{
+  .campageHead2 > div {
     display: flex;
     align-items: center;
     justify-content: center;
     border: 4px solid #fdb784;
-   }
+  }
 
-   .campageHead2 > div > img{
+  .campageHead2 > div > img {
     width: 35%;
-
-   }
+  }
 }
 
+@media all and (max-width: 877px) {
+  .campageHead {
+    flex-direction: column;
+  }
 
-@media all and (max-width :877px) {
-    .campageHead{
-        flex-direction: column;
-    }
+  .campageHead > div:first-child {
+    background-color: #fec99c;
+    width: 100%;
+  }
 
-
-    .campageHead> div:first-child{
-        background-color: #fec99c;
-        width: 100%;
-    }
-    
-
-.campageHead2{
+  .campageHead2 {
     flex-direction: row;
-}
+  }
 
-
-.campageHeadText > p{
+  .campageHeadText > p {
     font-size: 1.4rem;
-}
+  }
 
-.campageHeadText > span{
+  .campageHeadText > span {
     margin-top: 2px;
-}
+  }
 
-   .campageHeadText > button {
+  .campageHeadText > button {
     border: none;
     text-align: left;
     margin-top: 2px;
     padding: 8px 0px;
-   }
+  }
 
+  .campageHeadText {
+    max-width: 100%;
+    margin: 0;
+  }
 
-    .campageHeadText{
-        max-width: 100%;
-        margin: 0;
-    }
+  .campageHeaddiv2FirstChild {
+    width: 33.33%;
+  }
 
+  .campageHeaddiv2 {
+    width: 100%;
+  }
 
-    .campageHeaddiv2FirstChild{
-        width: 33.33%;
-    }
+  .campageHead2 > div > img {
+    width: 100%;
+  }
 
-    .campageHeaddiv2{
-        width: 100%;
-    }
-
-    .campageHead2 > div > img{
-        width: 100%;
-    
-       }
-
-       .campageHead2{
-        width: 67.66%;
-     }
-    
+  .campageHead2 {
+    width: 67.66%;
+  }
 }
 
 /* ccbjsc */
 
-.pikkachuimg{
- 
-    display: flex;
-   overflow: hidden;
-   background-color:
-   #430809;
+.pikkachuimg {
+  display: flex;
+  overflow: hidden;
+  background-color: #430809;
 }
 
 .pikkachuimg > div:first-child {
-    width: 4%;
-    background-color:
-    #430809;
-    color: #430809;
+  width: 4%;
+  background-color: #430809;
+  color: #430809;
 }
 
-
-.pikkachuimg > div:first-child > button{
-    background-color:
-    #430809;
-    color: #430809;
-    border: none;
-    display: none;
+.pikkachuimg > div:first-child > button {
+  background-color: #430809;
+  color: #430809;
+  border: none;
+  display: none;
 }
 
 .pikkachuimg > div:last-child {
-    width: 96%;
+  width: 96%;
 }
 
 .pikkachuimg > div > img {
-    width: 100%;
+  width: 100%;
 }
 
-
 @media all and (max-width: 1065px) {
-   .pikkachuimg {
+  .pikkachuimg {
     flex-direction: column;
     color: #fff;
     border: 1px solid green;
-   } 
+  }
 
-   .pikkachuimg > div:first-child {
+  .pikkachuimg > div:first-child {
     width: 100%;
     padding: 40px 20px;
     border: 1px solid green;
- 
-}
+  }
 
-
-.pikkachuimgfirstChild > p {
+  .pikkachuimgfirstChild > p {
     font-size: 1.5rem;
     margin-top: 4px;
     color: #fff;
-}
+  }
 
-
-.pikkachuimg > div:first-child > button{
+  .pikkachuimg > div:first-child > button {
     width: 20%;
     height: 20%;
     text-align: left;
@@ -577,73 +508,57 @@ margin: auto;
     margin: 5px 0px 0px 0px;
     display: block;
     /* border: 1px solid red; */
-}
+  }
 
-
-
-.pikkachuimg > div:last-child {
+  .pikkachuimg > div:last-child {
     width: 100%;
-}
-
-
+  }
 }
 
 @media all and (max-width: 726px) {
-    .pikkachuimg {
-     flex-direction: column;
-     color: #fff;
-     /* border: 1px solid green; */
-    } 
+  .pikkachuimg {
+    flex-direction: column;
+    color: #fff;
+    /* border: 1px solid green; */
+  }
 
+  .pikkachuimg > div:first-child {
+    width: 100%;
+    padding: 32px 20px;
+    /* border: 1px solid green; */
+  }
+}
 
-     .pikkachuimg > div:first-child {
-        width: 100%;
-        padding: 32px 20px;
-        /* border: 1px solid green; */
-     
-    }
- 
+@media all and (max-width: 671px) {
+  .pikkachuimg {
+    flex-direction: column;
+    color: #fff;
+    border: 1px solid green;
+  }
 
- 
- }
+  .pikkachuimg > div:first-child {
+    width: 100%;
+    padding: 30px 20px;
+  }
 
- @media all and (max-width: 671px) {
-    .pikkachuimg {
-     flex-direction: column;
-     color: #fff;
-     border: 1px solid green;
-    } 
+  .pikkachuimgfirstChild > p {
+    font-size: 1rem;
+    margin-top: 4px;
+    color: #fff;
+  }
+}
 
-
-     .pikkachuimg > div:first-child {
-        width: 100%;
-        padding: 30px 20px;
-     
-    }
-   
-
-    .pikkachuimgfirstChild > p {
-        font-size: 1rem;
-        margin-top: 4px;
-        color: #fff;
-    }
-
- 
- }
-
-
- @media all and (max-width: 340px) {
-    .pikkachuimg > div:first-child > button{
-        width: 50%;
-        height: 40%;
-        text-align: left;
-        border: none;
-        background: transparent;
-        padding: 4px 0;
-        color: #fff;
-        margin: 5px 0px 0px 0px;
-        display: block;
-        /* border: 1px solid red; */
-    }
-    
- }
+@media all and (max-width: 340px) {
+  .pikkachuimg > div:first-child > button {
+    width: 50%;
+    height: 40%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    padding: 4px 0;
+    color: #fff;
+    margin: 5px 0px 0px 0px;
+    display: block;
+    /* border: 1px solid red; */
+  }
+}

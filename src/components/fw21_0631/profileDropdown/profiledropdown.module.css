@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profileDropdown {
+  position: absolute;
+  top: 28px;
+  padding: 10px;
+  left: 0;
+  width: 220px;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.profileDropdown > div:first-child {
+  display: flex;
+  text-align: center;
+  gap: 15px;
+}
+
+.profileDropdown > div:first-child > div:last-child > h2 {
+  font-size: 1.2rem;
+}
+
+.profileDropdown > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profileDropdown > div:last-child > a {
+  color: inherit;
+}
+
+.profileDropdown > div:last-child > p:hover,
+.profileDropdown > div:last-child > a:hover {
+  text-decoration: underline;
+}
+
+.profileDropdown > div:last-child > button {
+  border: 1px solid #781b19;
+  padding: 10px 0px;
+  background-color: transparent;
+  color: #781b19;
+  font-weight: 500;
+}
+
+.profileDropdown > div:last-child > button:hover {
+  color: #fff;
+  background-color: #781b19;
+}

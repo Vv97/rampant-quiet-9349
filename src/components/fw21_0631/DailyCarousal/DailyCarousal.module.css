@@ -1,98 +1,108 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-.carousal{
-    max-width: 1248px;
-    margin: 0 auto;
-    position: relative;
-    transition: 2s ease-in-out;
-    /* border: 1px solid red; */
+.carousal,
+.maincontainer {
+  max-width: 1248px;
+  margin: 0 auto;
+  position: relative;
+  transition: 2s ease-in-out;
+  /* border: 1px solid red; */
 }
 
-
-
-
-
-
-.leftArrow{
-    display:block;
-    position: absolute;
-    color: gray;
-    top: 43%;
-    left: 0;
-    z-index: 3;
-    height: 50px;
-    width: 50px;
-    font-size: 40px;
+.leftArrow {
+  display: block;
+  position: absolute;
+  color: gray;
+  top: 43%;
+  left: 0;
+  z-index: 3;
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
 }
 
 .rightArrow {
-    display:block;
-    position: absolute;
-    /* border: 1px solid red; */
-    color: gray;
-    top: 43%;
-    right: -10px;
-    z-index: 3;
-    height: 50px;
-    width: 50px;
-    font-size: 40px;
-    border-radius: 50%;
+  display: block;
+  position: absolute;
+  /* border: 1px solid red; */
+  color: gray;
+  top: 43%;
+  right: -10px;
+  z-index: 3;
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
+  border-radius: 50%;
 }
 
-.rightArrow , .leftArrow {
-    display: none;
+.rightArrow,
+.leftArrow {
+  display: none;
 }
 
-
-.carousal:hover .rightArrow , .carousal:hover .leftArrow {
+.carousal:hover .rightArrow,
+.carousal:hover .leftArrow {
   display: block;
   transition: 2s ease-in-out;
 }
 
+.carousal > div > img {
+  width: 100%;
+}
 
-.carousal > div > img{
-    width: 100%;
+.maincontainerText {
+  display: flex;
+  padding: 25px 10px;
+}
 
+.maincontainerText > h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-right: 20px;
+  border-right: 2px solid #eeeeee;
+}
+
+.maincontainerText > div {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
 }
 
 .dailyCarousalHead {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dailyCarousalHeadimg{
-    height: 200px;
-    background-color: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dailyCarousalHeadimg {
+  height: 200px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.dailyCarousalHeadimg >  img {
-    object-fit: contain;
+.dailyCarousalHeadimg > img {
+  object-fit: contain;
 }
 
-.DailyCarousaltext{
-    padding: 10px 10px;
+.DailyCarousaltext {
+  padding: 10px 10px;
 }
 
-
-@media all and (max-width:1235px) {
-   .carousal{
+@media all and (max-width: 1235px) {
+  .carousal {
     padding-inline: 5px;
-   }
+  }
 }
 
-@media all and (max-width:420px) {
-    .DailyCarousaltext{
-        padding: 10px 20px;
-    }
+@media all and (max-width: 420px) {
+  .DailyCarousaltext {
+    padding: 10px 20px;
+  }
 }
-
