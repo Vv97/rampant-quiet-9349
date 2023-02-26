@@ -205,11 +205,7 @@ const CartPage = () => {
                 </button>
                 <button disabled>{current}</button>
                 <button onClick={() => setCurrent((prev) => prev + 1)} 
-                /////find
-                disabled style={{ width: "20px" }}>
-
-                
-                <button disabled style={{ width: "20px" }}>
+                disabled style={{ width: "20px" }} disabled style={{ width: "20px" }} >
 
                   {current}
                 </button>
@@ -292,7 +288,7 @@ const CartPage = () => {
 
 
       
-      </div>
+     
 
       <div id="third-Div">
         <div className="thirdDiv-1">Related sponsored items </div>
@@ -568,8 +564,7 @@ const CartPage = () => {
       </div>
     </div>
 
-
-    </div>
+    
 
   );
 };

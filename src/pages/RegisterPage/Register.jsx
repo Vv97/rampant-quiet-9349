@@ -37,9 +37,12 @@ const handleSubmit = (e) => {
   return (
 
     <div id={styles.mainregister} >
+
+<a href="http://localhost:3000/">
         <div id={styles.abjlogo}>
             <img src={"https://i.imgur.com/FQCppUc.png"} alt="logo" />
         </div>
+        </a>
 
         <div id={styles.singintext}>
             <p>Already a member? <a rel="stylesheet" href="http://localhost:3000/login" >Sign in </ a></p>
