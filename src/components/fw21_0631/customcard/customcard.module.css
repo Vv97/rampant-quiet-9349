@@ -118,7 +118,7 @@
   .customcard > div:first-child {
     max-width: 100%;
     width: 100%;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     order: 2;
   }
 
@@ -127,7 +127,7 @@
     height: 200px;
     width: 100%;
     order: 1;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 0;
   }
 
