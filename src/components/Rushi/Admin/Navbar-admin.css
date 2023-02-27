@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: row;
   text-align: center;
+  align-items: center;
   gap: 10px;
   height: 70px;
   background-color: rgb(246, 245, 245);
@@ -42,7 +43,7 @@
 .add_product_btn_div {
   font-size: 16px;
   border: 1px solid black;
-  background-color: blue;
+  background-color: rgb(59, 59, 188);
   color: white;
   height: 30px;
   padding: 20px 10px;
@@ -53,13 +54,14 @@
 }
 
 .nav_drop_down_section {  
+  background-color: rgb(59, 59, 188);
   font-size: 16px;
   border: 2px solid black;
-  background-color: white;
   border-radius: 5px;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 130px;
+  width: 100px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -71,3 +73,9 @@
   flex-direction: column;
   font-weight: bold;
 }
+
+/* @media screen and (max-width: "600px") and (min-width: "200px")  {
+  *{
+    border: "1px solid black";
+  }
+} */
