@@ -13,27 +13,28 @@ const NavbarAdmin = () => {
   const navigate = useNavigate();
 
   const redirect_AddProducts = () => {
-   // console.log("hello");
     navigate("/add_products");
   };
 
   const redirect_AdminProducts = () => {
-    //console.log("hello");
     navigate("/admin_products");
   };
 
   const redirect_AdminHome = () => {
-    //console.log("hello");
     navigate("/admin");
   };
 
   const handleSignOut = () => {
-   // console.log("inside signout");
-    navigate("/login");
+    navigate("/");
   }
+
+  const logoClicked = () => {
+     navigate("/");
+   }
+   
   return (
     <div className="nav_main">
-      <div className="nav_logo">
+      <div className="nav_logo" onClick={logoClicked}>
         <img src="https://i.imgur.com/FQCppUc.png" alt="logo" />
       </div>
       <div className="navigate_section">

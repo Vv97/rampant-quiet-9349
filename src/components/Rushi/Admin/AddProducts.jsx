@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 
+
 const AddProducts = () => {
   const [category, setCategory] = useState("");
   const [product, setProduct] = useState("");
@@ -58,7 +59,7 @@ const AddProducts = () => {
         <NavbarAdmin />
         <div
           style={{
-            backgroundColor:"white",
+            backgroundColor: "white",
             border: "1px solid grey",
             borderRadius: "10px",
             width: "60%",
@@ -164,7 +165,9 @@ const AddProducts = () => {
                 />
               </div>
               <div style={{ textAlign: "center", marginTop: "40px" }}>
-                <Button backgroundColor={"grey"} color={"black"} type="submit">Add Product</Button>
+                <Button backgroundColor={"grey"} color={"black"} type="submit">
+                  Add Product
+                </Button>
               </div>
             </FormControl>
           </form>

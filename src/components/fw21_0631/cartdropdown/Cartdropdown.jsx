@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import cart from "./CartDrop.module.css";
+import { Link } from "react-router-dom";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { getLocalData } from "../../../utils/accesslocalstore";
 export const Cartdropdown = () => {
   let val = getLocalData("bookData");
-  const [Cart, setcart] = useState([]);
+
+  let data = val == null ? [] : [{ ...val }];
+  const [Cart, setcart] = useState(data);
 
   const navigate = useNavigate();
 
