@@ -2,10 +2,23 @@ import React, { useState } from "react";
 import styles from "./SmallDropdown.module.css";
 import { RxCross2 } from "react-icons/rx";
 import { SmCategory } from "../smcategory/smCategory";
-import { setLocalDate } from "../../../utils/accesslocalstore";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutSucessAction } from "../../../Redux/Registerdata/action";
+import { useNavigate } from "react-router-dom";
 
 export const SmallSDropdown = ({ handleHamburger }) => {
   const [Categories, setCategories] = useState(false);
+  const isAuth = useSelector((store) => store.registerReducer.isAuth);
+  let dispatch = useDispatch(),
+    navigate = useNavigate();
+
+  function handleLogout() {
+    dispatch(logoutSucessAction());
+  }
+
+  function handleLogin() {
+    navigate("/register");
+  }
 
   const handleCategory = () => {
     setCategories((prev) => !prev);
@@ -33,7 +46,15 @@ export const SmallSDropdown = ({ handleHamburger }) => {
         <span>Help</span>
       </div>
 
-      <button className={styles.smallDropdownBtn}>Sign out</button>
+      {isAuth ? (
+        <button className={styles.smallDropdownBtn} onClick={handleLogout}>
+          Sign out
+        </button>
+      ) : (
+        <button className={styles.smallDropdownBtn} onClick={handleLogin}>
+          Log in
+        </button>
+      )}
     </div>
   );
 };

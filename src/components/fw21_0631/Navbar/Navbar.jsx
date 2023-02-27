@@ -8,13 +8,25 @@ import { CategoryDropdown } from "../CategoryDropdown/CategoryDropdown";
 import { Nava } from "../Nava/Nava";
 import { SmSearch } from "../scInputSearch/SmSearch";
 import { ProfileDropdown } from "../profileDropdown/ProfileDropdown";
+import { getLocalData } from "../../../utils/accesslocalstore";
+import { useSelector } from "react-redux";
 
 export const Navbar = () => {
-  const [name, setname] = useState("Vishal");
-  const [cart, setcart] = useState([]);
+  let val = getLocalData("bookData");
+
+  let data = val == null ? [] : [{ ...val }];
+  const [cart, setcart] = useState(data);
   const [auth, setauth] = useState(false);
   const [Category, setcategory] = useState(false);
   const navigate = useNavigate();
+
+  const getdata =
+    getLocalData("userdata") != null ? getLocalData("userdata") : {};
+  const [userData, setuserData] = useState(getdata);
+
+  const [name, setname] = useState(userData.Firstname || "");
+
+  const isAuth = useSelector((store) => store.registerReducer.isAuth);
 
   const handleCategory = () => {
     setcategory((prev) => !prev);
@@ -32,7 +44,7 @@ export const Navbar = () => {
             <ul className={styles.navList1}>
               <li style={{ zIndex: "9" }}>
                 Hi!
-                {name.length > 0 ? (
+                {isAuth ? (
                   name && (
                     <>
                       <h5>
@@ -40,7 +52,7 @@ export const Navbar = () => {
                       </h5>
 
                       <div className={styles.profileDropdown}>
-                        <ProfileDropdown />
+                        <ProfileDropdown {...userData} />
                       </div>
                     </>
                   )

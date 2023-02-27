@@ -36,7 +36,7 @@ export const SmCategory = ({ handleCategory, handleHamburger }) => {
         </p>
         {fashion && (
           <div className={styles.fashionListChild}>
-            <Link to="*">Men</Link>
+            <Link to="/product">Men</Link>
             <Link to="*">Women</Link>
             <Link to="*">Kids</Link>
             <Link to="*">Watches</Link>
