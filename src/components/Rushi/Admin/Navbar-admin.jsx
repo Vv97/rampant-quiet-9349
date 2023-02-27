@@ -58,7 +58,7 @@ const NavbarAdmin = () => {
         <Menu>
           <div className="dropbtn_text">
             <MenuButton style={{ color: "white"}}>
-              Hi Rushi
+              User Detail
               <ChevronDownIcon />
             </MenuButton>
           </div>
