@@ -32,12 +32,12 @@
   gap: 5px;
 }
 
-.cdContainer > ul > li > a:not(.cdContainerTitle) {
+.cdContainer > ul > li > span:not(.cdContainerTitle) {
   color: #707070;
   padding-inline: 10px;
 }
 
-.cdContainer > ul > li > a:hover,
+.cdContainer > ul > li > span:hover,
 .cdContainerTitle:hover {
   text-decoration: underline;
   color: #3394f8;
