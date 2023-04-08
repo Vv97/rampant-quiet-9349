@@ -43,7 +43,7 @@ const AdminProducts = () => {
       .get(`http://localhost:8080/admin/${id}`)
       .then((res) => {
         //console.log(res.data, res.data.price);
-        setEditPrice(res.data.price);
+        setEditPrice(res.data.discounted_price);
       })
       .catch((err) => console.log(err));
   };
@@ -150,13 +150,13 @@ const AdminProducts = () => {
 
         if (order === "asc") {
           data.sort((a, b) => {
-            return a.price - b.price;
+            return a.discounted_price - b.discounted_price;
           });
           setData(data);
           //console.log(data);
         } else {
           data.sort((a, b) => {
-            return b.price - a.price;
+            return b.discounted_price - a.discounted_price;
           });
           setData(data);
           //console.log(data);
@@ -164,6 +164,35 @@ const AdminProducts = () => {
       })
       .catch((err) => console.log(err));
   };
+
+  //pagination 
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const recordPerpage = 7;
+  const lastIndex = currentPage * recordPerpage;
+  const firstIndex = lastIndex - recordPerpage;
+  const records = data.slice(firstIndex, lastIndex);
+  const nPage = Math.ceil(data.length / recordPerpage);
+  const numbers = [...Array(nPage + 1).keys()].slice(1);
+
+  function prePage() {
+    if (currentPage !== 1) {
+      setCurrentPage((currentPage) => currentPage - 1);
+      console.log(currentPage);
+    }
+  }
+
+  function changeCurrentPage(id) {
+    setCurrentPage(id);
+    console.log(currentPage);
+  }
+
+  function nextPage() {
+    if (currentPage !== nPage) {
+      setCurrentPage((currentPage) => currentPage + 1);
+      console.log(currentPage);
+    }
+  }
 
   useEffect(() => {
     getData();
@@ -318,10 +347,10 @@ const AdminProducts = () => {
                 </Tr>
               </Thead>
               <Tbody>
-                {data?.map((el) => {
+                {records?.map((el, i) => {
                   return (
                     <Tr key={el.id}>
-                      <Td>{el.id}</Td>
+                      <Td>{(currentPage - 1) * 10 + i + 1}</Td>
                       <Td>{el.category}</Td>
                       <Td
                         style={{
@@ -337,7 +366,7 @@ const AdminProducts = () => {
                         <p>{el.title}</p>
                       </Td>
                       <Td>{el.brand}</Td>
-                      <Td>{el.price}</Td>
+                      <Td>{el.discounted_price}</Td>
                       <Td>
                         <Button
                           bg={"white"}
@@ -401,6 +430,43 @@ const AdminProducts = () => {
             </Table>
           </TableContainer>
         </div>
+
+        <nav>
+        <ul className="pagination">
+          <li className="page-item">
+            <button
+              className="page-link"
+              onClick={prePage}
+              disabled={currentPage === 1}
+              aria-label="previous page">
+              <span aria-hidden="true">&laquo;</span>
+              <span className="sr-only">Previous</span>
+            </button>
+          </li>
+          {numbers.map((n) => (
+            <li
+              className={`page-item ${currentPage === n ? "active" : ""}`}
+              key={n}>
+              <button
+                className="page-link"
+                onClick={() => changeCurrentPage(n)}
+                aria-label={`page ${n}`}>
+                {n}
+              </button>
+            </li>
+          ))}
+          <li className="page-item">
+            <button
+              className="page-link"
+              onClick={nextPage}
+              disabled={currentPage === nPage}
+              aria-label="next page">
+              <span aria-hidden="true">&raquo;</span>
+              <span className="sr-only">Next</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
 
         <div
           style={{

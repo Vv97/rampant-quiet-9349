@@ -21,6 +21,7 @@ const AddProducts = () => {
   const [strikePrice, setStrikePrice] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
+  const [discount, setDiscount] = useState(Number(""))
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -31,9 +32,12 @@ const AddProducts = () => {
       title,
       image,
       brand,
-      strikePrice: +strikePrice,
-      price: +price,
+      strike_price: +strikePrice,
+      discounted_price: +price,
       description,
+      discount: +discount,
+      rating: Math.floor(Math.random() * 5) + 1,
+      rating_count: Math.floor(Math.random() * 50) + 5
     };
 
     console.log(formData);
@@ -47,6 +51,7 @@ const AddProducts = () => {
     setStrikePrice("");
     setPrice("");
     setDescription("");
+    setDiscount(Number(""))
   };
 
   const postData = (data) => {
@@ -89,26 +94,70 @@ const AddProducts = () => {
                   <option value="men">Men's</option>
                   <option value="women">Women's</option>
                   <option value="kids">Kids</option>
-                  <option value="grocery">Grocery</option>
                   <option value="furniture">Furniture</option>
                   <option value="electronics">Electronics</option>
                 </Select>
               </div>
 
               <div style={{ marginBottom: "20px" }}>
-                <FormLabel>Select Product</FormLabel>
-                <Select
-                  value={product}
-                  onChange={(e) => setProduct(e.currentTarget.value)}
-                  placeholder="Select Product">
-                  <option value="shirt">Shirts</option>
-                  <option value="t-shirt">T-shirt</option>
-                  <option value="hoodie">Hoodie</option>
-                  <option value="pant">Pants</option>
-                  <option value="watch">Watches</option>
-                  <option value="Wooden chair">Wooden Chair</option>
-                  <option value="USB cable">USB cable</option>
-                </Select>
+                <FormLabel>Select product</FormLabel>
+                {category === "men" ? (
+                  <Select
+                    value={product}
+                    onChange={(e) => setProduct(e.currentTarget.value)}
+                    placeholder="Select product">
+                    <option value="shirt">Shirts</option>
+                    <option value="t-shirt">T-shirt</option>
+                    <option value="hoodie">Hoodie</option>
+                    <option value="pant">Pants</option>
+                  </Select>
+                ) : category === "women" ? (
+                  <Select
+                    value={product}
+                    onChange={(e) => setProduct(e.currentTarget.value)}
+                    placeholder="Select product">
+                    <option value="kurti">kurti</option>
+                    <option value="pant">Pants</option>
+                    <option value="saree">Saree</option>
+                    <option value="t-shirt">t-shirt</option>
+                  </Select>
+                ) : category === "kids" ? (
+                  <Select
+                    value={product}
+                    onChange={(e) => setProduct(e.currentTarget.value)}
+                    placeholder="Select product">
+                    <option value="shirt">Kid's Shirts</option>
+                    <option value="t-shirt">kid's T-shirt</option>
+                    <option value="sweater">Sweater</option>
+                    <option value="pant">Pants</option>
+                  </Select>
+                ) : category === "furniture" ? (
+                  <Select
+                    value={product}
+                    onChange={(e) => setProduct(e.currentTarget.value)}
+                    placeholder="Select sub-category">
+                    <option value="bed">Bed</option>
+                    <option value="sofa">Sofa</option>
+                    <option value="chair">Chair</option>
+                    <option value="dining table">Dining table</option>
+                    <option value="bookshelf">Bookshelf</option>
+                  </Select>
+                ) : category === "electronics" ? (
+                  <Select
+                    value={product}
+                    onChange={(e) => setProduct(e.currentTarget.value)}
+                    placeholder="Select sub-category">
+                    <option value="audio">Audio</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="smart TV">smart TV</option>
+                    <option value="Personal computer">Personal computer</option>
+                    <option value="Air conditioner">Air conditioner</option>
+                  </Select>
+                ) : (
+                  <Select>
+                    <option value="">Please select Category</option>
+                  </Select>
+                )}
               </div>
 
               <div style={{ marginBottom: "20px" }}>
