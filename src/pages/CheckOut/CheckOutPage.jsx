@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react"; /* import hooks from react */
 import "./CheckOutPage.css";
-// import { currentData } from "../Cart/CartPage";
 import GooglePayButton from "@google-pay/button-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";/* import Link from react-router-dom */
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { getCartApi } from "../../Redux/CartRedux/cart.action";
+
+/* This object for get the inputs values */
 const initialState = {
   name: "",
   lastName: "",
@@ -13,26 +16,61 @@ const initialState = {
   number: "",
 };
 
+/* Main Component */
 const CheckOutPage = () => {
-  const [details, setDetails] = useState(initialState);
-  const handleAdd = () => {
+  const [details, setDetails] = useState(initialState); /* Here I pass that above object in State */
+  const handleAdd = () => { /* After click on Add button that function will execute */
     setDetails(initialState);
   };
-  const handleChange = (e) => {
+  const handleChange = (e) => { /* Whenever the inputs change this function track that value  */
     setDetails(e.target.value);
   };
+  /* dispatch used because I used redux  */
+  const dispatch = useDispatch(); 
+  
+  const { cart } = useSelector((store) => {
+    // useSelector for get the data whatever data store in cartReducer 
+    return {
+      cart: store.cartReducer.cart,
+    };
+  }, shallowEqual);
 
-  let data = localStorage.getItem("bookData") || [];
-  let res = JSON.parse(data);
+  let price = [];
+  let disCount_price = [];
+  cart.map((el) => { // map use for to  get price,discount price and store their value in price array and disPrice array
+    return (
+      <>
+        {price.push(el.price)}
+        {disCount_price.push(el.discounted_price)}
+      </>
+    );
+  });
+let sum=0;
+// Running a for loop  till price array length
+  for(let i=0;i<price.length;i++){
+    sum=sum+price[i]-disCount_price[i] // calculate the sum for all cart item price
+
+  }
+
+// useEffect for every render
+  useEffect(() => {
+    dispatch(getCartApi());
+  }, [dispatch]);
+
+  // let data = localStorage.getItem("bookData") || [];
+  // let res = JSON.parse(data);
+
+  /*  Main component return part here */
   return (
+    /* Main div */
     <div>
       <div id="ch-firstDiv">
-        <div className="ch-firstDiv-1">
-          <Link to="/">
+        <div className="ch-firstDiv-1"> 
+          <Link to="/"> {/* logo */}
           <img
             src="https://i.imgur.com/FQCppUc.png"
             alt=""
-            style={{ width: "90%", height: "70%" }}
+            
           />
           </Link>
           <h1>Checkout</h1>
@@ -46,7 +84,7 @@ const CheckOutPage = () => {
       <div id="ch-secDiv">
         <div className="ch-secDiv-1">
           <div className="ch-secDiv-1-1">Ship to</div>
-          <div className="ch-secDiv-1-2">
+          <div className="ch-secDiv-1-2"> {/* All inputs here for enter address */}
             <select id="country" name="country">
               <option>select country</option>
               <option value="AF">Afghanistan</option>
@@ -366,16 +404,20 @@ const CheckOutPage = () => {
         <div className="ch-secDiv-2">
           <div className="ch-secDiv-2-1">
             <div className="ch-secDiv-2-1-1">
-              <p>Items (1)</p>
-              <p>Rs. {res.discounted_price}</p>
+              {/* total items value */}
+              <p>Items ({cart.length})</p> 
+              {/* total cost of your items */}
+              <p>Rs. {sum}</p> 
             </div>
             <div className="ch-secDiv-2-1-2">
               <p>Shipping </p>
-              <p>Rs. 100</p>
+              {/* if cart.length is greater than zero then shows the 100rs ship charge else shows zero */}
+              <p>Rs. {cart.length>0?100:0}</p> 
             </div>
             <div className="ch-secDiv-2-1-3">
               <p>Order Total</p>
-              <p>Rs. {+res.discounted_price + 100}</p>
+              {/* Total value for all the cart items */}
+              <p>Rs. {cart.length>0?(sum + 100):(sum+0)}</p> 
             </div>
           </div>
           <div className="ch-secDiv-2-2">
@@ -413,7 +455,7 @@ const CheckOutPage = () => {
                 transactionInfo: {
                   totalPriceStatus: "FINAL",
                   totalPriceLabel: "Total",
-                  totalPrice: `${+res.discounted_price + 100}`,
+                  totalPrice: `${cart.length>0?(sum+100):(sum+0)}`,
                   currencyCode: "USD",
                   countryCode: "US",
                 },

@@ -1,113 +1,14 @@
-
-
-import React from "react";
-import { Link } from "react-router-dom";
-import "./CartPage.css";
-import { Navbar } from "../../components/fw21_0631/Navbar/Navbar";
-import Carousel from "react-multi-carousel";
+import React, { useEffect } from "react"; /* import hooks from react */
+import { Link } from "react-router-dom"; /* import Link from react-router-dom */
+import "./CartPage.css"; /* importing cartPage css */
+import { Navbar } from "../../components/fw21_0631/Navbar/Navbar"; /* importing the navbar */
+import Carousel from "react-multi-carousel"; /* Carousel */
 import "react-multi-carousel/lib/styles.css";
-import { Footer } from "../../components/fw21_0631/Footer/Footer";
-// const SliderData = [
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/ATcAAOSwquhj1Q0W/s-l200.jpg",
-//     title: "Trousers Sweatpants Jogger Pants Cargo Casual Training Running...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/JwwAAOSwJv5j5jMr/s-l200.jpg",
-//     title: "Men's Casual Jogger Cotton Sweatpants Workout Athletic Pants...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/gqIAAOSwtfdi6fUW/s-l200.jpg",
-//     title: "Men's Casual Fleece Sweatpants Jogger Loungewear High...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/HnAAAOSw5VlgmKCP/s-l200.jpg",
-//     title: "Men's Fashion New Cargo Pants with Pockets Jogger SweatPants...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/gAAAAOSwLQFikIcN/s-l200.jpg",
-//     title:
-//       "Men Jogger Sweatpants Zipper Pocket Elastic Waistband Basketball...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/MY0AAOSwVH5bkN4H/s-l200.jpg",
-//     title: "New Man Style Casual Sport Gym Jogger Bodybuilding Trouser...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/WlgAAOSwvaRh2TH8/s-l200.jpg",
-//     title:
-//       "Men's Fashion Jogger Sweat Shorts Undershirt Gym Running Workout...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/Nt8AAOSwyFZgioNg/s-l200.jpg",
-//     title: "Men's Jogger Heavy Weight Fleece Cargo Pocket Sweat Pants...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/Nt8AAOSwyFZgioNg/s-l200.jpg",
-//     title:
-//       "VTG Nike Pants Mens Large Blue White Jogger Sweatpants Y2K Leg zi...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/6EUAAOSwOI5jdqe6/s-l200.jpg",
-//     title: "3 Pack Men's Shorts Quick Dry Jogger Shorts Gym Casual Workout...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/isMAAOSwuONixRyY/s-l200.jpg",
-//     title: "Mens Camo Cargo Pants Combat Jogger Gym Casual Trouser Pocket...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-//   {
-//     image: "https://i.ebayimg.com/thumbs/images/g/YDMAAOSwzuVjTlM2/s-l200.jpg",
-//     title: "Cargo Pants Jogger Trousers Sweatpants Training Running Casual...",
-//     design: "New",
-//     price: "$",
-//     discount: "US $5.87 5% off",
-//     shipping: "Free shipping",
-//   },
-// ];
+import { Footer } from "../../components/fw21_0631/Footer/Footer"; /* footer */
+import { shallowEqual, useSelector, useDispatch } from "react-redux";
+import { delCartApi, getCartApi } from "../../Redux/CartRedux/cart.action";
+
+/* This code for carousel responsiveness */
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -120,7 +21,7 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
+    items: 3,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -128,47 +29,68 @@ const responsive = {
   },
 };
 
-// const cartData={
-//   image:"https://designerbrandsforles.ipage.com/9-21/Nike-CB-804408-Heather-Grey-S__1.JPG",
-
-// }
-// export function currentData(Q){
-//   return Q
-
-// }
-let data = localStorage.getItem("bookData");
-let res = JSON.parse(data);
-console.log(res);
-
-let data1 = localStorage.getItem("bookSize");
-let res1 = JSON.parse(data1);
-console.log(res1);
-
+/* Main Component */
 const CartPage = () => {
-  let price = +res.discounted_price;
-  // let discount=price*7
-  const [current, setCurrent] = React.useState(1);
+  const dispatch = useDispatch(); ///Here the useDispatch use with one variable
+  const { cart } = useSelector((store) => {
+    // useSelector for get the data whatever data store in cartReducer
+    return {
+      cart: store.cartReducer.cart,
+    };
+  }, shallowEqual);
 
-  price = price * Number(current);
+  const [current, setCurrent] =
+    React.useState(
+      1
+    ); /* initialize on state for shows the current quantity of cart items */
   const formatter = new Intl.NumberFormat("en-US", {
-    minimumFractionDigits: 2,
+    /* this is for get 2 decimal value */ minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
-  let x = 100 * current;
-  let y = 100 * current;
-  // console.log(x)
 
+  useEffect(() => {
+    // useEffect for every render
+    dispatch(getCartApi());
+  }, [dispatch]);
+
+  let price = [];
+  let disPrice = [];
+  cart.map((el) => {
+    // map use for to  get price,discount price and store their value in price array and disPrice array
+    return (
+      <>
+        {price.push(el.price)}
+        {disPrice.push(el.discounted_price)}
+      </>
+    );
+  });
+  let sum = 0;
+  for (let i = 0; i < price.length; i++) {
+    // Running a for loop  till price array length
+    sum = sum + price[i] - disPrice[i]; // calculate the sum for all cart item price
+  }
+  const deleteCart = (id) => {
+    // delete function for delete the cart item with id
+    dispatch(delCartApi(id)).then((res) => {
+      // invoke the delCartAPi function give the id as a parameter
+      dispatch(getCartApi());
+    });
+  };
+
+  // Main component return part here
   return (
     <div>
-      <Navbar />
+      {" "}
+      {/* Main div */}
+      <Navbar /> {/* navbar */}
       <div id="firstDiv">
         <div className="firstDiv-1">Shopping Cart</div>
         <div className="firstDiv-2">
           <Link>Send Us Your Comments</Link>
         </div>
       </div>
-
-      {res1 && res ? (
+      {cart.length >
+      0 /* if cart.length is greater than zero than its shows the cart item else shows the cart is empty */ ? (
         <div id="sec-Div">
           <div className="secDiv-1">
             <div className="secDiv-1-1">
@@ -179,122 +101,137 @@ const CartPage = () => {
                 Request total <span id="i-btn">i</span>
               </div>
             </div>
-            <div className="secDiv-1-2">
-              <div className="secDiv-1-2-1">
-                <img
-                  src={res.images[1]}
-                  style={{ width: "120px", height: "140px" }}
-                  alt=""
-                />
-                <div>
-                  <p>
-                    {res.title} <br />
-                    Gym Work Out Draw String Casual Sweatpants{" "}
-                  </p>
-                  <p style={{ fontWeight: "400", marginTop: "8px" }}>
-                    {res1},Grey
-                  </p>
-                  <p>New with tags</p>
-                </div>
-              </div>
-              <div className="secDiv-1-2-2">
-                <div>
-                  <label id="quantity">Qty </label>
-                  <button
-                    disabled={current === 1}
-                    style={{ width: "20px" }}
-                    onClick={() => setCurrent((prev) => prev - 1)}
-                  >
-                    -
-                  </button>
-                  {/* <button disabled>{current}</button> */}
-                  {/* <button onClick={() => setCurrent((prev) => prev + 1)}></button> */}
-                  <button disabled style={{ width: "20px" }}>
-                    {current}
-                  </button>
-                  <button
-                    style={{ width: "20px" }}
-                    onClick={() => setCurrent((prev) => prev + 1)}
-                  >
-                    +
-                  </button>
-                </div>
-                <div>
-                  Economy
-                  <br />
-                  International
-                  <br />
-                  Shipping
-                </div>
-              </div>
-              <div className="secDiv-1-2-3">
-                <div>
-                  <p>Rs. {price}</p>
-
-                  <div>
-                    <div style={{ marginTop: "10px" }}>
-                      <strike>Rs. {res.strike_price}</strike>
+            <div
+              className={
+                cart.length <= 4 ? "data_container" : "scroll_container"
+              }
+            >
+              {cart.map((el) => (
+                <div className="secDiv-1-2" key={el._id}>
+                  <div className="secDiv-1-2-1">
+                    <img /* After click on the add to cart  here the image */
+                      src={el.image}
+                      style={{ width: "120px", height: "140px" }}
+                      alt=""
+                    />
+                    <div>
+                      <p>
+                        {el.title} {/* title of the items */}
+                        <br />
+                        Gym Work Out Draw String Casual Sweatpants{" "}
+                      </p>
+                      <p style={{ fontWeight: "400", marginTop: "8px" }}>
+                        Grey
+                      </p>
+                      <p>New with tags</p>
                     </div>
-                    <div>{res.discount}</div>
                   </div>
-                  <button
-                    id="remove-btn"
-                    onClick={() => {
-                      window.location.reload(false);
-                      localStorage.removeItem("bookSize");
-                    }}
-                  >
-                    Remove
-                  </button>
+
+                  <div className="secDiv-1-2-2">
+                    <div>
+                      {" "}
+                      {/* buttons for quantity */}
+                      <label id="quantity">Qty </label>
+                      <button /* this button for decrease the quantity */
+                        disabled={
+                          current === 1
+                        } /* if quantity is 1 then decrease button disabled */
+                        style={{ width: "20px" }}
+                        onClick={() => setCurrent((prev) => prev - 1)}
+                      >
+                        -
+                      </button>
+                      <button disabled style={{ width: "20px" }}>
+                        {" "}
+                        {/* this button shows the current quantity */}
+                        {current}
+                      </button>
+                      <button /* this button for increase the quantity */
+                        style={{ width: "20px" }}
+                        onClick={() => setCurrent((prev) => prev + 1)}
+                      >
+                        +
+                      </button>
+                    </div>
+                    <div>
+                      Economy
+                      <br />
+                      International
+                      <br />
+                      Shipping
+                    </div>
+                  </div>
+                  <div className="secDiv-1-2-3">
+                    <div>
+                      <p>Rs. {el.price - el.discounted_price}</p>
+
+                      <div>
+                        <div style={{ marginTop: "10px" }}>
+                          <strike>Rs. {el.discounted_price}</strike>
+                        </div>
+                        <div>{el.discount}</div>
+                      </div>
+                      <button
+                        id="remove-btn"
+                        onClick={() => deleteCart(el._id)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="secDiv-1-3">
-              {current === 1 ? (
-                <p>
-                  Save up to 7% when you buy more
-                  <br />
-                  Increase your item quantity to qualify
-                </p>
-              ) : (
-                <p>
-                  <i class="fa-sharp fa-solid fa-circle-check"></i> Offer
-                  applied
-                  <br />
-                  Save up to 7% when you buy more
-                </p>
-              )}
+              ))}
             </div>
           </div>
           <div className="secDiv-2">
             <div>
-              <Link to="/checkout">Go To CheckOut</Link>
+              <Link to="/checkout">Go To CheckOut</Link>{" "}
+              {/* Link for redirect to checkout page */}
             </div>
             <div className="secDiv-2-2">
               <div className="secDiv-2-2-1">
-                <p>Item ({current})</p>
-                <p>Rs. {formatter.format(price)}</p>
+                <p>Item ({current === 1 ? cart.length : cart.length + 1})</p>{" "}
+                {/* how much items in the cart  */}
+                <p>Rs. {formatter.format(sum * current)}</p>{" "}
+                {/* if anyone increase the quantity of the items then sum also increase */}
               </div>
               <div className="secDiv-2-2-2">
                 <p>Shipping to 110034</p>
-                <p>Rs. {formatter.format(y)}</p>
+                <p>
+                  Rs.{" "}
+                  {cart.length > 0
+                    ? formatter.format(100)
+                    : formatter.format(0)}
+                </p>
+                {/* if cart.length is greater than zero then shows the 100rs ship charge else shows zero */}
               </div>
             </div>
             <div className="secDiv-2-3">
               <div>Subtotal</div>
-              <div>Rs. {formatter.format(price - x + y)}</div>
+              {/* Total value for all the cart items */}
+              <div>
+                Rs.{" "}
+                {cart.length > 0
+                  ? formatter.format(sum + 100)
+                  : formatter.format(sum + 0)}
+              </div>
+              
             </div>
           </div>
         </div>
       ) : (
-        <h1>Cart is Empty</h1>
+        <h1 id="empty">Cart is Empty</h1>
       )}
-
       <div id="third-Div">
         <div className="thirdDiv-1">Related sponsored items </div>
         <div className="thirdDiv-2">
           <div className="thirdDiv-2-1">
-            <Carousel responsive={responsive} style={{ display: "flex" }}>
+            {/* Carousel div */}
+            <Carousel
+              responsive={responsive}
+              style={{ display: "flex" }}
+              className="carousel"
+            >
               <div>
                 <img
                   src="https://i.ebayimg.com/thumbs/images/g/ATcAAOSwquhj1Q0W/s-l200.jpg"
@@ -558,7 +495,7 @@ const CartPage = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer /> {/* footer */}
     </div>
   );
 };

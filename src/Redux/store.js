@@ -4,10 +4,12 @@ import thunk from "redux-thunk"
 
 import { mensProductReducer } from "./Product/Product.reducer"
 import { registerReducer } from "./Registerdata/registerReducer"
+import {reducer as cartReducer} from "./CartRedux/cart.reducer"
 
 const rootReducer = combineReducers({
     mens: mensProductReducer,
     registerReducer,
+    cartReducer
 
 
 
