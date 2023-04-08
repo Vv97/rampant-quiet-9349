@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { authSucessAction } from '../../Redux/Registerdata/action';
-import { logindata, setLocalDate } from '../../utils/accesslocalstore';
+import { AdminloginSucessAction, authSucessAction } from '../../Redux/Registerdata/action';
+import { logindata, setLocalDate, adminlogindata } from '../../utils/accesslocalstore';
+import { NavLink } from 'react-router-dom';
 import styles from "./Login.module.css"
+import bcrypt from "bcryptjs-react";
 
 export const Login = () => {
   const [btnval, setbtnval] = useState(false);
   const [userid, setuserid] = useState("");
   const [userEmail, setuserEmail] = useState("")
   
-  // const [password, setpassword] = useState("");
-  // const [regdata, setregdata] = useState([]);
+  const [pass, setpass] = useState("");
+  const [regdata, setregdata] = useState([]);
 
   
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
   const register = useSelector((store) => store.registerReducer.register)
+  console.log(register, "REGISTER")
+
+  const admin = useSelector((store) => store.registerReducer.admin)
+  console.log(admin, "ADMINBABU")
 
   const auth = useSelector((store) => store.registerReducer.isAuth)
     
@@ -25,14 +31,47 @@ export const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault()
-    const userdata = register.find((el) => el.Email === userid);
-    if(userdata.Email === userid) {
-      setLocalDate("userdata",userdata )
-      dispatch(authSucessAction())
-
-      navigate("/");
-    }
     
+    const userdata = register.find((el) => el.Email === userid);
+    const admindata = admin.find((el) => el.Email === userid);
+
+    console.log(userdata, "elem")
+    console.log(admindata, "admin")
+
+    // const {Firstname, Lastname, Email, Password, Type } = userdata
+    // const {Firstname, Lastname, Email, Password, Type } = admindata
+
+    // console.log(pass, Password, "single")
+    
+
+    // if(admindata.Email === userid) {
+    //   if(admindata.Password === pass) {
+    //       setLocalDate("userdata",admindata )
+    //       dispatch(authSucessAction())
+    //       navigate("/admin");
+    //     }else {
+    //       alert("wrong credentials")
+    //     }
+    //   } 
+      
+     if(userdata.Email === userid) {
+        if(userdata.Password === pass) {
+          setLocalDate("userdata",userdata )
+          dispatch(authSucessAction())
+          navigate("/");
+        }else {
+          alert("wrong credentials")
+        }
+      }
+
+
+
+
+   
+      
+      
+      
+      
   }
 
   // if(userEmail === "") {
@@ -44,6 +83,7 @@ export const Login = () => {
   useEffect(() => {
 
     dispatch(logindata)
+    dispatch(adminlogindata)
     
 
   }, []);
@@ -52,107 +92,107 @@ export const Login = () => {
   return (
 
     <div id={styles.loginbody}>
-      <div id={styles.learn} ><a href="https://connect.ebay.com/srv/survey/a/reg.personalized">Tell us what you think</a></div>
+
       
-      <a href="http://localhost:3000/">
+      <div id={styles.learn} ><a href="https://connect.ebay.com/srv/survey/a/reg.personalized">   Tell us what you think</a></div>
+      
+      <NavLink to="/">
       <div id={styles.logo}>
         <img src="https://i.imgur.com/FQCppUc.png" alt="logo" />
       </div>
-      </a>
+      </NavLink>
 
 
       <div id={styles.formDiv}>
 
-
     <div id={styles.desc}> 
-    To buy and sell on www.ebay.com or other eBay sites internationally, existing users can login using their credentials or new users can register an eBay account on ebay.in. Kindly note you can no longer buy or sell on eBay.in.</div>
+    <div id={styles.desc1}> <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/84711/preview.svg" alt="yes" /> </div>
+    <div id={styles.desc2} > <p>To buy and sell on www.ebay.com or other eBay sites internationally, existing users can login using their credentials or new users can register an eBay account on ebay.in. Kindly note you can no longer buy or sell on eBay.in.</p> </div>
+
+    </div>
+
+
 
     <div id={styles.hello}>
        <h1>Hello</h1> 
       </div>
       
-    <div id={styles.sign}> Sign in to eBay or <a href="http://localhost:3000/register">create an account</a> </div>
+    <div id={styles.sign}> Sign in to eBay or &nbsp; <NavLink to="/register"><u>create an account</u></NavLink></div>
     
 
     <div id={styles.formdata}>
       <form >
-        <div className={styles.inputDiv} >
+        <div className={styles.inputDivEmail} >
         
-        <input type="text" placeholder='Enter or username' style={{ borderRadius: "12px" ,border: "1px solid black" }} 
+        <input type="email" placeholder='Enter or username'
+        className={styles.inputEmail}
         value={userid}
         onChange={ (e) => setuserid(e.target.value) } />
         </div> 
 
-        {/* <div className={styles.inputDiv} >
+        <div className={styles.inputDivEmail} style={{ marginTop: "15px"}} >
         
-        <input type="text" placeholder='Enter password' style={{ borderRadius: "12px" ,border: "1px solid black" }} 
-        value={password}
-        onChange={ (e) => setpassword(e.target.value) }
+        <input type="text" placeholder='Enter password' 
+         className={styles.inputEmail}
+        value={pass}
+        onChange={ (e) => setpass(e.target.value) }
         />
-        </div>  */}
+        </div> 
 
 
-        <div className={styles.inputDiv} >
-        <button type='submit' className={styles.div_btn} disabled={ userid === "" } onClick={handleLogin} >Continue</button>
+        <div className={styles.inputDivsubmit} >
+        <button type='submit' className={styles.div_btnn} disabled={ userid === "" } onClick={handleLogin} >Continue</button>
         </div>
         
       </form>
 
-      <div className={styles.inputDiv} style={{ display: "flex", justifyContent: "center", alignItems: "center", gap:"10px" }} >
+      <div className={styles.inputDivv} style={{ display: "flex", justifyContent: "center", alignItems: "center", gap:"10px", border: "none" }} >
         <div style={{ width:"40%" }} ><hr /></div>
         <div style={{ paddingBottom:"6px" }}>or</div>
         <div style={{ width:"40%" }} ><hr /></div>
 
       </div>
 
-    <div className={styles.inputDiv}  style={{background: "#385898"}} >
-    <img src="https://cdn.pixabay.com/photo/2015/05/17/10/51/facebook-770688_1280.png" className={styles.btn_img } alt="fb" />
-        <button type='submit'className={styles.div_btn} style={{ background: "#385898" }} >Continue with Facebook</button>
+    <div className={styles.fbinputDiv} >
+    <img src="https://i.postimg.cc/nL3sf9NQ/10001.png" className={styles.btn_img } alt="fb" />
+        <button type='submit'className={styles.fsdiv_btn}  >Continue with Facebook</button>
         </div>
 
-        <div className={styles.inputDiv} style={{ border: "1px solid black"}} >
-        <img src="https://cdn.pixabay.com/photo/2017/01/19/09/11/logo-google-1991840_1280.png" className={styles.btn_img } alt="fb" />
-        <button type='submit' className={styles.div_btn} style={{ background: "white" }}>Continue with Google</button>
+        <div className={styles.inputDiv} >
+        <img src="https://i.postimg.cc/1t48m5Z7/10002.png" className={styles.btn_img } alt="fb" />
+        <button type='submit' className={styles.div_btn} >Continue with Google</button>
         </div>
 
-        <div className={styles.inputDiv} style={{ border: "1px solid black"}} >
-        <img src="https://w7.pngwing.com/pngs/695/105/png-transparent-apple-logo-business-apple-logo-outline-heart-logo-computer-wallpaper-thumbnail.png" alt="fb" className={styles.btn_img } />
-        <button type='submit' className={styles.div_btn} style={{ background: "white" }}>Continue with Apple</button>
+        <div className={styles.inputDiv} >
+        <img src="https://img.icons8.com/sf-black/2x/mac-os.png" alt="fb" className={styles.btn_img } />
+        <button type='submit' className={styles.div_btn}>Continue with Apple</button>
         </div>
 
-     <div style={{ margin:"auto" }}>
-
+     <div id={styles.checkboxdiv} style={{ margin:"auto" }}>
+      
       <div id={styles.check_div}> <input type="checkbox"  />
-        <p>  Stay signed in </p> </div>
-      <div id={styles.text_div} ><p>Using a public or shared device?
-Uncheck to protect your account.</p></div>
-         
+        <p>  Stay signed in </p> 
+        </div>
+      <div id={styles.text_div} ><p>  Using a public or shared device?
+Uncheck to protect your account.</p>
+      </div>
     </div>
 
-    <div id={styles.show_box} >
-
-      <div style={{ border: "0px solid black"}} > <button onClick={(e)=> setbtnval((prev) => !prev )} id={styles.show_div} >Learn More ^ </button>
+    <div id={styles.show_box}>
+      <div style={{ border: "0px solid black"}} > <button onClick={()=> setbtnval((prev) => !prev )} id={styles.show_div} >Learn More ^      </button>
 
    {btnval ?  <div id={styles.show_btn} >With this box checked, we'll keep you signed in, making it easier to bid and buy. You'll also be all set to pay if you've saved your payment info. You can always turn off this feature in My eBay. We may ask you to sign in again for some activities, such as making changes to your account.</div> : <></> } 
    </div>
       
-      
     </div>
-      
-    
     </div>
 
       </div>
-
-        
-     
      <br />
-     <br />
-     
-      <hr />
-
-      <div id={styles.terms}>
-    <p>Copyright © 1995-2023 eBay Inc. All Rights Reserved. <a href="https://www.ebayinc.com/accessibility/">Accessibility</a>, <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-agreement?id=4259">User Agreement</a>, <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260">Privacy</a>, <a href="https://pages.ebay.com/payment/2.0/terms.html">Payments Terms of Use</a>, <a href="https://www.ebay.com/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267">Cookies</a>, <a href="https://www.ebay.com/adchoice/ccpa">Your Privacy Choices</a> and <a href="https://www.ebay.com/adchoice">AdChoice</a></p>
+     <hr />
+      <div id={styles.term}>
+      <p id={styles.terms}>Copyright © 1995-2023 eBay Inc. All Rights Reserved. <a href="https://www.ebayinc.com/accessibility/"> <u> Accessibility </u> </a>, <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-agreement?id=4259"> <u> User Agreement </u> </a>, <a href="https://www.ebay.com/help/policies/member-behaviour-policies/user-privacy-notice-privacy-policy?id=4260"> <u>Privacy</u> </a>, <a href="https://pages.ebay.com/payment/2.0/terms.html"> <u> Payments Terms of Use </u> </a>, <a href="https://www.ebay.com/help/policies/member-behaviour-policies/ebay-cookie-notice?id=4267"> <u> Cookies </u> </a>, <a href="https://www.ebay.com/adchoice/ccpa"> <u> Your Privacy Choices </u> </a> and <a href="https://www.ebay.com/adchoice"> 
+    <u> AdChoice </u> </a></p>
     </div>
 
       

@@ -8,11 +8,14 @@ import {
   POST_REGISTER_FAIL,
   POST_REGISTER_REQUEST,
   POST_REGISTER_SUCESS,
+  POST_ADMINREGISTER_SUCESS,
+  ADMINLOGIN_SUCESS
 } from "./actionType";
 
 const initstate = {
   isLoading: false,
   register: [],
+  admin:[],
   isError: false,
   isAuth: getLocalData("isAuth") || false,
 };
@@ -28,6 +31,12 @@ export const registerReducer = (state = initstate, { type, payload }) => {
         isLoading: false,
         register: [...state.register, payload],
       };
+      case POST_ADMINREGISTER_SUCESS:
+      return {
+        ...state,
+        isLoading: false,
+        admin: [...state.admin, payload],
+      };
 
     case POST_REGISTER_FAIL:
       return { ...state, isLoading: false, isError: true };
@@ -37,6 +46,9 @@ export const registerReducer = (state = initstate, { type, payload }) => {
 
     case LOGIN_SUCESS:
       return { ...state, isLoading: false, register: payload };
+    
+      case ADMINLOGIN_SUCESS:
+        return { ...state, isLoading: false, admin: payload };
 
     case LOGIN_FAIL:
       return { ...state, isLoading: false, isError: true };
