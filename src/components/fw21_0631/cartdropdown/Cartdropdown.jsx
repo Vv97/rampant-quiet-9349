@@ -5,10 +5,11 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { getLocalData } from "../../../utils/accesslocalstore";
 export const Cartdropdown = () => {
-  let val = getLocalData("bookData");
+  let val = getLocalData("bookData") || []
+  // console.log(val)
 
-  let data = val == null ? [] : [{ ...val }];
-  const [Cart, setcart] = useState(data);
+  // let data = val == null ? [] : [{ ...val }];
+  const [Cart, setcart] = useState(val);
 
   const navigate = useNavigate();
 
@@ -92,6 +93,7 @@ export const Cartdropdown = () => {
           <span>Time to start shopping!</span>
         </div>
       )}
+      
     </div>
   );
 };
