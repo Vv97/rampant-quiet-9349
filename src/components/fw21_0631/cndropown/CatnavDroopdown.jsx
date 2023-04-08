@@ -17,7 +17,16 @@ export const CatnavDroopdown = ({ l = "0", arr1 }) => {
             arr1[0].data.map((user, i) => {
               return (
                 <li key={user}>
-                  <Link to={`${user.link ? l1 : l2}`}>{user}</Link>
+                  {user == "Men's clothing" ? (
+                    <Link
+                      style={{ color: "blue" }}
+                      to={`${user.link ? l1 : l2}`}
+                    >
+                      {user}
+                    </Link>
+                  ) : (
+                    <span>{user}</span>
+                  )}
                 </li>
               );
             })}
@@ -32,7 +41,11 @@ export const CatnavDroopdown = ({ l = "0", arr1 }) => {
             arr1[0].data1.map((user, i) => {
               return (
                 <li key={user}>
-                  <Link to="*">{user}</Link>
+                  {user == "Men's clothing" ? (
+                    <Link to={`${user.link ? l1 : l2}`}>{user}</Link>
+                  ) : (
+                    <span>{user}</span>
+                  )}
                 </li>
               );
             })}

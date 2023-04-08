@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./cdropdown.module.css";
 import { FiChevronRight } from "react-icons/fi";
 //styles.cdContainerTitle
@@ -72,16 +71,16 @@ export const CategoryDropdown = () => {
                 <FiChevronRight className={styles.cdContainerHeadDownIcon} />
               </div>
               <li>
-                <Link to="*">{user.l1}</Link>
+                <span to="*">{user.l1}</span>
               </li>
               <li>
-                <Link to="*">{user.l2}</Link>
+                <span to="*">{user.l2}</span>
               </li>
               <li>
-                <Link to="*">{user.l3}</Link>
+                <span to="*">{user.l3}</span>
               </li>
               <li>
-                <Link to="*">{user.l4}</Link>
+                <span to="*">{user.l4}</span>
               </li>
             </ul>
           ))}

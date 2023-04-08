@@ -26,7 +26,7 @@ function SamplePrevArrow(props) {
 export const Carousal = () => {
   let settings = {
     dots: false,
-    // infinite: true,
+    infinite: true,
     // autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,

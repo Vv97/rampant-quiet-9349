@@ -10,6 +10,7 @@ import { SmSearch } from "../scInputSearch/SmSearch";
 import { ProfileDropdown } from "../profileDropdown/ProfileDropdown";
 import { getLocalData } from "../../../utils/accesslocalstore";
 import { useSelector } from "react-redux";
+import { searchQuery } from "./searchQuery";
 
 export const Navbar = () => {
   let val = getLocalData("bookData");
@@ -23,7 +24,7 @@ export const Navbar = () => {
   const getdata =
     getLocalData("userdata") != null ? getLocalData("userdata") : {};
   const [userData, setuserData] = useState(getdata);
-
+  const [query, setquery] = useState("");
   const [name, setname] = useState(userData.Firstname || "");
 
   const isAuth = useSelector((store) => store.registerReducer.isAuth);
@@ -146,18 +147,31 @@ export const Navbar = () => {
           </div>
 
           <div className={styles.nav2DropdownSearch}>
-            <input type="text" placeholder="Search for anyting" />
+            <input
+              type="text"
+              placeholder="Search for anyting"
+              value={query}
+              onChange={(e) => setquery(e.target.value)}
+            />
             <select>
               <option>Category</option>
             </select>
           </div>
 
-          <button className={styles.navMediumScreenIcon}>
+          <button
+            className={styles.navMediumScreenIcon}
+            onClick={() => searchQuery(query)}
+          >
             {" "}
             <BsSearch />{" "}
           </button>
 
-          <button className={styles.nav2DropdownSearchBtn}>Search</button>
+          <button
+            className={styles.nav2DropdownSearchBtn}
+            onClick={() => searchQuery(query)}
+          >
+            Search
+          </button>
           <div className={styles.nav2Ad}>Advanced</div>
         </div>
 
