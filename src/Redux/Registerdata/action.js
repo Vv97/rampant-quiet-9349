@@ -1,7 +1,11 @@
-import { AUTHLOGIN_SUCESS, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCESS, LOGOUT_SUCESS, POST_REGISTER_FAIL, POST_REGISTER_REQUEST, POST_REGISTER_SUCESS } from "./actionType"
+import { ADMINLOGIN_SUCESS, AUTHLOGIN_SUCESS, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCESS, LOGOUT_SUCESS, POST_ADMINREGISTER_SUCESS, POST_REGISTER_FAIL, POST_REGISTER_REQUEST, POST_REGISTER_SUCESS } from "./actionType"
 
 export const postRequestAction = () => {
     return {type: POST_REGISTER_REQUEST }
+}
+
+export const postAdminRequestAction = (payload) => {
+    return {type: POST_ADMINREGISTER_SUCESS, payload }
 }
 
 export const postSucessAction = (payload) => {
@@ -18,6 +22,10 @@ export const loginRequestAction = () => {
 
 export const loginSucessAction = (payload) => {
     return {type: LOGIN_SUCESS, payload }
+}
+
+export const AdminloginSucessAction = (payload) => {
+    return {type: ADMINLOGIN_SUCESS, payload }
 }
 
 export const loginFailAction = () => {
