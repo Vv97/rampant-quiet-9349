@@ -61,3 +61,27 @@
 ![CheckoutPage](https://user-images.githubusercontent.com/110036788/230706974-b426eb63-5701-4f75-b6cb-635f4a68df44.png)
 
 
+
+## Our Learnings
+
+On this journey we faced many issues, but we keep motivated each other with patience.
+
+- We all learned how to read and understand the code of other team members.
+
+- We learned how to write more efficient and clean code.
+
+- Even though We also learned how to plan a project and how to execute it step by step.
+
+- By this Project we have learned how to collaborate and communicate with team effectively and improving the productivity.
+
+- We also got a glimpse of using GitHub for the version control.
+
+Source Code(GitHub link):- https://github.com/Vv97/rampant-quiet-9349/
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+### Thank you
+
+
