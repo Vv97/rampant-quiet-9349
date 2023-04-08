@@ -13,7 +13,7 @@
 
 - Ayush Kaushik (My Linkedin profile :- https://www.linkedin.com/in/ayush-kaushik-81418a250/)
 
-- Abhishek Kumar Jha (My Linkedin profile :- https://www.linkedin.com/in/abhishekjha96/)
+- Abhishek Jha (My Linkedin profile :- https://www.linkedin.com/in/abhishekjha96/)
 
 - Kashif Jamal (My Linkedin profile :- )
   <br/>
