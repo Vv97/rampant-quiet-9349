@@ -9,7 +9,7 @@
 
 - Vishal Verma (Team Leader) (My Linkedin profile :- https://www.linkedin.com/in/vishal-varma-96a9bb241/)
 
-- Rushi Joshi (My Linkedin profile :- )
+- Rushi Joshi (My Linkedin profile :- https://www.linkedin.com/in/rushijoshi3798/)
 
 - Ayush Kaushik (My Linkedin profile :- https://www.linkedin.com/in/ayush-kaushik-81418a250/)
 
