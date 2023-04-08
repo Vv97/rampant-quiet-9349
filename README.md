@@ -51,3 +51,13 @@
 ## Products Page :
 
 ![ProductsPage](https://user-images.githubusercontent.com/110036788/230706412-812eb402-f43c-432d-b572-3d5afd22d43a.png)
+
+## Cart Page :
+
+![cartPage](https://user-images.githubusercontent.com/110036788/230706954-8ec3193e-6e65-45c9-b71c-1aa87f5465fd.png)
+
+## Checkout Page :
+
+![CheckoutPage](https://user-images.githubusercontent.com/110036788/230706974-b426eb63-5701-4f75-b6cb-635f4a68df44.png)
+
+
