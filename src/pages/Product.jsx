@@ -13,20 +13,16 @@ import {
 } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import {
-  getFilterdProducts,
-  getMainData,
-  getMensProducts,
-  getMensProductsSorted,
-} from "../Redux/Product/Product.action";
+import { getMensProduct } from "../Redux/Product/Product.action";
 import LoadingPage from "./LoadingPage";
 import PageNotFound from "./PageNotFound";
 import Pagination from "../components/Pagination";
 import { useCallback } from "react";
 
-import SampleBrand from "./SampleBrands";
+// import SampleBrand from "./SampleBrands";
 import Final from "../components/Carousel/Final";
 import { Navbar } from "../components/fw21_0631/Navbar/Navbar";
+import { useLocation, useSearchParams } from "react-router-dom";
 
 let brands = [
   "HRX by Hrithik Roshan",
@@ -52,87 +48,77 @@ let brands = [
 const Product = () => {
   const { loading, error, totalPages, products, filteredBrandData } =
     useSelector((store) => store.mens);
-  // page state
-  /* current page is for pagination */
-  const [currentPage, setCurrentPage] = useState(1);
 
-  /* SValue  is for sorting */
+  // searchParams to set query in url
+  const [searchParams, setsearchParams] = useSearchParams();
+
+  // to get part of query from url
+  const location = useLocation();
+
+  // using searchparams to get qurey
+  const initalFilterValues = searchParams.getAll("brand");
+  const intialPageValue = +searchParams.get("p");
+  const [currentPage, setCurrentPage] = useState(intialPageValue || 1);
   const [sValue, setSValue] = useState("");
-
-  /* brand is for brand filter */
-  const [brand, setBrand] = useState();
+  const [filterValues, setFilterValues] = useState(initalFilterValues || []);
 
   const [checked, setChecked] = useState(false);
 
+  // using dispatch to trigger action
   const dispatch = useDispatch();
 
-  //console.log(products, currentPage);
-
-  useEffect(() => {
-    // if (products.length === 0) {
-    dispatch(getMensProducts(currentPage));
-    dispatch(getMainData());
-    // }
-  }, [dispatch, currentPage]);
-
-  //console.log(brands);
-
-  // pagination starts here
-
-  useEffect(() => {
-    dispatch(getMensProducts(currentPage));
-  }, [dispatch, currentPage]);
-
-  const handlePage = (val) => {
-    setCurrentPage((prev) => prev + val);
+  // pagination page handle logic
+  const handlePagechange = (newPageNumber) => {
+    console.log(newPageNumber);
+    setCurrentPage(newPageNumber);
   };
-  // pagination ends here
-
-  // sorting filter start
-  useEffect(() => {
-    //console.log(sValue);
-    dispatch(getMensProductsSorted(sValue, currentPage));
-  }, [dispatch, sValue, currentPage]);
 
   const handleChange = (e) => {
-    setSValue(e.target.value);
+    const { value } = e.target;
+    setSValue(value);
   };
 
-  // sorting filter ends here
-
-  /*brand filter starts here */
-
-  useEffect(() => {
-    dispatch(getFilterdProducts(brand));
-  }, [brand, dispatch]);
-
-  const handleCheck = (e) => {
-    e.preventDefault();
-    if (checked) {
-      setChecked(false);
+  // logic to handle query of category
+  const handleFilterChange = (e) => {
+    const { value } = e.target;
+    const val = [...filterValues];
+    if (val.includes(value)) {
+      val.splice(val.indexOf(value), 1);
     } else {
-      setChecked(true);
-      setBrand(e.target.value);
+      val.push(value);
     }
+
+    setFilterValues(val);
   };
-  //console.log("isChecked", checked);
-
-  /*brand filter ends here */
-
-  /* handleClear starts here*/
 
   const handleClear = useCallback(() => {
-    dispatch(getMensProducts(currentPage));
+    searchParams.delete("brand");
+    setsearchParams(searchParams);
   }, [dispatch, currentPage]);
 
-  /* handleClear ends here*/
+  useEffect(() => {
+    if (products.length === 0 || location) {
+      const getparams = {
+        params: {
+          brand: initalFilterValues,
+          _sort: sValue.length > 0 && "strike_price",
+          _order: sValue.length > 0 && sValue,
+          p: currentPage > 1 && currentPage,
+        },
+      };
+      dispatch(getMensProduct(getparams, currentPage));
+    }
+  }, [location.search, sValue, currentPage, dispatch]);
 
-  if (loading)
-    return (
-      <>
-        <LoadingPage />
-      </>
-    );
+  useEffect(() => {
+    let params = {};
+    if (filterValues.length > 0) params.brand = filterValues;
+    if (sValue.length > 0) params._sort = "price";
+    if (sValue.length > 0) params._order = sValue;
+    if (currentPage > 1) params.p = currentPage;
+    setsearchParams(params);
+  }, [filterValues, setsearchParams, sValue, currentPage]);
+
   if (error)
     return (
       <>
@@ -140,7 +126,9 @@ const Product = () => {
       </>
     );
 
-  return (
+  return loading ? (
+    LoadingPage
+  ) : (
     <div>
       <Navbar />
       <Final />
@@ -206,6 +194,7 @@ const Product = () => {
                 onClick={() => handleClear()}
                 fontSize={"0.9rem"}
                 fontWeight={"700"}
+                cursor={"pointer"}
                 color={"red"}
               >
                 Clear All
@@ -226,13 +215,14 @@ const Product = () => {
               <Flex flexDirection={"column"} textAlign={"left"}>
                 {brands?.map((brand, i) => (
                   <Checkbox
+                    key={i}
                     textAlign={"left"}
                     fontSize={"0.7rem"}
-                    key={i}
                     pl={"1rem"}
                     value={brand}
                     // isChecked
-                    onChange={(e) => handleCheck(e)}
+                    defaultChecked={filterValues.includes(brand)}
+                    onChange={(e) => handleFilterChange(e)}
                   >
                     {brand}
                   </Checkbox>
@@ -284,8 +274,8 @@ const Product = () => {
                     >
                       <option value="rating">Rating </option>
                       <option value="discount">Better Discount</option>
-                      <option value="PriceLTH">Price:Low To High</option>
-                      <option value="PriceHTL">Price:High To Low</option>
+                      <option value="asc">Price:Low To High</option>
+                      <option value="desc">Price:High To Low</option>
                     </Select>
                   </Box>
                   {/* filters */}
@@ -310,7 +300,10 @@ const Product = () => {
                         lg: "none",
                       }}
                     >
-                      <SampleBrand brands={brands} handleCheck={handleCheck} />
+                      {/* <SampleBrand
+                        brands={brands}
+                        handleFilterChange={handleFilterChange}
+                      /> */}
                     </Stack>
                   </Box>
                   <Box
@@ -369,7 +362,7 @@ const Product = () => {
             </div>
             <Box>
               <Pagination
-                handlePage={handlePage}
+                handlePagechange={handlePagechange}
                 setCurrentPage={setCurrentPage}
                 currentPage={currentPage}
                 totalPages={totalPages}
