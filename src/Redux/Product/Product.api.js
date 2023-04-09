@@ -1,7 +1,9 @@
 import axios from "axios"
 
-export const getMensProductsAPI = async (page) => {
-    let res = await axios.get(`https://puce-busy-zebra.cyclic.app/MensData?_limit=10&_page=${page}`)
+
+export const getMensProductsAPI = async (data) => {
+    let page = 1;
+    let res = await axios.get(`https://puce-busy-zebra.cyclic.app/MensData?_limit=10&_page=${page}`, data)
     // console.log(res.data)
     return res
 }
@@ -31,8 +33,8 @@ export const getProductsSorting = async (val, page) => {
         let res = await axios.get(`https://puce-busy-zebra.cyclic.app/MensData?_limit=10&_page=${page}&_sort=${val}&_order=desc`)
         return res
 
-    } 
-    
+    }
+
     if (val === "rating") {
         let res = await axios.get(`https://puce-busy-zebra.cyclic.app/MensData?_limit=10&_page=${page}&_sort=${val}&_order=desc`)
         return res
@@ -44,9 +46,9 @@ export const getProductsSorting = async (val, page) => {
 }
 // filter 
 
-export const getFilterByBrand = async(val,page)=>{
-val = (val.toString())
-// console.log(val)
+export const getFilterByBrand = async (val, page) => {
+    val = (val.toString())
+    // console.log(val)
     let res = await axios.get(`https://puce-busy-zebra.cyclic.app/MensData?_limit=10&_page=${page}&brand=${val}`)
 
     return res
