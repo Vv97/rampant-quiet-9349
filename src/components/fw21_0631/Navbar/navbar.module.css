@@ -121,7 +121,8 @@
 }
 
 .navList2 li:hover .Cartdropdownicon,
-.navList2 li:hover .notificationDropdown {
+.navList2 li:hover .notificationDropdown,
+.navList2 > li:hover .watchDropDown {
   display: block;
   cursor: pointer;
   opacity: 1;
@@ -208,6 +209,12 @@
 
 .navList1 > li:hover .profileDropdown {
   display: block;
+}
+
+.watchDropDown {
+  display: none;
+  cursor: none;
+  opacity: 0;
 }
 
 .navList2 > li:hover .notificationDropdown,

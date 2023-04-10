@@ -73,7 +73,7 @@ export const getFilteredByBrand = (val, page) => async (dispatch) => {
    try {
       let data = await getFilterByBrand(val, page)
 
-      //   console.log("data:", data )
+      // console.log("data:", data)
       dispatch({
          type: types.GET_PRODUCTS_SUCCESS,
          payload: data
