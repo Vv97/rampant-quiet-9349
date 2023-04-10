@@ -127,7 +127,7 @@ const Product = () => {
     );
 
   return loading ? (
-    LoadingPage
+    <LoadingPage />
   ) : (
     <div>
       <Navbar />

@@ -12,12 +12,14 @@ import Product from "../pages/Product";
 import { Register } from "../pages/RegisterPage/Register";
 import SingleProductPage from "../pages/SingleProductPage";
 import AdminProducts from "../components/Rushi/Admin/AdminProducts";
+import { WatchList } from "../components/fw21_0631/Watchlist/Watchlist";
+import { Purhcases } from "../components/fw21_0631/purchases/Purhcases";
 
 export const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/cart" element={  <CartPage />   } />
+      <Route path="/cart" element={<CartPage />} />
       <Route path="/admin" element={<Admin />} />
       <Route path="/checkout" element={<CheckOutPage />} />
       {/* <Route path="/seeDetails" element={<SeeDetails/>}/> */}
@@ -28,6 +30,8 @@ export const AllRoutes = () => {
       <Route path="/admin_products" element={<AdminProducts />} />
       <Route path="/product" element={<Product />} />
       <Route path="/product/:id" element={<SingleProductPage />}></Route>
+      <Route path="/watchlist" element={<WatchList />} />
+      <Route path="/purchases" element={<Purhcases />} />
     </Routes>
   );
 };

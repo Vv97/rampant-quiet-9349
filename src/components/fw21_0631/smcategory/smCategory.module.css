@@ -1,90 +1,79 @@
-.smCategory{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    border: 1px solid red;
-    background-color: #fff;
-   top: 0;
-   right: 0;
-   left: 0;
-   bottom: 0;
-   padding: 10px 20px;
-    z-index: 1;   
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.smCategory {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  inset: 0 0 0 0;
+  padding: 10px 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-
-
-.smCategoryBackbtn{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0px;
+.smCategoryBackbtn {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
 }
 
-
-
-.smCategoryBackbtn > button{
-   border: none;
-   background-color: transparent;    
-   font-size: 1.7rem;
-   width: 8%;
+.smCategoryBackbtn > button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.7rem;
+  width: 8%;
 }
-
 
 .fashionList {
-     width: 25%;
-     font-size: 1.1rem;
-
- }
-
- .ElectronicList{
-    width: 45%;
-    font-size: 1.1rem;
- }
-
- .fashionList > p , .ElectronicList > p {
-    display: flex;
-    align-items: center;
-    gap: 7px;
- }
-
-
- .SmCategoryLists{
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 1.1rem;
- }
-
- .fashionList > p > svg , .ElectronicList > p > svg , .SmCategoryLists > svg{
-   font-size: 1rem;
- }
-
-.fashionListChild , .electronicListChild{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background-color: #fff;
-    font-size: 0.9rem;
-    padding-inline-start: 5px;
-    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
-    
+  width: 25%;
+  font-size: 1.1rem;
 }
 
-.fashionListChild > a {
-    color: #363636;
-    width: 80%;
+.ElectronicList {
+  width: 45%;
+  font-size: 1.1rem;
 }
 
-
-.electronicListChild > a{
-    width: 100%;
-    color: #363636;
-    font-size: 0.9rem;
+.fashionList > p,
+.ElectronicList > p {
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
+.SmCategoryLists {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.1rem;
+}
 
+.fashionList > p > svg,
+.ElectronicList > p > svg,
+.SmCategoryLists > svg {
+  font-size: 1rem;
+}
 
+.fashionListChild,
+.electronicListChild {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #fff;
+  font-size: 0.9rem;
+  padding-inline-start: 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+}
 
+.fashionListChild > a,
+.fashionListChild > span {
+  color: #363636;
+  width: 80%;
+}
+
+.electronicListChild > a,
+.fashionListChild > span {
+  width: 100%;
+  color: #363636;
+  font-size: 0.9rem;
+}

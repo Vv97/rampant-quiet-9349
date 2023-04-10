@@ -37,9 +37,9 @@ export const SmCategory = ({ handleCategory, handleHamburger }) => {
         {fashion && (
           <div className={styles.fashionListChild}>
             <Link to="/product">Men</Link>
-            <Link to="*">Women</Link>
-            <Link to="*">Kids</Link>
-            <Link to="*">Watches</Link>
+            <span>Kids</span>
+            <span>Women</span>
+            <span>Watches</span>
           </div>
         )}
       </div>
@@ -51,10 +51,10 @@ export const SmCategory = ({ handleCategory, handleHamburger }) => {
 
         {elcetronics && (
           <div className={styles.electronicListChild}>
-            <Link to="*">Computer & tablets</Link>
-            <Link to="*">Camera & photo</Link>
-            <Link to="*">Tv audio & survelliance</Link>
-            <Link to="*">cell phones & accessories</Link>
+            <span>Computer & tablets</span>
+            <span>Camera & photo</span>
+            <span>Tv audio & survelliance</span>
+            <span>cell phones & accessories</span>
           </div>
         )}
       </div>

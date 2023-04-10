@@ -1,0 +1,30 @@
+.SmsidebarContainer {
+  top: 0;
+  width: 300px;
+  padding: 15px 5px 25px 5px;
+  position: fixed;
+  background-color: #fff;
+  z-index: 11;
+}
+
+.Smsidebar {
+  height: 100vh;
+  box-sizing: border-box;
+  padding-right: 32px;
+  min-height: 800px;
+}
+
+.SmsidebarCross {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.SmsidebarCross > button {
+  border: none;
+  background-color: inherit;
+}
+
+.SmsidebarCross > button > svg {
+  font-size: 1.2rem;
+}
