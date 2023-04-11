@@ -42,7 +42,7 @@ const {Firstname, Lastname, Email, Password, Type } = data
 
 console.log(Firstname, Lastname, Email, Password, Type)
 
-let NEWBUTTON = document.getElementsByClassName("Newbtn")
+// let NEWBUTTON = document.getElementsByClassName("Newbtn")
 
   return (
 
@@ -116,7 +116,7 @@ let NEWBUTTON = document.getElementsByClassName("Newbtn")
         </div>
 
         <div id={styles.btn_div}>
-        <button  id={NEWBUTTON.isDisabled ? styles.btn : styles.newbtn } type="submit" className={styles.Newbtn}  disabled= {data.Firstname === ""  ||  data.Email === "" || data.Password === "" }> Register</button>
+        <button  id={styles.newbtn } type="submit" className={styles.Newbtn}  disabled= {data.Firstname === ""  ||  data.Email === "" || data.Password === "" }> Register</button>
         </div>
     </form>
     </div>

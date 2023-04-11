@@ -340,7 +340,7 @@ input:hover{
     height: 50px;
     /* border: 1px solid red; */
     font-family:"Market Sans", Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 200;
     color: rgb(34, 33, 33);
     display: flex;
@@ -696,9 +696,9 @@ input:hover{
         margin: auto;
         width: 100%;
         height: auto;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         font-family:"Market Sans", Arial, sans-serif;
-        font-size: 14px;
+        font-size: 10px;
         font-weight: 200;
         color: rgb(34, 33, 33);
         display: flex;
@@ -708,7 +708,7 @@ input:hover{
 
     #terms > a {
         color: rgb(97, 93, 93);
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
 

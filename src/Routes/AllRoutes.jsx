@@ -26,6 +26,7 @@ export const AllRoutes = () => {
       <Route path="*" element={<h1>page not found</h1>} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/adminlogin" element={<AdminLogin />} />
       <Route path="/add_products" element={<AddProducts />} />
       <Route path="/admin_products" element={<AdminProducts />} />
       <Route path="/product" element={<Product />} />
