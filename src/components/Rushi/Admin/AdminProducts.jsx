@@ -40,7 +40,7 @@ const AdminProducts = () => {
 
   const getPrice = (id) => {
     axios
-      .get(`https://zany-twill-bass.cyclic.app/products/${id}`)
+      .get(`http://localhost:8080/MensData/${id}`)
       .then((res) => {
         //console.log(res.data, res.data.price);
         setEditPrice(res.data.discounted_price);
@@ -53,20 +53,20 @@ const AdminProducts = () => {
 
   const getData = () => {
     axios
-      .get("https://zany-twill-bass.cyclic.app/products")
+      .get("http://localhost:8080/MensData")
       .then((res) => {
         console.log(res.data);
         setData(res.data);
       })
       .catch((err) => console.log(err));
   };
-  //axios.patch(`https://zany-twill-bass.cyclic.app/products/${id}`, )
+  //axios.patch(`http://localhost:8080/MensData/${id}`, )
 
   // HANDLE EDIT FUNCTIONALITY
   const handleEditAdmin = (id) => {
     //console.log("inside handleAdmin")
     axios
-      .patch(`https://zany-twill-bass.cyclic.app/products/${id}`, { discounted_price: +editPrice })
+      .patch(`http://localhost:8080/MensData/${id}`, { discounted_price: +editPrice })
       .then((res) => {
         console.log(res)
         getData();
@@ -79,7 +79,7 @@ const AdminProducts = () => {
 
   // HANDLE DELETE FUNCTIONALITY
   const handleDelete = (id) => {
-    axios.delete(`https://zany-twill-bass.cyclic.app/products/${id}`).then((res) => {
+    axios.delete(`http://localhost:8080/MensData/${id}`).then((res) => {
       getData();
     });
   };
@@ -87,7 +87,7 @@ const AdminProducts = () => {
   // HANDLING THE FILTERING PART
   const handleFilter = (filter) => {
     axios
-      .get(`https://zany-twill-bass.cyclic.app/products`)
+      .get(`http://localhost:8080/MensData`)
       .then((res) => {
         console.log(res.data)
         let data = res.data;
@@ -143,7 +143,7 @@ const AdminProducts = () => {
   // HANDLING THE SORTING PART
   const handleSort = (order) => {
     axios
-      .get(`https://zany-twill-bass.cyclic.app/products`)
+      .get(`http://localhost:8080/MensData`)
       .then((res) => {
         console.log(res.data)
         let data = res.data;
@@ -168,7 +168,7 @@ const AdminProducts = () => {
   //pagination 
 
   const [currentPage, setCurrentPage] = useState(1);
-  const recordPerpage = 7;
+  const recordPerpage = 20;
   const lastIndex = currentPage * recordPerpage;
   const firstIndex = lastIndex - recordPerpage;
   const records = data.slice(firstIndex, lastIndex);

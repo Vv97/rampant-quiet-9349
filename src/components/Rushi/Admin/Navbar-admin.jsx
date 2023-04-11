@@ -25,7 +25,9 @@ const NavbarAdmin = () => {
   };
 
   const handleSignOut = () => {
+    localStorage.clear("isAuth", "apnidukan");
     navigate("/");
+    document.location.reload();
   }
 
   const logoClicked = () => {
@@ -58,38 +60,38 @@ const NavbarAdmin = () => {
         <Menu>
           <div className="dropbtn_text">
             <MenuButton style={{ color: "white"}}>
-              User Detail
+              Setting
               <ChevronDownIcon />
             </MenuButton>
           </div>
           <MenuList marginTop={"15px"} border={"1px solid black"}>
             <MenuItem>
               <b>Profile</b>
-              <Box marginLeft={3}>
+              <Box marginLeft={1}>
                 <CgProfile />
               </Box>
             </MenuItem>
-            <MenuItem>
+            {/* <MenuItem>
               <b>Setting</b>
-              <Box marginLeft={3}>
+              <Box marginLeft={1}>
                 <IoSettingsSharp />
               </Box>
-            </MenuItem>
+            </MenuItem> */}
             <MenuItem>
               <b>Order History</b>
-              <Box marginLeft={3}>
+              <Box marginLeft={1}>
                 <FaHistory />
               </Box>
             </MenuItem>
             <MenuItem>
               <b>Help & Contact</b>
-              <Box marginLeft={3}>
+              <Box marginLeft={1}>
                 <TiContacts />
               </Box>
             </MenuItem>
             <MenuItem onClick={handleSignOut}>
               <b>Sign Out</b>
-              <Box marginLeft={3}>
+              <Box marginLeft={1}>
                 <FiLogOut />
               </Box>
             </MenuItem>
