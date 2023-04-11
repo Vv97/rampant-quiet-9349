@@ -40,7 +40,7 @@ const AdminProducts = () => {
 
   const getPrice = (id) => {
     axios
-      .get(`http://localhost:8080/admin/${id}`)
+      .get(`https://zany-twill-bass.cyclic.app/products/${id}`)
       .then((res) => {
         //console.log(res.data, res.data.price);
         setEditPrice(res.data.discounted_price);
@@ -53,22 +53,22 @@ const AdminProducts = () => {
 
   const getData = () => {
     axios
-      .get("http://localhost:8080/admin")
+      .get("https://zany-twill-bass.cyclic.app/products")
       .then((res) => {
-        //console.log(res.data);
+        console.log(res.data);
         setData(res.data);
       })
       .catch((err) => console.log(err));
   };
-  //axios.patch(`http://localhost:8080/admin/${id}`, )
+  //axios.patch(`https://zany-twill-bass.cyclic.app/products/${id}`, )
 
   // HANDLE EDIT FUNCTIONALITY
   const handleEditAdmin = (id) => {
     //console.log("inside handleAdmin")
     axios
-      .patch(`http://localhost:8080/admin/${id}`, { price: +editPrice })
+      .patch(`https://zany-twill-bass.cyclic.app/products/${id}`, { discounted_price: +editPrice })
       .then((res) => {
-        //console.log(res)
+        console.log(res)
         getData();
       })
       .catch((err) => console.log(err));
@@ -79,7 +79,7 @@ const AdminProducts = () => {
 
   // HANDLE DELETE FUNCTIONALITY
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8080/admin/${id}`).then((res) => {
+    axios.delete(`https://zany-twill-bass.cyclic.app/products/${id}`).then((res) => {
       getData();
     });
   };
@@ -87,9 +87,9 @@ const AdminProducts = () => {
   // HANDLING THE FILTERING PART
   const handleFilter = (filter) => {
     axios
-      .get(`http://localhost:8080/admin`)
+      .get(`https://zany-twill-bass.cyclic.app/products`)
       .then((res) => {
-        //console.log(res.data)
+        console.log(res.data)
         let data = res.data;
 
         if (filter === "pant") {
@@ -143,9 +143,9 @@ const AdminProducts = () => {
   // HANDLING THE SORTING PART
   const handleSort = (order) => {
     axios
-      .get(`http://localhost:8080/admin`)
+      .get(`https://zany-twill-bass.cyclic.app/products`)
       .then((res) => {
-        //console.log(res.data)
+        console.log(res.data)
         let data = res.data;
 
         if (order === "asc") {
@@ -360,10 +360,10 @@ const AdminProducts = () => {
                         }}>
                         <img
                           style={{ width: "100px", height: "100px" }}
-                          src={el.image}
+                          src={el.images[0]}
                           alt={el.id}
                         />
-                        <p>{el.title}</p>
+                        <p>{el.title.substr(0,30)}</p>
                       </Td>
                       <Td>{el.brand}</Td>
                       <Td>{el.discounted_price}</Td>

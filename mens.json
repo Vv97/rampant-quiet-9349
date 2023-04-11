@@ -6522,6 +6522,58 @@
         "Medium",
         "large"
       ]
+    },
+    {
+      "category": "electronics",
+      "product": "laptop",
+      "title": "DDFADF",
+      "images": [
+        "dsvsdf",
+        "fgddaf",
+        "efafaf",
+        "asfafsf"
+      ],
+      "brand": "adffadf",
+      "strike_price": 40000,
+      "discounted_price": 36000,
+      "description": "zdfdgtaevzcbcaerVX CVDAGZC   ZGSXV  ",
+      "inStock": true,
+      "size": [
+        "DD",
+        "FF",
+        "GG",
+        "DD"
+      ],
+      "discount": 10,
+      "rating": 3,
+      "rating_count": 44,
+      "id": "j_SQRNe"
+    },
+    {
+      "category": "electronics",
+      "product": "Personal computer",
+      "title": "sDFADF",
+      "images": [
+        "svsdf",
+        "fgaf",
+        "efafaf",
+        "asfafsf"
+      ],
+      "brand": "sdffadf",
+      "strike_price": 50000,
+      "discounted_price": 45000,
+      "description": "sssdfdgtaevzcbcaerVX CVDAGZC   ZGSXV  ",
+      "inStock": true,
+      "size": [
+        "sD",
+        "FF",
+        "GG",
+        "DD"
+      ],
+      "discount": 10,
+      "rating": 2,
+      "rating_count": 43,
+      "id": "997bhtC"
     }
   ]
 }
