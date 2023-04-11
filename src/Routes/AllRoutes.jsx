@@ -14,6 +14,7 @@ import SingleProductPage from "../pages/SingleProductPage";
 import AdminProducts from "../components/Rushi/Admin/AdminProducts";
 import { WatchList } from "../components/fw21_0631/Watchlist/Watchlist";
 import { Purhcases } from "../components/fw21_0631/purchases/Purhcases";
+import { AdminLogin} from "../components/Adminlogin/AdminLogin"
 
 export const AllRoutes = () => {
   return (
