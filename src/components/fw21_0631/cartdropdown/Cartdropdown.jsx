@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import cart from "./CartDrop.module.css";
 import { Link } from "react-router-dom";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { getLocalData } from "../../../utils/accesslocalstore";
+import { useDispatch, useSelector } from "react-redux";
+import { delCartApi, getCartApi } from "../../../Redux/CartRedux/cart.action";
 export const Cartdropdown = () => {
-  let val = getLocalData("bookData") || []
-  // console.log(val)
+  const cartData = useSelector((store) => store.cartReducer.cart);
+  const dispatch = useDispatch();
 
-  // let data = val == null ? [] : [{ ...val }];
-  const [Cart, setcart] = useState(val);
+  let totalprice = 0;
 
   const navigate = useNavigate();
 
@@ -21,9 +21,20 @@ export const Cartdropdown = () => {
     navigate("/checkout");
   }
 
+  function DeleteData(id) {
+    dispatch(delCartApi(id)).then((res) => {
+      // invoke the delCartAPi function give the id as a parameter
+      dispatch(getCartApi());
+    });
+  }
+
+  useEffect(() => {
+    dispatch(getCartApi());
+  }, [dispatch]);
+
   return (
     <div className={cart.cartDropdown}>
-      {Cart.length > 0 ? (
+      {cartData.length > 0 ? (
         <div>
           <div className={cart.cartpriceDropdownWrapper}>
             <span style={{ padding: "10px 20px 20px 20px" }}>
@@ -33,17 +44,18 @@ export const Cartdropdown = () => {
             {/* cartProductsHeight */}
             <div
               className={
-                Cart.length > 2
+                cartData.length > 2
                   ? `${cart.cartProducts} ${cart.cartProductsHeight}`
                   : cart.cartProducts
               }
             >
-              {Cart.length > 0 &&
-                Cart.map((user) => {
+              {cartData.length > 0 &&
+                cartData.map((user) => {
+                  totalprice += user.price;
                   return (
-                    <div className={cart.prouctContain} key={user.id}>
+                    <div className={cart.prouctContain} key={user._id}>
                       <div>
-                        <img src={user.images[0]} width="100%" alt="" />
+                        <img src={user.image} width="100%" alt="" />
                       </div>
                       <div>
                         <h3 className={cart.prouctContainTitle}>
@@ -51,7 +63,7 @@ export const Cartdropdown = () => {
                         </h3>
                         <div className={cart.cartProductsPQ}>
                           <span>
-                            {user.strike_price}
+                            {user.price}
                             <div
                               style={{
                                 fontSize: ".9rem",
@@ -66,7 +78,10 @@ export const Cartdropdown = () => {
                           <span>Qty : {1}</span>
                         </div>
                         <div className={cart.cartProductDeletebtn}>
-                          <button>
+                          <button
+                            onClick={() => DeleteData(user._id)}
+                            style={{ cursor: "pointer" }}
+                          >
                             <FaRegTrashAlt />
                           </button>
                         </div>
@@ -77,7 +92,7 @@ export const Cartdropdown = () => {
             </div>
 
             <div className={cart.cartTotalvalue}>
-              <span>Total</span> <span>$120.76</span>
+              <span>Total</span> <span>{totalprice}</span>
             </div>
             <div className={cart.cartCheckoutBtn}>
               <button onClick={checkoutRedirect}>Checkout</button>
@@ -93,7 +108,6 @@ export const Cartdropdown = () => {
           <span>Time to start shopping!</span>
         </div>
       )}
-      
     </div>
   );
 };

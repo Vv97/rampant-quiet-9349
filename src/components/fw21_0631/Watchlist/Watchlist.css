@@ -1,0 +1,303 @@
+.WatchListWrapper {
+  max-width: 1248px;
+  margin: auto;
+}
+
+.WatchListHeading {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  align-items: center;
+}
+
+.watchlistcontainer {
+  display: flex;
+}
+
+.watchlistsidebar {
+  width: 20%;
+}
+
+.watchlistlists {
+  width: 80%;
+}
+
+.WatchListHeading > h2 {
+  font-size: 1.8rem;
+  color: #363636;
+}
+
+.WatchListHeading > span {
+  text-decoration: underline;
+  font-size: 0.8rem;
+  color: #3665f3;
+}
+
+.WatchlistUnderline {
+  width: 100%;
+  height: 1px;
+  background-color: #c7c7c7;
+  margin-bottom: 20px;
+}
+
+.WatchlistHeading1 {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #c7c7c7;
+  padding-bottom: 5px;
+}
+
+.WatchlistHeading > h2 {
+  color: #191919;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.WatchlistHeading1 > span {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.WatchlistHeading1 > span:nth-child(1) {
+  margin-right: 5px;
+  display: none;
+}
+
+.WatchlistHeading1 > span:nth-child(1) > button {
+  border: none;
+  background-color: inherit;
+  /* border: 1px solid red; */
+  display: flex;
+  padding-top: 5px;
+  align-items: center;
+}
+
+.WatchlistHeading1 > span:nth-child(1) > button > svg {
+  font-size: 1.2rem;
+  /* border: 1px solid red; */
+}
+
+.WatchlistHeading1 > span:nth-child(3) {
+  color: #3665f3;
+  margin-left: 5px;
+}
+
+.witchListCard {
+  display: flex;
+  border-bottom: 1px solid #c7c7c7;
+  /* margin-bottom: 5px; */
+  padding: 10px 0px;
+}
+
+.witchListCard > div:first-child {
+  /* border: 1px solid sandybrown; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+  width: 150px;
+}
+
+.watchlistcardheading {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: #363636;
+}
+
+.witchListCard > div > img {
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.witchListCard > div:nth-child(2) {
+  /* border: 1px solid red; */
+  padding: 10px 5px 10px 5px;
+  width: 65%;
+}
+
+.witchListCard > div:nth-child(3) {
+  width: 20%;
+}
+
+.witchListQty {
+  display: flex;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #707070;
+  margin-bottom: 8px;
+}
+
+.WitchListCardDiscount {
+  text-decoration: line-through;
+}
+
+.WitchListCardDiscountCon {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.watchlistSb {
+  display: none;
+}
+
+.WitchListCardDiscountCon > span:nth-child(3) {
+  color: #707070;
+  /* border: 1px solid red; */
+  font-size: 0.8rem;
+}
+
+.WitchListCardDiscountCon > span:nth-child(1) {
+  color: #007600;
+  font-size: 0.8rem;
+}
+
+.WitchListCardDiscountCon > span:nth-child(2) {
+  font-size: 0.8rem;
+  color: #707070;
+}
+
+.WitchListCardDiscountCon > span:nth-child(2) > span {
+  color: #007185;
+}
+
+.WitchListCardBtnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.WitchListCardBtnContainer > button {
+  padding: 10px;
+  border: 1px solid #3665f3;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.WitchListCardBtnContainer > button:nth-child(1) {
+  background-color: #3665f3;
+  color: #fff;
+  font-weight: 600;
+}
+
+.WitchListCardBtnContainer > button:nth-child(2),
+.WitchListCardBtnContainer > button:nth-child(3),
+.WitchListCardBtnContainer > span {
+  color: #3665f3;
+}
+
+.WitchListCardBtnContainer > span {
+  text-align: center;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  padding: 2px 0;
+}
+
+.watchlistcardbtnextra {
+  display: none;
+}
+
+@media all and (max-width: 1012px) {
+  .watchlistsidebar {
+    display: none;
+  }
+
+  .watchlistlists {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .WatchlistHeading1 > span:nth-child(1) {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
+
+  .watchlistSb {
+    display: block;
+  }
+}
+
+@media all and (max-width: 958px) {
+  /* .WatchListHeading {
+    padding: 0 10px;
+  } */
+  .witchListCard > div:nth-child(2) {
+    /* border: 1px solid red; */
+    padding: 10px 5px 10px 5px;
+    width: 60%;
+  }
+
+  .witchListCard > div:nth-child(3) {
+    width: 28%;
+    /* border: 1px solid red; */
+  }
+}
+
+@media all and (max-width: 710px) {
+  .watchlistcardheading {
+    font-size: 1.3rem;
+    /* max-width: 670px; */
+  }
+}
+
+@media all and (max-width: 680px) {
+  .WitchListCardBtnContainer {
+    display: none;
+  }
+
+  .witchListCard > div:nth-child(2) {
+    padding: 10px 5px 10px 5px;
+    width: 80%;
+  }
+
+  .watchlistcardbtnextra {
+    display: flex;
+    gap: 10px;
+  }
+
+  .watchlistcardbtnextra > button {
+    border: none;
+    background-color: inherit;
+  }
+
+  .watchlistcardbtnextra > button:nth-child(1) {
+    width: 80%;
+    height: 36px;
+    border: 1px solid #3665f3;
+    color: #007185;
+    font-weight: 700;
+    border-radius: 16px;
+  }
+
+  .watchlistcardbtnextra > button:nth-child(2) {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #707070;
+  }
+
+  .watchlistcardbtnextra > button:nth-child(2) > svg {
+    fill: #707070;
+    font-size: 18px;
+  }
+
+  .witchListCard > div:first-child {
+    /* border: 1px solid sandybrown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 4px;
+    width: 180px;
+  }
+
+  .watchlistcardheading {
+    font-size: 0.9rem;
+    height: 20px;
+    max-width: 670px;
+  }
+}

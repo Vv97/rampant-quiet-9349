@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./cdropdown.module.css";
 import { FiChevronRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 //styles.cdContainerTitle
 
 let data = [
@@ -71,16 +72,22 @@ export const CategoryDropdown = () => {
                 <FiChevronRight className={styles.cdContainerHeadDownIcon} />
               </div>
               <li>
-                <span to="*">{user.l1}</span>
+                <span>{user.l1}</span>
               </li>
               <li>
-                <span to="*">{user.l2}</span>
+                {user.l2 == "Men" ? (
+                  <Link to="/product" style={{ color: "blue" }}>
+                    {user.l2}
+                  </Link>
+                ) : (
+                  <span>{user.l2}</span>
+                )}
               </li>
               <li>
-                <span to="*">{user.l3}</span>
+                <span>{user.l3}</span>
               </li>
               <li>
-                <span to="*">{user.l4}</span>
+                <span>{user.l4}</span>
               </li>
             </ul>
           ))}

@@ -1,21 +1,25 @@
+import axios from "axios"
 import { getFilterByBrand, getMensProductsAPI, getProductsSorting } from "./Product.api"
 import * as types from "./Product.type"
+import { GET_PRODUCTS_ERROR } from "./Product.type"
+import { GET_PRODUCTS_SUCCESS } from "./Product.type"
+import { GET_PRODUCTS_LOADING } from "./Product.type"
 
 
 
-export const getMensProducts = (page) => async (dispatch) => {
-   dispatch({ type: types.GET_PRODUCTS_LOADING })
-   try {
-      let data = await getMensProductsAPI(page)
-      //   console.log("data:", data )
-      dispatch({
-         type: types.GET_PRODUCTS_SUCCESS,
-         payload: data
-      })
-   } catch (err) {
-      dispatch({ type: types.GET_PRODUCTS_ERROR })
-   }
-}
+// export const getMensProducts = (obj) => async (dispatch) => {
+//    dispatch({ type: types.GET_PRODUCTS_LOADING })
+//    try {
+//       let data = await getMensProductsAPI(obj)
+//       //   console.log("data:", data )
+//       dispatch({
+//          type: types.GET_PRODUCTS_SUCCESS,
+//          payload: data
+//       })
+//    } catch (err) {
+//       dispatch({ type: types.GET_PRODUCTS_ERROR })
+//    }
+// }
 export const getMainData = (page) => async (dispatch) => {
    dispatch({ type: types.GET_PRODUCTS_LOADING })
    try {
@@ -69,7 +73,7 @@ export const getFilteredByBrand = (val, page) => async (dispatch) => {
    try {
       let data = await getFilterByBrand(val, page)
 
-      //   console.log("data:", data )
+      // console.log("data:", data)
       dispatch({
          type: types.GET_PRODUCTS_SUCCESS,
          payload: data
@@ -78,3 +82,27 @@ export const getFilteredByBrand = (val, page) => async (dispatch) => {
       dispatch({ type: types.GET_PRODUCTS_ERROR })
    }
 }
+
+
+const getProductRequest = () => {
+   return { type: GET_PRODUCTS_LOADING };
+};
+
+const getProductSuccess = (payload) => {
+   return { type: GET_PRODUCTS_SUCCESS, payload };
+};
+
+const getProductFailure = () => {
+   return { type: GET_PRODUCTS_ERROR };
+};
+
+
+export const getMensProduct = (data = {}, page = 1) => async (dispatch) => {
+   dispatch(getProductRequest());
+   try {
+      let productData = await axios.get(`https://puce-busy-zebra.cyclic.app/MensData?_limit=10&_page=${page}`, data);
+      dispatch(getProductSuccess(productData));
+   } catch (error) {
+      dispatch(getProductFailure())
+   };
+};

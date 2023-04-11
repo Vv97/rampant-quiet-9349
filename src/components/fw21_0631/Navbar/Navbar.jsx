@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { IoNotificationsOutline } from "react-icons/io5";
@@ -9,17 +9,16 @@ import { Nava } from "../Nava/Nava";
 import { SmSearch } from "../scInputSearch/SmSearch";
 import { ProfileDropdown } from "../profileDropdown/ProfileDropdown";
 import { getLocalData } from "../../../utils/accesslocalstore";
-import { useSelector } from "react-redux";
 import { searchQuery } from "./searchQuery";
+import { WatchDropDown } from "../WatchlistDropdown/WatchDropDown";
+import { useSelector } from "react-redux";
 
 export const Navbar = () => {
-  let val = getLocalData("bookData");
-
-  let data = val == null ? [] : [{ ...val }];
-  const [cart, setcart] = useState(data);
+  const cartData = useSelector((store) => store.cartReducer.cart);
   const [auth, setauth] = useState(false);
   const [Category, setcategory] = useState(false);
   const navigate = useNavigate();
+  const [watchlistshow, setwatchlist] = useState(false);
 
   const getdata =
     getLocalData("userdata") != null ? getLocalData("userdata") : {};
@@ -92,12 +91,13 @@ export const Navbar = () => {
                   Sell
                 </a>
               </li>
-              <li className={styles.navListWithoutLink}>
+              <li
+                className={styles.navListWithoutLink}
+                onClick={() => setwatchlist((prev) => !prev)}
+              >
                 Watchlist
                 <BsChevronDown className={styles.NavDownicon} />
-                <div className={styles.navMyEbayDropdown1}>
-                  <p>Looks like you are not watching any items yet. </p>
-                </div>
+                {watchlistshow && <WatchDropDown setwatchlist={setwatchlist} />}
               </li>
               <li className={styles.navListWithoutLink}>
                 My Ebay <BsChevronDown className={styles.NavDownicon} />
@@ -123,8 +123,8 @@ export const Navbar = () => {
               </li>
               <li className={styles.navIcons}>
                 <BsCart2 />
-                {cart.length > 0 && (
-                  <div className={styles.cartBadges}>{cart.length}</div>
+                {cartData.length > 0 && (
+                  <div className={styles.cartBadges}>{cartData.length}</div>
                 )}
                 <div className={styles.Cartdropdownicon}>
                   <Cartdropdown onClick={redirect} />
