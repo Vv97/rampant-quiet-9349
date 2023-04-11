@@ -23,11 +23,8 @@ export const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [watchlistshow, setwatchlist] = useState(false);
-  const getdata =
-    getLocalData("userdata") != null ? getLocalData("userdata") : {};
-  const [userData, setuserData] = useState(getdata);
   const [query, setquery] = useState("");
-  const [name, setname] = useState(userData || "");
+  const [name, setname] = useState(getLocalData("userdata") || "");
   const [suggestion, setsuggestion] = useState([]);
 
   const { isAuth, productSuggestion } = useSelector(
@@ -97,7 +94,7 @@ export const Navbar = () => {
                       </h5>
 
                       <div className={styles.profileDropdown}>
-                        <ProfileDropdown firstname={userData} />
+                        <ProfileDropdown firstname={name} />
                       </div>
                     </>
                   )
