@@ -20,8 +20,10 @@ const AddProducts = () => {
   const [brand, setBrand] = useState("");
   const [strikePrice, setStrikePrice] = useState("");
   const [price, setPrice] = useState("");
+  const [inStock, setInStock] = useState(true);
+  const [size, setSize] = useState("");
   const [description, setDescription] = useState("");
-  const [discount, setDiscount] = useState(Number(""))
+  const [discount, setDiscount] = useState("");
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -30,32 +32,35 @@ const AddProducts = () => {
       category,
       product,
       title,
-      image,
+      images: image.split(" "),
       brand,
       strike_price: +strikePrice,
       discounted_price: +price,
       description,
+      inStock,
+      size: size.split(" "),
       discount: +discount,
       rating: Math.floor(Math.random() * 5) + 1,
       rating_count: Math.floor(Math.random() * 50) + 5
     };
 
-    console.log(formData);
+    console.log("formdata",formData);
     postData(formData);
 
-    setCategory("");
-    setProduct("");
-    setTitle("");
-    setImage("");
-    setBrand("");
-    setStrikePrice("");
-    setPrice("");
-    setDescription("");
-    setDiscount(Number(""))
+    // setCategory("");
+    // setProduct("");
+    // setTitle("");
+    // setImage("");
+    // setBrand("");
+    // setStrikePrice("");
+    // setSize("")
+    // setPrice("");
+    // setDescription("");
+    // setDiscount("")
   };
 
   const postData = (data) => {
-    axios.post("http://localhost:8080/admin", data);
+    axios.post("https://zany-twill-bass.cyclic.app/products", data);
   };
 
   return (
@@ -94,7 +99,7 @@ const AddProducts = () => {
                   <option value="men">Men's</option>
                   <option value="women">Women's</option>
                   <option value="kids">Kids</option>
-                  <option value="furniture">Furniture</option>
+                  <option value="furnitures">Furnitures</option>
                   <option value="electronics">Electronics</option>
                 </Select>
               </div>
@@ -135,7 +140,7 @@ const AddProducts = () => {
                   <Select
                     value={product}
                     onChange={(e) => setProduct(e.currentTarget.value)}
-                    placeholder="Select sub-category">
+                    placeholder="Select product">
                     <option value="bed">Bed</option>
                     <option value="sofa">Sofa</option>
                     <option value="chair">Chair</option>
@@ -146,7 +151,7 @@ const AddProducts = () => {
                   <Select
                     value={product}
                     onChange={(e) => setProduct(e.currentTarget.value)}
-                    placeholder="Select sub-category">
+                    placeholder="Select product">
                     <option value="audio">Audio</option>
                     <option value="laptop">Laptop</option>
                     <option value="smart TV">smart TV</option>
@@ -155,7 +160,7 @@ const AddProducts = () => {
                   </Select>
                 ) : (
                   <Select>
-                    <option value="">Please select Category</option>
+                    <option value="">Kindly select Category</option>
                   </Select>
                 )}
               </div>
@@ -166,6 +171,14 @@ const AddProducts = () => {
                   value={title}
                   onChange={(e) => setTitle(e.currentTarget.value)}
                   placeholder="Product Title"
+                />
+              </div>
+              <div style={{ marginBottom: "20px" }}>
+                <FormLabel>Sizes</FormLabel>
+                <Input
+                  value={size}
+                  onChange={(e) => setSize(e.currentTarget.value)}
+                  placeholder="Product's sizes"
                 />
               </div>
               <div style={{ marginBottom: "20px" }}>
@@ -202,6 +215,15 @@ const AddProducts = () => {
                   onChange={(e) => setPrice(e.currentTarget.value)}
                   type="number"
                   placeholder="Price"
+                />
+              </div>
+              <div style={{ marginBottom: "20px" }}>
+                <FormLabel>Discount</FormLabel>
+                <Input
+                  value={discount}
+                  onChange={(e) => setDiscount(e.currentTarget.value)}
+                  type="number"
+                  placeholder="Discount (in %)"
                 />
               </div>
               <div style={{ marginBottom: "20px" }}>
