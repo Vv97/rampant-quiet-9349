@@ -60,6 +60,21 @@
 
 ![CheckoutPage](https://user-images.githubusercontent.com/110036788/230706974-b426eb63-5701-4f75-b6cb-635f4a68df44.png)
 
+## Sign-Up Page :
+
+![register Page](https://user-images.githubusercontent.com/110036788/231098538-18fbc769-ebc1-4142-83e4-098821c10501.png)
+
+## Login Page :
+
+![SignIn Page](https://user-images.githubusercontent.com/110036788/231098640-4ffe48b5-2d2a-42a4-ab82-9a698a0b0b87.png)
+
+## Admin Welcome :
+
+![Admin Welcome Page](https://user-images.githubusercontent.com/110036788/231098793-c2e40d55-5fac-4477-9032-516963c38397.png)
+
+## Add Products :
+
+![Add Products](https://user-images.githubusercontent.com/110036788/231099004-7fe65f34-0143-4eb6-85bb-2e038579b9f7.png)
 
 
 ## Our Learnings
