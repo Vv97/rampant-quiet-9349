@@ -55,6 +55,8 @@ export const registerReducer = (state = initstate, { type, payload }) => {
 
     case LOGOUT_SUCESS:
       setLocalDate("isAuth", false)
+      localStorage.removeItem("token");
+      localStorage.removeItem("userdata");
       return { ...state, isLoading: false, isAuth: false };
 
     case AUTHLOGIN_SUCESS:
