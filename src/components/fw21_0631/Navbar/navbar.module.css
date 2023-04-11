@@ -255,6 +255,7 @@
 .nav2DropdownSearch {
   width: 65%;
   height: 41px;
+  position: relative;
   display: flex;
   border: 2px solid #41413f;
 }
@@ -317,6 +318,15 @@
 .signin_loginLink + span {
   font-size: 0.7rem;
   margin-left: 5px;
+}
+
+.SearchDropdownRelative {
+  position: relative;
+}
+
+.SearchDropdow {
+  position: absolute;
+  inset: 0 0 0 0;
 }
 
 /* ------ media querie ------- */

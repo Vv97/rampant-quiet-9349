@@ -19,10 +19,10 @@ import { useDispatch } from "react-redux";
 import { Navbar } from "../components/fw21_0631/Navbar/Navbar";
 import Carousel from "react-multi-carousel";
 import { Footer } from "../components/fw21_0631/Footer/Footer";
+import { addwatchlist } from "../Redux/WatchlistRedux/watchlistApi";
 // import { fetchCartData } from "../Redux/Cart/Cart.action";
 
 const SingleProductPage = () => {
- 
   const [singleProduct, setSingleProduct] = useState({});
   // const [cartData,setCartData]=useState([])
   const [poster, setPoster] = useState("");
@@ -36,7 +36,6 @@ const SingleProductPage = () => {
       .then((res) => {
         setSingleProduct(res?.data);
         setPoster(res?.data?.images);
-        
       })
       .catch((err) => console.log(err));
   };
@@ -48,7 +47,7 @@ const SingleProductPage = () => {
   const {
     title,
     brand,
-    category,    
+    category,
     discount,
     discounted_price,
     rating,
@@ -56,11 +55,6 @@ const SingleProductPage = () => {
     size,
     strike_price,
   } = singleProduct;
-
-  
-
-
-  
 
   const handleAddToWishlist = async () => {
     // console.log("newItem:",props)
@@ -116,26 +110,34 @@ const SingleProductPage = () => {
   const addToCart = async () => {
     // const data=JSON.parse(localStorage.getItem("bookData")) || []
     // data.push(singleProduct)
-    
+
     localStorage.setItem("bookData", JSON.stringify(singleProduct));
     // showMessage();
-    
 
-     try{
-        let res = await axios.post("https://drab-plum-cricket-tie.cyclic.app/cart/add",{title,image:`${ poster ? poster[0]:""}`,price:strike_price,discount,discounted_price},{
+    try {
+      let res = await axios.post(
+        "https://drab-plum-cricket-tie.cyclic.app/cart/add",
+        {
+          title,
+          image: `${poster ? poster[0] : ""}`,
+          price: strike_price,
+          discount,
+          discounted_price,
+        },
+        {
           headers: {
-            Authorization: localStorage.getItem('token'),
-          }
-        })
-        alert("Added to Cart");
-        console.log(res);
-
-      }catch(err){
-        console.log(err);
-      }
+            Authorization: localStorage.getItem("token"),
+          },
+        }
+      );
+      alert("Added to Cart");
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
   };
-  
-// console.log(poster?poster[0]:"")
+
+  // console.log(poster?poster[0]:"")
   return (
     <div style={{ width: "100%", border: "0px solid red", margin: "auto" }}>
       <Navbar />
@@ -358,7 +360,7 @@ const SingleProductPage = () => {
                     color={"pink.500"}
                     border={"2px solid gray"}
                     borderRadius={"0.2rem"}
-                    onClick={handleAddToWishlist}
+                    onClick={() => dispatch(addwatchlist(singleProduct))}
                     px={2}
                   >
                     <Flex gap={"0.5rem"}>

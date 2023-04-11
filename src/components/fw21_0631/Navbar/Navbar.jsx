@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BsCart2, BsChevronDown, BsSearch } from "react-icons/bs";
 import { Cartdropdown } from "../cartdropdown/Cartdropdown";
@@ -8,33 +8,79 @@ import { CategoryDropdown } from "../CategoryDropdown/CategoryDropdown";
 import { Nava } from "../Nava/Nava";
 import { SmSearch } from "../scInputSearch/SmSearch";
 import { ProfileDropdown } from "../profileDropdown/ProfileDropdown";
-import { getLocalData } from "../../../utils/accesslocalstore";
+import { getLocalData, setLocalDate } from "../../../utils/accesslocalstore";
 import { searchQuery } from "./searchQuery";
 import { WatchDropDown } from "../WatchlistDropdown/WatchDropDown";
-import { useSelector } from "react-redux";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { SearchDropdown } from "../searchDropdown/SearchDropdown";
+import { useThrottle } from "../../../hooks/useThrottle";
+import { getproductssuggestion } from "../../../Redux/Product/Product.action";
 
 export const Navbar = () => {
   const cartData = useSelector((store) => store.cartReducer.cart);
   const [auth, setauth] = useState(false);
   const [Category, setcategory] = useState(false);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [watchlistshow, setwatchlist] = useState(false);
-
+  const [searchparam, setsearchParams] = useSearchParams();
   const getdata =
     getLocalData("userdata") != null ? getLocalData("userdata") : {};
   const [userData, setuserData] = useState(getdata);
   const [query, setquery] = useState("");
   const [name, setname] = useState(userData.Firstname || "");
+  const [suggestion, setsuggestion] = useState([]);
 
-  const isAuth = useSelector((store) => store.registerReducer.isAuth);
+  const { isAuth, productSuggestion } = useSelector(
+    (store) => ({
+      isAuth: store.registerReducer.isAuth,
+      productSuggestion: store.mens.productSuggestion,
+    }),
+    shallowEqual
+  );
+
+  const throttletext = useThrottle(query, 200);
 
   const handleCategory = () => {
     setcategory((prev) => !prev);
   };
 
+  const redirectProduct = (value) => {
+    let val = value.split("");
+    val[0] = val[0].toUpperCase();
+    val = val.join("");
+    let params;
+    // setsearchParams()
+    setLocalDate("searchkey", val);
+    navigate("/product", { state: val });
+  };
+
   const redirect = () => {
     navigate("/cart");
   };
+
+  useEffect(() => {
+    dispatch(getproductssuggestion);
+  }, []);
+
+  useEffect(() => {
+    if ((throttletext == "") | (query.length == 0)) {
+      setsuggestion([]);
+    } else {
+      let newsuggesiton = productSuggestion.filter((iteam) => {
+        return iteam.title
+          .split(" ")
+          .join("")
+          .trim()
+          .toLowerCase()
+          .indexOf(throttletext) !== -1
+          ? true
+          : false;
+      });
+
+      setsuggestion(newsuggesiton);
+    }
+  }, [throttletext]);
 
   return (
     <div className={styles.navbar}>
@@ -148,11 +194,16 @@ export const Navbar = () => {
 
           <div className={styles.nav2DropdownSearch}>
             <input
+              className={styles.SearchDropdownRelative}
+              style={{ position: "relative" }}
               type="text"
               placeholder="Search for anyting"
               value={query}
               onChange={(e) => setquery(e.target.value)}
             />
+            {suggestion.length > 0 && (
+              <SearchDropdown suggestion={suggestion} />
+            )}
             <select>
               <option>Category</option>
             </select>
@@ -168,7 +219,7 @@ export const Navbar = () => {
 
           <button
             className={styles.nav2DropdownSearchBtn}
-            onClick={() => searchQuery(query)}
+            onClick={() => redirectProduct(query)}
           >
             Search
           </button>
