@@ -23,6 +23,7 @@ import { useCallback } from "react";
 import Final from "../components/Carousel/Final";
 import { Navbar } from "../components/fw21_0631/Navbar/Navbar";
 import { useLocation, useSearchParams } from "react-router-dom";
+import { getLocalData } from "../utils/accesslocalstore";
 
 let brands = [
   "HRX by Hrithik Roshan",
@@ -63,7 +64,6 @@ const Product = () => {
   const [filterValues, setFilterValues] = useState(initalFilterValues || []);
 
   const [checked, setChecked] = useState(false);
-
   // using dispatch to trigger action
   const dispatch = useDispatch();
 
@@ -78,7 +78,7 @@ const Product = () => {
     setSValue(value);
   };
 
-  // logic to handle query of category
+  // logic to handle query of  brand
   const handleFilterChange = (e) => {
     const { value } = e.target;
     const val = [...filterValues];
@@ -100,7 +100,7 @@ const Product = () => {
     if (products.length === 0 || location) {
       const getparams = {
         params: {
-          brand: initalFilterValues,
+          brand: filterValues,
           _sort: sValue.length > 0 && "strike_price",
           _order: sValue.length > 0 && sValue,
           p: currentPage > 1 && currentPage,
@@ -272,8 +272,8 @@ const Product = () => {
                       bg={"gray.200"}
                       onChange={(e) => handleChange(e)}
                     >
-                      <option value="rating">Rating </option>
-                      <option value="discount">Better Discount</option>
+                      {/* <option value="rating">Rating </option>
+                      <option value="discount">Better Discount</option> */}
                       <option value="asc">Price:Low To High</option>
                       <option value="desc">Price:High To Low</option>
                     </Select>

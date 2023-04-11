@@ -97,6 +97,11 @@ const getProductFailure = () => {
 };
 
 
+const getProductSuggestion = (payload) => {
+   return { type: types.GET_PRODUCT_SUGGESTION_SUCCESS, payload };
+}
+
+
 export const getMensProduct = (data = {}, page = 1) => async (dispatch) => {
    dispatch(getProductRequest());
    try {
@@ -106,3 +111,17 @@ export const getMensProduct = (data = {}, page = 1) => async (dispatch) => {
       dispatch(getProductFailure())
    };
 };
+
+
+// get products for frontend search
+export const getproductssuggestion = async (dispatch) => {
+   dispatch(getProductRequest());
+   try {
+      let productData = await axios.get(`https://puce-busy-zebra.cyclic.app/MensData`);
+      dispatch(getProductSuggestion(productData));
+   } catch (error) {
+      dispatch(getProductFailure())
+   };
+
+}
+

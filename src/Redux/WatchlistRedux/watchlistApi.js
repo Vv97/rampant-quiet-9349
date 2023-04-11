@@ -9,7 +9,7 @@ export const getWatchlist = (token) => (dispatch) => {
         }
     }
     dispatch(getWatchlistRequest());
-    axios.get("https://drab-plum-cricket-tie.cyclic.app/cart", option)
+    axios.get("https://drab-plum-cricket-tie.cyclic.app/wish", option)
         .then(({ data }) => {
             dispatch(getWatchlistSuccess(data))
         }).catch((err) => {
@@ -17,3 +17,42 @@ export const getWatchlist = (token) => (dispatch) => {
         });
 
 };
+
+
+export const addwatchlist = (data) => (dispatch) => {
+
+    let obj = {
+        title: data.title,
+        discounted_price: +data.discounted_price,
+        price: +data.strike_price,
+        discount: data.discount,
+        image: data.images[0]
+    }
+
+
+    axios.post("https://drab-plum-cricket-tie.cyclic.app/wish/add", obj)
+        .then(() => {
+            return true
+        }).catch((err) => {
+            return false
+        })
+};
+
+
+
+export const addtoc = (data) => () => {
+    console.log(data)
+    axios.post("https://drab-plum-cricket-tie.cyclic.app/cart/add", data).then(res => {
+        return true;
+    }).catch((err) => {
+        return false;
+    })
+}
+
+export const deleteProduct = (id) => (dispatch) => {
+    axios.delete(`https://drab-plum-cricket-tie.cyclic.app/wish/delete/${id}`).then(res => {
+        dispatch(getWatchlist())
+    }).catch(err => {
+        console.log(err)
+    })
+}
