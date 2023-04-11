@@ -3,9 +3,9 @@
   inset: 39px 0 0 0;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   z-index: 999;
-  min-height: 320px;
+  min-height: 240px;
   min-width: 300px;
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: white;
   width: 80%;
   display: flex;
@@ -17,6 +17,7 @@
   padding: 10px;
   color: #363636;
   /* border-bottom: 1px solid grey; */
+  background-color: white;
 }
 
 .searchdropdown > a:hover {

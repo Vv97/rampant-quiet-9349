@@ -115,7 +115,7 @@ export const getMensProduct = (data = {}, page = 1) => async (dispatch) => {
 
 // get products for frontend search
 export const getproductssuggestion = async (dispatch) => {
-   dispatch(getProductRequest());
+   // dispatch(getProductRequest());
    try {
       let productData = await axios.get(`https://puce-busy-zebra.cyclic.app/MensData`);
       dispatch(getProductSuggestion(productData));
@@ -124,4 +124,5 @@ export const getproductssuggestion = async (dispatch) => {
    };
 
 }
+
 
