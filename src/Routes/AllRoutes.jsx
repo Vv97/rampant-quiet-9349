@@ -12,6 +12,7 @@ import Product from "../pages/Product";
 import { Register } from "../pages/RegisterPage/Register";
 import SingleProductPage from "../pages/SingleProductPage";
 import AdminProducts from "../components/Rushi/Admin/AdminProducts";
+import { AdminLogin } from "../components/Adminlogin/AdminLogin";
 
 export const AllRoutes = () => {
   return (
@@ -24,6 +25,7 @@ export const AllRoutes = () => {
       <Route path="*" element={<h1>page not found</h1>} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/adminlogin" element={<AdminLogin />} />
       <Route path="/add_products" element={<AddProducts />} />
       <Route path="/admin_products" element={<AdminProducts />} />
       <Route path="/product" element={<Product />} />

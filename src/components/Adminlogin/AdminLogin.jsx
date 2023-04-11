@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { AdminloginSucessAction, authSucessAction } from '../../Redux/Registerdata/action';
 import { logindata, setLocalDate, adminlogindata } from '../../utils/accesslocalstore';
 import { NavLink } from 'react-router-dom';
-import styles from "./Login.module.css"
-import bcrypt from "bcryptjs-react";
+import styles from "./AdminLogin.module.css"
+// import bcrypt from "bcryptjs-react";
 
-export const Login = () => {
+export const AdminLogin = () => {
   const [btnval, setbtnval] = useState(false);
   const [userid, setuserid] = useState("");
   const [userEmail, setuserEmail] = useState("")
@@ -19,15 +19,16 @@ export const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
-  const register = useSelector((store) => store.registerReducer.register)
-  console.log(register, "REGISTER")
+  // const register = useSelector((store) => store.registerReducer.register)
+  // console.log(register, "REGISTER")
 
-  if(register.token) {
-    window.localStorage.setItem('token', (register.token));
+
+  const admin = useSelector((store) => store.registerReducer.admin)
+  console.log(admin, "ADMINBABU")
+
+  if(admin.token) {
+    window.localStorage.setItem('Admintoken', (admin.token));
   }
-
-  // const admin = useSelector((store) => store.registerReducer.admin)
-  // console.log(admin, "ADMINBABU")
 
   const auth = useSelector((store) => store.registerReducer.isAuth)
   console.log(auth)
@@ -39,7 +40,7 @@ export const Login = () => {
       Password: pass
     }
     
-    dispatch(logindata(payload))
+    dispatch(adminlogindata(payload))
 
 
     // const userdata = register.find((el) => el.Email === userid);
@@ -102,10 +103,10 @@ export const Login = () => {
 
   // }, []);
 
-  if(register.token) {
-       setLocalDate("userdata", register.data.Firstname )
+  if(admin.token) {
+      setLocalDate("admindata", admin.data.Firstname )
         dispatch(authSucessAction())
-        navigate("/");
+        navigate("/admin");
       }
 
 
@@ -121,6 +122,11 @@ export const Login = () => {
       </div>
       </NavLink>
       <div id={styles.formDiv}>
+        <div id={styles.welcome}  >      
+        <div id={styles.welcome1}> <img src="https://media0.giphy.com/media/RHigihI7PAcelUUwQA/200.webp?cid=ecf05e47x4xo6xof96v620blfcbhlpx8eqpl5kzk01ai7bp2&rid=200.webp&ct=g" alt="img" /> </div>
+        <div id={styles.welcome2}> <h1>Welcome to Admin Login Page</h1></div>
+        
+        </div>
 
     <div id={styles.desc}> 
     <div id={styles.desc1}> <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/84711/preview.svg" alt="yes" /> </div>
