@@ -38,12 +38,12 @@ export const Purhcases = () => {
                     <GiHamburgerMenu />
                   </button>
                 </span>
-                <h2>Watchlist</h2>
+                <h2>Purchases</h2>
                 <span>
                   <AiOutlineDown />
                 </span>
               </div>
-              <div>hello</div>
+              {/* <div>hello</div> */}
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import axios from "axios"
 import { getWatchlistFailed, getWatchlistRequest, getWatchlistSuccess } from "./action"
+import { getCartApi } from "../CartRedux/cart.action";
 
 
 export const getWatchlist = (token) => (dispatch) => {
@@ -40,9 +41,10 @@ export const addwatchlist = (data) => (dispatch) => {
 
 
 
-export const addtoc = (data) => () => {
+export const addtoc = (data) => (dispatch) => {
     console.log(data)
     axios.post("https://drab-plum-cricket-tie.cyclic.app/cart/add", data).then(res => {
+        dispatch(getCartApi());
         return true;
     }).catch((err) => {
         return false;

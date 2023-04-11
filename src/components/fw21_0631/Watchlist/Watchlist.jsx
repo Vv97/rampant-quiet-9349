@@ -80,7 +80,7 @@ export const WatchList = () => {
                       <h3 className="watchlistcardheading">{user.title}</h3>
                       <div className="witchListQty">
                         <span>Package Qty : 3pcs</span>
-                        <span>size : </span>
+                        <span>size : S</span>
                         <span></span>
                       </div>
 
@@ -101,7 +101,7 @@ export const WatchList = () => {
 
                         {/* <span>pattern Name : shirt</span> */}
                         <div className="watchlistcardbtnextra">
-                          <button onClick={() => addtoc(user)}>
+                          <button onClick={() => dispatch(addtoc(user))}>
                             Add to cart
                           </button>
                           <button
@@ -114,8 +114,12 @@ export const WatchList = () => {
                     </div>
                     <div className="WitchListCardBtnContainer">
                       <button onClick={redirectcheckoutpage}>Buy it Now</button>
-                      <button onClick={() => addtoc(user)}>Add to cart</button>
-                      <button>i'd like to</button>
+                      <button onClick={() => dispatch(addtoc(user))}>
+                        Add to cart
+                      </button>
+                      <button onClick={() => dispatch(deleteProduct(user._id))}>
+                        Delete
+                      </button>
                       <span>Noted to self</span>
                     </div>
                   </div>
