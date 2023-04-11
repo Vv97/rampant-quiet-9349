@@ -17,7 +17,7 @@ const initstate = {
   register: [],
   admin: [],
   isError: false,
-  isAuth: getLocalData("isAuth") || false,
+  isAuth: JSON.parse(getLocalData("isAuth")) || false,
 };
 
 export const registerReducer = (state = initstate, { type, payload }) => {
