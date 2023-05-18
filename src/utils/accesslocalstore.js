@@ -26,11 +26,10 @@ export const setLocalDate = (key, data) => {
 // Registerdata PROCESS
 
 export const Registerdata = (data) => (dispatch) => {
-  console.log(data)
   dispatch(postRequestAction());
 
-  const {Firstname, Lastname, Email, Password, Type } = data
-  console.log(Firstname, Lastname, Email, Password, Type)
+  const { Firstname, Lastname, Email, Password, Type } = data
+  // console.log(Firstname, Lastname, Email, Password, Type)
 
   // bcrypt.hash(Password, 5, (err, hash) => {
   //   const newdata = {Firstname, Lastname, Email, Password:hash, Type}
@@ -38,34 +37,37 @@ export const Registerdata = (data) => (dispatch) => {
 
   // )}
 
-    if(Type === "user"){
-      axios.post(`https://zany-twill-bass.cyclic.app/user/register`, data)
-    .then((res) => {
-      console.log(res)
-     dispatch(postSucessAction(res.data))
-    })
-    .catch((err) => dispatch(postFailAction()));
-    }
-    else {
-      axios.post(`https://zany-twill-bass.cyclic.app/admin/register`, data)
-    .then((res) => {
-      console.log(res)
-     dispatch(postAdminRequestAction(res.data))
-    })
-    .catch((err) => dispatch(postFailAction()));
+  if (Type === "user") {
+    axios.post(`https://fair-pink-millipede-gear.cyclic.app/user/register`, data)
+      .then((res) => {
+        console.log(res)
+        dispatch(postSucessAction(res.data))
+      })
+      .catch((err) => dispatch(postFailAction()));
+  }
+  else {
+    axios.post(`https://fair-pink-millipede-gear.cyclic.app/admin/register`, data)
+      .then((res) => {
+        console.log(res)
+        dispatch(postAdminRequestAction(res.data))
+      })
+      .catch((err) => dispatch(postFailAction()));
 
-    }
+  }
 
 };
 
 
 export const logindata = (payload) => (dispatch) => {
   dispatch(postRequestAction());
-  axios.post("https://zany-twill-bass.cyclic.app/user/login", payload)
+  axios.post("https://fair-pink-millipede-gear.cyclic.app/user/login", payload)
     .then((res) => {
       dispatch(loginSucessAction(res.data))
     })
-    .catch((err) => dispatch(postFailAction()));
+    .catch((err) => {
+      console.log("user/login", err)
+      dispatch(postFailAction())
+    });
 };
 
 
@@ -73,7 +75,7 @@ export const logindata = (payload) => (dispatch) => {
 
 export const adminlogindata = (payload) => (dispatch) => {
   dispatch(postRequestAction());
-axios.post("https://zany-twill-bass.cyclic.app/admin/login", payload)
+  axios.post("https://fair-pink-millipede-gear.cyclic.app/admin/login", payload)
     .then((res) => {
       dispatch(AdminloginSucessAction(res.data))
     })
