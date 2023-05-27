@@ -1940,11 +1940,11 @@
         "discounted_price": 224,
         "size": "small Medium large"
     }
-]
+],
 
-// data
 
-{
+[
+    {
     "category": "men",
     "brand": "Roadster",
     "title": "Solid Hooded Sweatshirt",

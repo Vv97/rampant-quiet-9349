@@ -1,4 +1,4 @@
-import { ADMINLOGIN_SUCESS, AUTHLOGIN_SUCESS, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCESS, LOGOUT_SUCESS, POST_ADMINREGISTER_SUCESS, POST_REGISTER_FAIL, POST_REGISTER_REQUEST, POST_REGISTER_SUCESS } from "./actionType"
+import { ADMINLOGIN_SUCESS, AUTHADMINLOGIN_SUCESS, AUTHLOGIN_SUCESS, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCESS, LOGOUT_SUCESS, POST_ADMINREGISTER_SUCESS, POST_REGISTER_FAIL, POST_REGISTER_REQUEST, POST_REGISTER_SUCESS } from "./actionType"
 
 export const postRequestAction = () => {
     return {type: POST_REGISTER_REQUEST }
@@ -38,5 +38,9 @@ export const logoutSucessAction = () => {
 
 export const authSucessAction = () => {
     return {type: AUTHLOGIN_SUCESS }
+}
+
+export const authAdminSucessAction = () => {
+    return {type: AUTHADMINLOGIN_SUCESS }
 }
 

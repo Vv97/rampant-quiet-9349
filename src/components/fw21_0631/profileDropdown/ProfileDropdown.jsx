@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logoutSucessAction } from "../../../Redux/Registerdata/action";
 
-export const ProfileDropdown = ({ Firstname, Lastname, Type }) => {
+export const ProfileDropdown = ({ name }) => {
   const dispatch = useDispatch();
 
   function handleLogout() {
     dispatch(logoutSucessAction());
+    localStorage.clear();
   }
 
   return (
@@ -21,13 +22,13 @@ export const ProfileDropdown = ({ Firstname, Lastname, Type }) => {
           />
         </div>
         <div>
-          <h2>{`${Firstname} ${Lastname}`}</h2>
+          <h2>{name}</h2>
         </div>
       </div>
 
       <div>
         <p>Account Settings</p>
-        {Type == "admin" && <Link to="/admin">Admin</Link>}
+        {localStorage.getItem("Admintoken") && <Link to="/admin">Admin</Link>}
         <button onClick={handleLogout}>Sign out</button>
       </div>
     </div>

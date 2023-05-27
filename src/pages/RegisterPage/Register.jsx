@@ -33,9 +33,9 @@ console.log(data.data)
 const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(Registerdata(data))
+    data.Type === "user" ? navigate("/login") : navigate("/adminlogin");
     setdata(initstate)
-    navigate("/login")
-
+    
 };
 
 const {Firstname, Lastname, Email, Password, Type } = data
@@ -50,8 +50,9 @@ console.log(Firstname, Lastname, Email, Password, Type)
 
         <div id={styles.abjlogo}>
         <div> <NavLink to="/" > <img id='logopic' src={"https://i.imgur.com/FQCppUc.png"} alt="logo" /> </NavLink>   </div>
-        <div>
+        <div style={{display:'flex', flexDirection: 'column'}}>
         <p id= {styles.paraalready}>Already a member? <NavLink to="/login" > Sign in </NavLink> </p>
+        <p id= {styles.paraalready}>Admin SignIn? <NavLink to="/adminlogin" > Sign in </NavLink> </p>
         </div>
             
         </div>

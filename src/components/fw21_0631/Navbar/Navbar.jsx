@@ -19,12 +19,11 @@ export const Navbar = () => {
   const [Category, setcategory] = useState(false);
   const navigate = useNavigate();
   const [watchlistshow, setwatchlist] = useState(false);
+  
 
-  const getdata =
-    getLocalData("userdata") != null ? getLocalData("userdata") : {};
-  const [userData, setuserData] = useState(getdata);
   const [query, setquery] = useState("");
-  const [name, setname] = useState(userData.Firstname || "");
+  const [name, setname] = useState(localStorage.getItem("userdata") || "");
+
 
   const isAuth = useSelector((store) => store.registerReducer.isAuth);
 
@@ -52,7 +51,7 @@ export const Navbar = () => {
                       </h5>
 
                       <div className={styles.profileDropdown}>
-                        <ProfileDropdown {...userData} />
+                        <ProfileDropdown name={name} />
                       </div>
                     </>
                   )
@@ -71,16 +70,14 @@ export const Navbar = () => {
               <li>
                 <a
                   className={`${styles.navListWithLinks}  ${styles.navScreenNone} `}
-                  href="#"
-                >
+                  href="#">
                   Daily Deals
                 </a>
               </li>
               <li>
                 <a
                   className={`${styles.navListWithLinks}   ${styles.navScreenNone}`}
-                  href="#"
-                >
+                  href="#">
                   Help & Contact
                 </a>
               </li>
@@ -93,8 +90,7 @@ export const Navbar = () => {
               </li>
               <li
                 className={styles.navListWithoutLink}
-                onClick={() => setwatchlist((prev) => !prev)}
-              >
+                onClick={() => setwatchlist((prev) => !prev)}>
                 Watchlist
                 <BsChevronDown className={styles.NavDownicon} />
                 {watchlistshow && <WatchDropDown setwatchlist={setwatchlist} />}
@@ -116,8 +112,7 @@ export const Navbar = () => {
 
                 <div
                   className={styles.notificationDropdown}
-                  style={{ background: "#fff" }}
-                >
+                  style={{ background: "#fff" }}>
                   <p>There are no new notifications.</p>
                 </div>
               </li>
@@ -160,16 +155,14 @@ export const Navbar = () => {
 
           <button
             className={styles.navMediumScreenIcon}
-            onClick={() => searchQuery(query)}
-          >
+            onClick={() => searchQuery(query)}>
             {" "}
             <BsSearch />{" "}
           </button>
 
           <button
             className={styles.nav2DropdownSearchBtn}
-            onClick={() => searchQuery(query)}
-          >
+            onClick={() => searchQuery(query)}>
             Search
           </button>
           <div className={styles.nav2Ad}>Advanced</div>

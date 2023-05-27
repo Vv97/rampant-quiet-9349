@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { AdminloginSucessAction, authSucessAction } from '../../Redux/Registerdata/action';
-import { logindata, setLocalDate, adminlogindata } from '../../utils/accesslocalstore';
+import { AdminloginSucessAction, authAdminSucessAction, authSucessAction } from '../../Redux/Registerdata/action';
+import { logindata, setLocalDate, adminlogindata, setAdminLocalDate } from '../../utils/accesslocalstore';
 import { NavLink } from 'react-router-dom';
 import styles from "./AdminLogin.module.css"
 // import bcrypt from "bcryptjs-react";
@@ -10,14 +10,14 @@ import styles from "./AdminLogin.module.css"
 export const AdminLogin = () => {
   const [btnval, setbtnval] = useState(false);
   const [userid, setuserid] = useState("");
-  const [userEmail, setuserEmail] = useState("")
+  // const [userEmail, setuserEmail] = useState("")
   
   const [pass, setpass] = useState("");
-  const [regdata, setregdata] = useState([]);
+  // const [regdata, setregdata] = useState([]);
 
   
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   // const register = useSelector((store) => store.registerReducer.register)
   // console.log(register, "REGISTER")
@@ -28,10 +28,11 @@ export const AdminLogin = () => {
 
   if(admin.token) {
     window.localStorage.setItem('Admintoken', (admin.token));
+    console.log(admin.token);
   }
 
-  const auth = useSelector((store) => store.registerReducer.isAuth)
-  console.log(auth)
+  // const auth = useSelector((store) => store.registerReducer.isAdminAuth)
+  // console.log("auth",auth)
 
   const handleLogin = (e) => {
     e.preventDefault()
@@ -104,8 +105,9 @@ export const AdminLogin = () => {
   // }, []);
 
   if(admin.token) {
-      setLocalDate("admindata", admin.data.Firstname )
-        dispatch(authSucessAction())
+    console.log(admin.token);
+    setAdminLocalDate("admindata", admin.data.Firstname )
+        dispatch(authAdminSucessAction())
         navigate("/admin");
       }
 
