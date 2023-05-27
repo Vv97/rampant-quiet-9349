@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logoutSucessAction } from "../../../Redux/Registerdata/action";
 
-export const ProfileDropdown = ({ name }) => {
-  const dispatch = useDispatch();
 
+export const ProfileDropdown = ({ name }) => {
+
+  const dispatch = useDispatch();
+  
   function handleLogout() {
     dispatch(logoutSucessAction());
     localStorage.clear();

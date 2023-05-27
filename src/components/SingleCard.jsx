@@ -13,6 +13,7 @@ import {
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { addwatchlist } from "../Redux/WatchlistRedux/watchlistApi";
 // import { fetchCartData } from "../Redux/Cart/Cart.action";
 function SingleCard({ ...props }) {
   const dispatch = useDispatch();
@@ -107,6 +108,7 @@ function SingleCard({ ...props }) {
                 border: "3px solid #e91f99",
               }}
               //   onClick={() => handleAddToWishlist()}
+              onClick={() => dispatch(addwatchlist(props.prod))}
             >
               <FaRegHeart fontVariant={"primary"} /> Add To Wishlist
             </Button>

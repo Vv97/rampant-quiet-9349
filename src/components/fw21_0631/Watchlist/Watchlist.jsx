@@ -7,11 +7,17 @@ import { Sidebar } from "../sidebar/Sidebar";
 import { Navbar } from "../Navbar/Navbar";
 import { Footer } from "../Footer/Footer";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
-import { getWatchlist } from "../../../Redux/WatchlistRedux/watchlistApi";
+import {
+  addtoc,
+  deleteProduct,
+  getWatchlist,
+} from "../../../Redux/WatchlistRedux/watchlistApi";
 import LoadingPage from "../../../pages/LoadingPage";
 import { SmSidebar } from "../smsidebar/SmSidebar";
+import { useNavigate } from "react-router-dom";
 export const WatchList = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [show, setshow] = useState(false);
   const { watchlist, isLoading } = useSelector(
     (store) => ({
@@ -20,6 +26,11 @@ export const WatchList = () => {
     }),
     shallowEqual
   );
+
+  function redirectcheckoutpage() {
+    navigate("/cart");
+  }
+
   useEffect(() => {
     dispatch(getWatchlist());
   }, []);
@@ -69,7 +80,7 @@ export const WatchList = () => {
                       <h3 className="watchlistcardheading">{user.title}</h3>
                       <div className="witchListQty">
                         <span>Package Qty : 3pcs</span>
-                        <span>size : </span>
+                        <span>size : S</span>
                         <span></span>
                       </div>
 
@@ -90,17 +101,25 @@ export const WatchList = () => {
 
                         {/* <span>pattern Name : shirt</span> */}
                         <div className="watchlistcardbtnextra">
-                          <button>Add to cart</button>
-                          <button>
+                          <button onClick={() => dispatch(addtoc(user))}>
+                            Add to cart
+                          </button>
+                          <button
+                            onClick={() => dispatch(deleteProduct(user._id))}
+                          >
                             <RiDeleteBinLine />
                           </button>
                         </div>
                       </div>
                     </div>
                     <div className="WitchListCardBtnContainer">
-                      <button>Buy it Now</button>
-                      <button>Add to cart</button>
-                      <button>i'd like to</button>
+                      <button onClick={redirectcheckoutpage}>Buy it Now</button>
+                      <button onClick={() => dispatch(addtoc(user))}>
+                        Add to cart
+                      </button>
+                      <button onClick={() => dispatch(deleteProduct(user._id))}>
+                        Delete
+                      </button>
                       <span>Noted to self</span>
                     </div>
                   </div>

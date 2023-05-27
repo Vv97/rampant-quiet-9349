@@ -1,6 +1,6 @@
 import { getLocalAdminData, getLocalData, setAdminLocalDate, setLocalDate } from "../../utils/accesslocalstore";
 import {
-    AUTHLOGIN_SUCESS,
+  AUTHLOGIN_SUCESS,
   LOGIN_FAIL,
   LOGIN_REQUEST,
   LOGIN_SUCESS,
@@ -16,10 +16,12 @@ import {
 const initstate = {
   isLoading: false,
   register: [],
-  admin:[],
+  admin: [],
   isError: false,
+
   isAuth: getLocalData("isAuth") || false,
   isAdminAuth: getLocalAdminData("isAdminAuth") || false
+
 };
 
 export const registerReducer = (state = initstate, { type, payload }) => {
@@ -33,7 +35,7 @@ export const registerReducer = (state = initstate, { type, payload }) => {
         isLoading: false,
         register: [...state.register, payload],
       };
-      case POST_ADMINREGISTER_SUCESS:
+    case POST_ADMINREGISTER_SUCESS:
       return {
         ...state,
         isLoading: false,
@@ -48,19 +50,21 @@ export const registerReducer = (state = initstate, { type, payload }) => {
 
     case LOGIN_SUCESS:
       return { ...state, isLoading: false, register: payload };
-    
-      case ADMINLOGIN_SUCESS:
-        return { ...state, isLoading: false, admin: payload };
+
+    case ADMINLOGIN_SUCESS:
+      return { ...state, isLoading: false, admin: payload };
 
     case LOGIN_FAIL:
       return { ...state, isLoading: false, isError: true };
 
     case LOGOUT_SUCESS:
-        setLocalDate("isAuth", false)
+      setLocalDate("isAuth", false)
+      localStorage.removeItem("token");
+      localStorage.removeItem("userdata");
       return { ...state, isLoading: false, isAuth: false };
 
-      case AUTHLOGIN_SUCESS:
-        setLocalDate("isAuth", true)
+    case AUTHLOGIN_SUCESS:
+      setLocalDate("isAuth", true)
       return { ...state, isAuth: true };
 
       case AUTHADMINLOGIN_SUCESS:

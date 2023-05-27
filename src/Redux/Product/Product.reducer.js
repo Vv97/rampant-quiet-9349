@@ -3,6 +3,7 @@ import * as types from "./Product.type"
 let initialState = {
     loading: false,
     error: false,
+    productSuggestion: [],
     totalPages: 0,
     products: [],
     mainData: [],
@@ -55,7 +56,8 @@ export const mensProductReducer = (state = initialState, { type, payload }) => {
             }
         }
 
-
+        case types.GET_PRODUCT_SUGGESTION_SUCCESS:
+            return { ...state, loading: false, productSuggestion: payload.data }
 
         default: {
             return state

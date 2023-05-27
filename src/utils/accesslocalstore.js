@@ -38,11 +38,12 @@ export const setAdminLocalDate = (key, data) => {
 // Registerdata PROCESS
 
 export const Registerdata = (data) => (dispatch) => {
-  console.log(data);
+ 
   dispatch(postRequestAction());
 
   const { Firstname, Lastname, Email, Password, Type } = data;
-  console.log(Firstname, Lastname, Email, Password, Type);
+ 
+
 
   // bcrypt.hash(Password, 5, (err, hash) => {
   //   const newdata = {Firstname, Lastname, Email, Password:hash, Type}
@@ -77,19 +78,22 @@ export const Registerdata = (data) => (dispatch) => {
 
 export const logindata = (payload) => (dispatch) => {
   dispatch(postRequestAction());
-  axios
-    .post("https://fair-pink-millipede-gear.cyclic.app/user/login", payload)
+
+  axios.post("https://fair-pink-millipede-gear.cyclic.app/user/login", payload)
     .then((res) => {
       console.log(res.data)
       dispatch(loginSucessAction(res.data));
     })
-    .catch((err) => dispatch(postFailAction()));
+    .catch((err) => {
+      console.log("user/login", err)
+      dispatch(postFailAction())
+    });
 };
 
 export const adminlogindata = (payload) => (dispatch) => {
   dispatch(postRequestAction());
-  axios
-    .post("https://fair-pink-millipede-gear.cyclic.app/admin/login", payload)
+
+  axios.post("https://fair-pink-millipede-gear.cyclic.app/admin/login", payload)
     .then((res) => {
       dispatch(AdminloginSucessAction(res.data));
     })
