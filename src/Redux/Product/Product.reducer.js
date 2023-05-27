@@ -8,7 +8,6 @@ let initialState = {
     products: [],
     mainData: [],
     filteredBrandData: []
-
 }
 
 export const mensProductReducer = (state = initialState, { type, payload }) => {
@@ -35,7 +34,6 @@ export const mensProductReducer = (state = initialState, { type, payload }) => {
                 loading: false,
                 error: false,
                 mainData: payload.data,
-
             }
         }
         case types.GET_FILTERED_PRODUCTS: {

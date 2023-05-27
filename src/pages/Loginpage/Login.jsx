@@ -135,6 +135,7 @@ export const Login = () => {
       </div>
       
     <div id={styles.sign}> Sign in to eBay or &nbsp; <NavLink to="/register"><u>create an account</u></NavLink></div>
+    <div id={styles.sign}>Sign In as Admin ? <a href="/adminLogin">Click here!</a> </div>
     
 
     <div id={styles.formdata}>

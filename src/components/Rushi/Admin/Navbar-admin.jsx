@@ -1,6 +1,5 @@
 import { Menu, MenuButton, MenuList, MenuItem, Box } from "@chakra-ui/react";
 import { CgProfile } from "react-icons/cg";
-import { IoSettingsSharp } from "react-icons/io5";
 import { FaHistory } from "react-icons/fa";
 import { TiContacts } from "react-icons/ti";
 import { FiLogOut } from "react-icons/fi";
@@ -28,12 +27,12 @@ const NavbarAdmin = () => {
     localStorage.clear("isAuth", "apnidukan");
     navigate("/");
     document.location.reload();
-  }
+  };
 
   const logoClicked = () => {
-     navigate("/");
-   }
-   
+    navigate("/");
+  };
+
   return (
     <div className="nav_main">
       <div className="nav_logo" onClick={logoClicked}>
@@ -58,9 +57,17 @@ const NavbarAdmin = () => {
 
       <div className="nav_drop_down_section">
         <Menu>
-          <div className="dropbtn_text">
-            <MenuButton style={{ color: "white"}}>
-              Setting
+          <div>
+            <MenuButton
+              className="dropbtn_text"
+              style={{
+                color: "white",
+                display: "flex",
+                width: "auto",
+                fontSize: "17px",
+                fontFamily: "monospace",
+              }}>
+              <p> Hi {localStorage.getItem("admindata")}</p>
               <ChevronDownIcon />
             </MenuButton>
           </div>
@@ -71,12 +78,6 @@ const NavbarAdmin = () => {
                 <CgProfile />
               </Box>
             </MenuItem>
-            {/* <MenuItem>
-              <b>Setting</b>
-              <Box marginLeft={1}>
-                <IoSettingsSharp />
-              </Box>
-            </MenuItem> */}
             <MenuItem>
               <b>Order History</b>
               <Box marginLeft={1}>
@@ -89,7 +90,7 @@ const NavbarAdmin = () => {
                 <TiContacts />
               </Box>
             </MenuItem>
-            <MenuItem onClick={handleSignOut}>
+            <MenuItem bg={"blue.200"} onClick={handleSignOut}>
               <b>Sign Out</b>
               <Box marginLeft={1}>
                 <FiLogOut />

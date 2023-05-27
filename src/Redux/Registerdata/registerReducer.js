@@ -1,4 +1,4 @@
-import { getLocalData, setLocalDate } from "../../utils/accesslocalstore";
+import { getLocalAdminData, getLocalData, setAdminLocalDate, setLocalDate } from "../../utils/accesslocalstore";
 import {
   AUTHLOGIN_SUCESS,
   LOGIN_FAIL,
@@ -9,7 +9,8 @@ import {
   POST_REGISTER_REQUEST,
   POST_REGISTER_SUCESS,
   POST_ADMINREGISTER_SUCESS,
-  ADMINLOGIN_SUCESS
+  ADMINLOGIN_SUCESS,
+  AUTHADMINLOGIN_SUCESS
 } from "./actionType";
 
 const initstate = {
@@ -17,7 +18,10 @@ const initstate = {
   register: [],
   admin: [],
   isError: false,
-  isAuth: JSON.parse(getLocalData("isAuth")) || false,
+
+  isAuth: getLocalData("isAuth") || false,
+  isAdminAuth: getLocalAdminData("isAdminAuth") || false
+
 };
 
 export const registerReducer = (state = initstate, { type, payload }) => {
@@ -62,6 +66,10 @@ export const registerReducer = (state = initstate, { type, payload }) => {
     case AUTHLOGIN_SUCESS:
       setLocalDate("isAuth", true)
       return { ...state, isAuth: true };
+
+      case AUTHADMINLOGIN_SUCESS:
+        setAdminLocalDate("isAdminAuth", true)
+      return { ...state, isAdminAuth: true };
 
 
 

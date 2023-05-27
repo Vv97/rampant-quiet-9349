@@ -8,7 +8,7 @@
   align-items: center;
   gap: 10px;
   height: 70px;
-  background-color: #092546
+  background-color: #092546;
 }
 
 .nav_logo {
@@ -28,20 +28,20 @@
   display: flex;
   align-items: center;
   gap: 50px;
-  background-color: #092546 ;
+  background-color: #092546;
   color: white;
   margin: none 100px none auto;
 }
 
 .navigate_section_products {
-  background-color: #092546 ;
+  background-color: #092546;
 }
 .navigate_section_products:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-.navigate_section_products > b{
+.navigate_section_products > b {
   background-color: #092546;
 }
 
@@ -51,18 +51,18 @@
 }
 
 .navigate_section_home {
-  background-color: #092546 ;
+  background-color: #092546;
 }
 
 .navigate_section_home > b {
-  background-color: #092546 ;
+  background-color: #092546;
 }
 
 .add_product_btn_div {
   font-size: 16px;
   border: 1px solid black;
-  background-color: #092546;
-  color: white;
+  background-color: #e0d9d9;
+  color: #092546;
   height: 30px;
   padding: 20px 10px;
   margin: auto 10px auto 30%;
@@ -71,11 +71,11 @@
   border-radius: 10px;
 }
 
-.add_product_btn_div > button > b{
-  background-color: #092546;
+.add_product_btn_div > button > b {
+  background-color: #e0d9d9;
 }
 
-.nav_drop_down_section {  
+.nav_drop_down_section {
   background-color: #092546;
   font-size: 16px;
   color: black;
@@ -91,17 +91,19 @@
   justify-content: center;
   margin: 20px 100px 20px auto;
 }
-.dropbtn_text{
+
+.dropbtn_text {
   border-radius: 5px;
   /* border: 3px solid salmon; */
   background-color: #092546;
+  font-size: 20px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   font-weight: bold;
 }
 
-@media screen and (max-width: "600px") and (min-width: "200px")  {
-  
+@media screen and (max-width: "600px") and (min-width: "200px") {
   .nav_logo {
     border: 1px solid red;
     /* background-color: white; */
@@ -115,41 +117,41 @@
   .nav_logo:hover {
     cursor: pointer;
   }
-  
+
   .navigate_section {
     display: flex;
     align-items: center;
     gap: 50px;
-    background-color: #092546 ;
+    background-color: #092546;
     color: white;
     margin: none 100px none auto;
   }
-  
+
   .navigate_section_products {
-    background-color: #092546 ;
+    background-color: #092546;
   }
   .navigate_section_products:hover {
     cursor: pointer;
     text-decoration: underline;
   }
-  
-  .navigate_section_products > b{
+
+  .navigate_section_products > b {
     background-color: #092546;
   }
-  
+
   .navigate_section_home:hover {
     cursor: pointer;
     text-decoration: underline;
   }
-  
+
   .navigate_section_home {
-    background-color: #092546 ;
+    background-color: #092546;
   }
-  
+
   .navigate_section_home > b {
-    background-color: #092546 ;
+    background-color: #092546;
   }
-  
+
   .add_product_btn_div {
     font-size: 16px;
     border: 1px solid black;
@@ -162,12 +164,12 @@
     align-items: center;
     border-radius: 10px;
   }
-  
-  .add_product_btn_div > button > b{
+
+  .add_product_btn_div > button > b {
     background-color: #092546;
   }
-  
-  .nav_drop_down_section {  
+
+  .nav_drop_down_section {
     background-color: #092546;
     font-size: 16px;
     color: black;
@@ -183,7 +185,7 @@
     justify-content: center;
     margin: 20px 100px 20px auto;
   }
-  .dropbtn_text{
+  .dropbtn_text {
     border-radius: 5px;
     /* border: 3px solid salmon; */
     background-color: #092546;

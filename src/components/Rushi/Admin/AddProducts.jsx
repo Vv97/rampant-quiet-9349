@@ -47,20 +47,24 @@ const AddProducts = () => {
     console.log("formdata",formData);
     postData(formData);
 
-    // setCategory("");
-    // setProduct("");
-    // setTitle("");
-    // setImage("");
-    // setBrand("");
-    // setStrikePrice("");
-    // setSize("")
-    // setPrice("");
-    // setDescription("");
-    // setDiscount("")
+    setCategory("");
+    setProduct("");
+    setTitle("");
+    setImage("");
+    setBrand("");
+    setStrikePrice("");
+    setSize("")
+    setPrice("");
+    setDescription("");
+    setDiscount("");
   };
 
   const postData = (data) => {
-    axios.post("https://zany-twill-bass.cyclic.app/products", data);
+   axios.post("https://fair-pink-millipede-gear.cyclic.app/products/add",data, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("Admintoken")}`
+      }
+    } );
   };
 
   return (
@@ -96,9 +100,7 @@ const AddProducts = () => {
                   value={category}
                   onChange={(e) => setCategory(e.currentTarget.value)}
                   placeholder="Select Category">
-                  <option value="men">Men's</option>
-                  <option value="women">Women's</option>
-                  <option value="kids">Kids</option>
+                  <option value="cloths">Cloths</option>
                   <option value="furnitures">Furnitures</option>
                   <option value="electronics">Electronics</option>
                 </Select>
@@ -106,37 +108,16 @@ const AddProducts = () => {
 
               <div style={{ marginBottom: "20px" }}>
                 <FormLabel>Select product</FormLabel>
-                {category === "men" ? (
+                {category === "cloths" ? (
                   <Select
                     value={product}
                     onChange={(e) => setProduct(e.currentTarget.value)}
                     placeholder="Select product">
-                    <option value="shirt">Shirts</option>
-                    <option value="t-shirt">T-shirt</option>
-                    <option value="hoodie">Hoodie</option>
-                    <option value="pant">Pants</option>
+                    <option value="men">men</option>
+                    <option value="women">Women</option>
+                    <option value="kids">Kids</option>
                   </Select>
-                ) : category === "women" ? (
-                  <Select
-                    value={product}
-                    onChange={(e) => setProduct(e.currentTarget.value)}
-                    placeholder="Select product">
-                    <option value="kurti">kurti</option>
-                    <option value="pant">Pants</option>
-                    <option value="saree">Saree</option>
-                    <option value="t-shirt">t-shirt</option>
-                  </Select>
-                ) : category === "kids" ? (
-                  <Select
-                    value={product}
-                    onChange={(e) => setProduct(e.currentTarget.value)}
-                    placeholder="Select product">
-                    <option value="shirt">Kid's Shirts</option>
-                    <option value="t-shirt">kid's T-shirt</option>
-                    <option value="sweater">Sweater</option>
-                    <option value="pant">Pants</option>
-                  </Select>
-                ) : category === "furniture" ? (
+                ) : category === "furnitures" ? (
                   <Select
                     value={product}
                     onChange={(e) => setProduct(e.currentTarget.value)}
@@ -174,7 +155,7 @@ const AddProducts = () => {
                 />
               </div>
               <div style={{ marginBottom: "20px" }}>
-                <FormLabel>Sizes</FormLabel>
+                <FormLabel>Sizes (keep space in-between to save multiple Sizes, i.e. Small Medium Large)</FormLabel>
                 <Input
                   value={size}
                   onChange={(e) => setSize(e.currentTarget.value)}
@@ -182,12 +163,12 @@ const AddProducts = () => {
                 />
               </div>
               <div style={{ marginBottom: "20px" }}>
-                <FormLabel>Image</FormLabel>
+                <FormLabel>Image (keep space in-between to save multiple Images, i.e. http://some.jpg http://some2.jpg)</FormLabel>
                 <Input
                   value={image}
                   onChange={(e) => setImage(e.currentTarget.value)}
                   type="text"
-                  placeholder="Image URL"
+                  placeholder="Image URLs"
                 />
               </div>
               <div style={{ marginBottom: "20px" }}>
