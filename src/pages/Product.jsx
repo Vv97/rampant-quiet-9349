@@ -49,6 +49,8 @@ let brands = [
 const Product = () => {
   const { loading, error, totalPages, products, filteredBrandData } =
     useSelector((store) => store.mens);
+  //registerReducer
+  const register = useSelector((store) => store.registerReducer.register);
 
   // searchParams to set query in url
   const [searchParams, setsearchParams] = useSearchParams();
@@ -91,21 +93,23 @@ const Product = () => {
     setFilterValues(val);
   };
 
-  const handleClear = useCallback(() => {
+  const handleClear = () => {
+    console.log(searchParams.getAll("brand"));
     searchParams.delete("brand");
     setsearchParams(searchParams);
-  }, [dispatch, currentPage]);
+    console.log(searchParams, "end");
+  };
 
   useEffect(() => {
     if (products.length === 0 || location) {
       const getparams = {
         params: {
           brand: filterValues,
-          _sort: sValue.length > 0 && "strike_price",
-          _order: sValue.length > 0 && sValue,
-          p: currentPage > 1 && currentPage,
+          sort: sValue && "discounted_price",
+          order: sValue && sValue,
         },
       };
+
       dispatch(getMensProduct(getparams, currentPage));
     }
   }, [location.search, sValue, currentPage, dispatch]);
@@ -113,9 +117,8 @@ const Product = () => {
   useEffect(() => {
     let params = {};
     if (filterValues.length > 0) params.brand = filterValues;
-    if (sValue.length > 0) params._sort = "price";
-    if (sValue.length > 0) params._order = sValue;
-    if (currentPage > 1) params.p = currentPage;
+    if (sValue) params.sort = "discounted_price";
+    if (sValue) params.order = sValue;
     setsearchParams(params);
   }, [filterValues, setsearchParams, sValue, currentPage]);
 

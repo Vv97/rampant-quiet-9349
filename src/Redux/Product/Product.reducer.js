@@ -24,8 +24,10 @@ export const mensProductReducer = (state = initialState, { type, payload }) => {
                 ...state,
                 loading: false,
                 error: false,
-                products: payload.data,
-                totalPages: payload.headers["x-total-count"],
+                products: payload.data.products
+                ,
+                totalPages: payload.data.TotalCount
+                ,
             }
         }
         case types.GET_MAIN_DATA_SUCCESS: {
