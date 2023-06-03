@@ -104,8 +104,15 @@ const getProductSuggestion = (payload) => {
 
 export const getMensProduct = (data = {}, page = 1) => async (dispatch) => {
    dispatch(getProductRequest());
+   let { params } = data
+
    try {
-      let productData = await axios.get(`https://puce-busy-zebra.cyclic.app/MensData?_limit=10&_page=${page}`, data);
+      let productData = await axios.get(`https://jolly-tutu-slug.cyclic.app/products?category=cloths&product=men&limit=10&page=${page}`, {
+         params,
+         headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`
+         }
+      });
       dispatch(getProductSuccess(productData));
    } catch (error) {
       dispatch(getProductFailure())
