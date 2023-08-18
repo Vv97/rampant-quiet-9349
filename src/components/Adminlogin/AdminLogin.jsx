@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AdminloginSucessAction, authAdminSucessAction, authSucessAction } from '../../Redux/Registerdata/action';
 import { logindata, setLocalDate, adminlogindata, setAdminLocalDate } from '../../utils/accesslocalstore';
 import { NavLink } from 'react-router-dom';
-import styles from "./AdminLogin.module.css"
+import styles from "./AdminLogin.module.css";
 // import bcrypt from "bcryptjs-react";
 
 export const AdminLogin = () => {
   const [btnval, setbtnval] = useState(false);
   const [userid, setuserid] = useState("");
-  // const [userEmail, setuserEmail] = useState("")
+  // const [userEmail, setuserEmail] = useState("");
   
   const [pass, setpass] = useState("");
   // const [regdata, setregdata] = useState([]);
@@ -35,7 +35,7 @@ export const AdminLogin = () => {
   // console.log("auth",auth)
 
   const handleLogin = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     let payload = {
       Email: userid,
       Password: pass

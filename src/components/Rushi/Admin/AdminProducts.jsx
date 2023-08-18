@@ -77,7 +77,7 @@ const AdminProducts = () => {
       console.log(dataSorted, "line 80 -----------------");
     } else if (dataSorted.length === 0) {
       axios
-        .get("https://fair-pink-millipede-gear.cyclic.app/products", {
+        .get(`https://fair-pink-millipede-gear.cyclic.app/products/`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("Admintoken")}`,
           },
@@ -141,6 +141,7 @@ const AdminProducts = () => {
         }
       )
       .then((res) => {
+        console.log(res);
         getData();
       });
   };
@@ -159,7 +160,8 @@ const AdminProducts = () => {
       .then((res) => {
         console.log(res.data.products);
         setData(res.data.products);
-        console.log("inside handleFIlter");
+        //setDataSorted([]); // Reset dataSorted when applying a filter
+        console.log("inside handleFIlter - line 164");
       })
       .catch((err) => console.log(err));
   };
@@ -177,40 +179,30 @@ const AdminProducts = () => {
       .then((res) => {
         console.log(res.data.products);
         setData(res.data.products);
-        console.log("inside handleFIlter");
+        // setDataSorted([]); // Reset dataSorted when applying a filter
+        console.log("inside inner-handleFIlter- line 182");
       })
       .catch((err) => console.log(err));
   };
 
   // HANDLING THE SORTING PART
   const handleSort = (order) => {
+    let sortData = [...data];
     if (order === "asc") {
-      let sortData = data.sort((a, b) => {
-        console.log(a, b, "a & b");
+      sortData = sortData.sort((a, b) => {
         return a.discounted_price - b.discounted_price;
       });
-      setData((prev) => {
-        // let f = prev;
-        return sortData;
-      });
-      setDataSorted((prev) => {
-        // let f = prev;
-        return sortData;
-      });
-      console.log(sortData);
+      setData(sortData);
+      setDataSorted((prev) => sortData);
+      console.log(sortData, "asc");
+      //getData();
     } else if (order === "desc") {
-      let sortData = data.sort((a, b) => {
-        console.log(a, b, "c & d");
+      sortData = sortData.sort((a, b) => {
         return b.discounted_price - a.discounted_price;
       });
-      setData((prev) => {
-        // let f = prev;
-        return sortData;
-      });
-      setDataSorted((prev) => {
-        // let f = prev;
-        return sortData;
-      });
+      setDataSorted((prev) => sortData);
+      setDataSorted(sortData, "desc");
+      //getData();
     }
   };
 
@@ -227,25 +219,25 @@ const AdminProducts = () => {
   function prePage() {
     if (currentPage !== 1) {
       setCurrentPage((currentPage) => currentPage - 1);
-      console.log(currentPage);
+     // console.log(currentPage);
     }
   }
 
   function changeCurrentPage(id) {
     setCurrentPage(id);
-    console.log(currentPage);
+    console.log(id);
   }
 
   function nextPage() {
     if (currentPage !== nPage) {
       setCurrentPage((currentPage) => currentPage + 1);
-      console.log(currentPage);
+      //console.log(currentPage);
     }
   }
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [dataSorted]);
 
   return (
     <div style={{ backgroundColor: "#cec6c6", minHeight: "1000px" }}>
@@ -265,12 +257,14 @@ const AdminProducts = () => {
                   <MenuItem
                     onClick={() => {
                       handleSort("asc");
+                      //getData();
                     }}>
                     Price: Low to High
                   </MenuItem>
                   <MenuItem
                     onClick={() => {
                       handleSort("desc");
+                      //getData();
                     }}>
                     Price: High to Low
                   </MenuItem>
