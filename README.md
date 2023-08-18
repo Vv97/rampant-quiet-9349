@@ -70,7 +70,7 @@
 
 ## Admin Welcome:
 
-![Admin Welcome Page](https://user-images.githubusercontent.com/110036788/231098793-c2e40d55-5fac-4477-9032-516963c38397.png)
+![Admin Welcome Page](./public//welcome_page.png)
 
 ## All Products:
 
@@ -78,7 +78,7 @@
 
 ## Add Products:
 
-![Add Products Page](https://user-images.githubusercontent.com/110036788/231099004-7fe65f34-0143-4eb6-85bb-2e038579b9f7.png)
+![Add Products Page](./public/add_product_page.png)
 
 
 ## Our Learnings
