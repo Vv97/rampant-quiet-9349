@@ -68,13 +68,17 @@
 
 ![SignIn Page](https://user-images.githubusercontent.com/110036788/231098640-4ffe48b5-2d2a-42a4-ab82-9a698a0b0b87.png)
 
-## Admin Welcome :
+## Admin Welcome:
 
 ![Admin Welcome Page](https://user-images.githubusercontent.com/110036788/231098793-c2e40d55-5fac-4477-9032-516963c38397.png)
 
-## Add Products :
+## All Products:
 
-![Add Products](https://user-images.githubusercontent.com/110036788/231099004-7fe65f34-0143-4eb6-85bb-2e038579b9f7.png)
+![All Products Page](./public//all_products_admin.png)
+
+## Add Products:
+
+![Add Products Page](https://user-images.githubusercontent.com/110036788/231099004-7fe65f34-0143-4eb6-85bb-2e038579b9f7.png)
 
 
 ## Our Learnings
