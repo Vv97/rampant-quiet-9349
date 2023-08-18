@@ -2,7 +2,7 @@
 .admin_dashboard_div {
   background-color: rgb(206, 198, 198);
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .welcome_div {
