@@ -107,7 +107,7 @@ export const getMensProduct = (data = {}, page = 1) => async (dispatch) => {
    let { params } = data
 
    try {
-      let productData = await axios.get(`https://jolly-tutu-slug.cyclic.app/products?category=cloths&product=men&limit=10&page=${page}`, {
+      let productData = await axios.get(`https://fair-pink-millipede-gear.cyclic.app/products?category=cloths&product=men&limit=10&page=${page}`, {
          params,
          headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
